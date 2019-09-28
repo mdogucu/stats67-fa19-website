@@ -1,0 +1,38 @@
+---
+title: "Homework 1: Stats 67 & You"
+date: "due 2019-10-04 at 5:00 pm"
+output: 
+  html_document:
+    css: hw-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+## Goals 
+This homework serves two goals 
+
+- for you to get to know the syllabus and course policies.
+- for me to get to know you.
+
+
+## Assignment
+
+__Type:__ Individual
+
+__Tasks:__
+
+- Complete the <a href= "https://canvas.eee.uci.edu/courses/19775/quizzes/70474"> Syllabus Quiz </a>
+
+This quiz will test your knowledge about the policies of the course as well as information about the course. You should read the <a href= "https://mdogucu.ics.uci.edu/teaching/stats67-fa19/main.html" >Stats 67 course website </a> before beginning the quiz. Multiple attempts are allowed for the quiz and there is no time limit. You will receive a score for completion.
+
+- Complete the <a href ="https://canvas.eee.uci.edu/courses/19775/quizzes/70475"> All About You Survey </a> 
+
+This survey has questions about your background in statistics, computing, and your interests. You do not need to do any prepartion for it. It really is all about you! Multiple attempts are allowed for the quiz and there is no time limit. You will receive a score for completion.
+
+
+## Submission
+
+This homework is completed and submitted on Canvas following the hyperlinks provided above.
+<br>
+<br>
+<br>

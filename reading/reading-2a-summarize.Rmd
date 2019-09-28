@@ -1,0 +1,27 @@
+---
+title: "Reading 2: Data Basics"
+date: "due 2019-10-07 at 9:00 am"
+output: 
+  html_document:
+    css: reading-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+## Reading
+
+Read Chapter 2 (Summarizing Data) from <a href = "https://leanpub.com/openintro-statistics"> OpenIntro </a>. 
+
+
+
+__Note:__ You may discuss the reading with others before attempting the reading questions. Make sure those you are discussing with have not completed their reading questions either. 
+
+## Reading Questions
+
+You can use your book while answering the reading questions. You will have a single attempt to answer the questions. Make sure you have done the reading before attempting to answer. There is a twenty minute time limit. 
+
+Respond to reading questions <a href="https://canvas.eee.uci.edu/courses/19775/quizzes/70540"> here </a>
+
+<br>
+<br>
+<br>

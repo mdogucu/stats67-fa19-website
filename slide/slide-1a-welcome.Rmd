@@ -1,0 +1,182 @@
+---
+title: "Welcome to Stats 67"
+author: "Dr. Dogucu"
+date: "2019-09-30"
+output: 
+  xaringan::moon_reader:
+    css: slide-styles.css
+      
+---
+
+layout: true
+  
+<div class="my-header"></div>
+
+<div class="my-footer"> 
+ Copyright &copy; <a href="https://mdogucu.ics.uci.edu">Dr. Mine Dogucu</a>. All Rights Reserved.</div> 
+
+---
+
+## Merhaba
+
+- Hello 
+- ` `Private Sub Form_Load()`     
+    `MsgBox "Hello, World!"`   
+`End Sub` ` 
+- Hallo   
+- مرحبا
+- `print('Hello world')`
+- नमस्ते & السلام عليكم
+- `print("Hello world")`
+- `<html> Hello world</html>`
+- ¡Hola!
+- سلام
+
+ 
+---
+
+## About Me
+
+
+Mine Dogucu   
+`r emo::ji("e-mail")` <a href="mailto:mdogucu@uci.edu">mdogucu@uci.edu</a>  
+`r emo::ji("calendar")` Mon 1:00 - 2 pm  
+`r emo::ji("location")` DBH 2204  
+
+
+
+
+---
+
+## Teaching Team
+
+.pull-left[
+__Section C__
+<br>
+<br>
+_TA_  
+Corey Katz   
+`r emo::ji("e-mail")` <a href="mailto:ckatz@uci.edu">ckatz@uci.edu</a>   
+`r emo::ji("calendar")` Tue and Thu 08:00 - 10:00 am  
+`r emo::ji("location")` DBH 2013
+<br>
+<br>
+
+_Grader_  
+Xuan Liu  
+`r emo::ji("e-mail")` <a href="mailto:xuanl29@uci.edu">xuanl29@uci.edu</a>  
+
+
+]
+
+.pull-right[
+__Section D__
+<br>
+<br>
+_TA_  
+Mary Ryan   
+`r emo::ji("e-mail")` <a href="mailto:marymr@uci.edu">marymr@uci.edu</a>   
+`r emo::ji("calendar")` Wed 9 - 11 am and Fri 2 - 4 pm  
+`r emo::ji("location")` DBH 2013
+<br>
+<br>
+
+_Grader_  
+Federica Ricci  
+`r emo::ji("e-mail")` <a href="mailto:fzricci@uci.edu">fzricci@uci.edu</a>  
+
+]
+
+---
+
+## Meet and Greet Each Other
+
+In groups three or four meet and greet each other.
+
+Find something in common between all of you. 
+
+Find a difference.
+
+---
+# About You
+
+.question[Raise your hand if this is your first year at UCI.]
+
+---
+# About You
+
+.question[Raise your hand if you are from California.]
+
+---
+# About You
+
+.question[Raise your hand if you are further than 1000 miles (~1600 km) away from home.]
+
+---
+# About You
+
+.question[Raise your hand if you are left-handed.]
+
+---
+# About You
+
+.question[Raise your hand if you were born in September.]
+
+---
+# How to be successful in this course
+
+- Be punctual
+- Be organized
+- Do the work
+
+---
+
+# The most important thing about this course
+
+<br>
+<br>
+<a href = "https://mdogucu.ics.uci.edu/teaching/stats67-fa19/main.html"
+style ="font-size: 35px; display:block; text-align:center;">The course website </a>
+
+
+---
+
+# What is Statistics?
+
+Think `r emo::ji("thinking")`- Pair `r emo::ji("couple")` - Share `r emo::ji("speech")`
+
+What do you think statistics is about and what will we learn in this course? There is no correct or wrong answer.
+
+---
+
+# Gapminder Test
+
+<br>
+<br>
+<a href = "http://forms.gapminder.org/s3/test-2018"
+style ="font-size: 35px; display:block; text-align:center;">
+Gapminder Test</a>
+
+---
+
+
+# Reflect
+
+- Are you surprised?
+
+- How do researchers know all that? Do you know any of the methods they use?
+
+
+---
+# Within One Week
+
+
+* Due Wednesday:   
+  + Reading and Reading Questions   
+* Due Friday:  
+ + HW1 (Syllabus Quiz and All About You Survey)  
+* Due Monday:  
+  + Reading and Reading Questions  
+  
+
+

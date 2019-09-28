@@ -1,0 +1,26 @@
+---
+title: "Summarizing Data"
+date: "2019-10-07"
+output: 
+  html_document:
+    css: slo-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+## Learning Objectives
+
+By the end of this lab, you will be able to:
+
+- choose appropriate visualization for discrete data. 
+- choose appropriate visualization for numerical data. 
+- choose appropriate visualization for multivariate data. 
+- calculate and use descriptive statistics such as mean, median, mode, standard deviation, variance, interquartile range, count, and proportion.
+- describe shape and spread of distributions. 
+
+
+
+<br>
+<br>
+<br>
+

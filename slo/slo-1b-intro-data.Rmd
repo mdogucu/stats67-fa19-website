@@ -1,0 +1,24 @@
+---
+title: "Introduction to Data"
+date: "2019-10-02"
+output: 
+  html_document:
+    css: slo-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- differentiate between categorical and numerical variables
+- differentiate between discrete and continous numeric variables. 
+- identify independent and dependent variables.
+- differentiate population and sample.
+- design an experiment. 
+- label findings as causation and association.
+
+<br>
+<br>
+<br>

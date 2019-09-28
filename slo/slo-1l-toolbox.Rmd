@@ -1,0 +1,23 @@
+---
+title: "Opening the Tool Box"
+date: "2019-10-02"
+output: 
+  html_document:
+    css: slo-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+## Learning Objectives
+
+By the end of this lab, you will be able to:
+
+- write text and code in Rmd.
+- knit an .Rmd file.
+- contribute to discussions on Piazza.
+- upload assignments using Gradescope. 
+
+<br>
+<br>
+<br>
+
