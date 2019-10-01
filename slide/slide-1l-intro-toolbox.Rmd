@@ -93,14 +93,25 @@ Now that you have your .Rmd file open go ahead and Knit your document by
 
 Saving documents - Every time you knit it saves
 
-Note that you have different knit options such as knitting to HTML or pdf. Even though HTML looks much nicer, we will use pdf because it is easier to upload to Gradescope.
+Note that you have different knit options such as knitting to HTML or pdf. We will use pdf because it is easier to upload to Gradescope.
 
 ---
 
 ## Demo
 
 Demo on RStudio Cloud
+
 ---
+
+## Recap
+
+We have learned that we can insert R code chunk to an R Markdown file by 
+
+- Clicking Insert > R or
+- using shortcuts Ctrl+Alt+I (Windows) &	Command+Option+I (Mac)
+
+---
+
 
 ## Your Turn
 
@@ -124,6 +135,9 @@ You have been provided with `bechdel` dataframe object in your project. Get to k
 - Knit your document as a .pdf one last time. 
 
 - On the files panel, in the lower right, you should see your pdf file. Check the pdf file. Click on More > Export > Download. You now have downloaded your pdf file to your computer.
+
+
+---
 
 ## Submission
 
