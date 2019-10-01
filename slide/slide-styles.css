@@ -20,8 +20,13 @@ a{
   font-weight: bold;
 }
 
-body{
-  font-size:27px;
+p {
+font-size: 28px;
+}
+
+ul {
+  font-size: 28px;
+
 }
 
 blockquote {
@@ -55,7 +60,7 @@ div.my-footer {
   
 .question{
   background-color:#cfafaf;
-  font-size: 30px;
+  font-size: 36px;
   color:#000000;
 
 }
@@ -67,4 +72,16 @@ div.my-footer {
 .pull-right {
   float: right;
   width: 50%;
+}
+
+.center-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.remark-code, .remark-inline-code { 
+  font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;
+  font-size: 90%;
 }
