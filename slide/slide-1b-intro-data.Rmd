@@ -1,0 +1,79 @@
+---
+title: "Introduction to Data"
+author: "Dr. Dogucu"
+date: "2019-10-02"
+output: 
+  xaringan::moon_reader:
+    css: slide-styles.css
+      
+---
+
+layout: true
+  
+<div class="my-header"></div>
+
+<div class="my-footer"> 
+ Copyright &copy; <a href="https://mdogucu.ics.uci.edu">Dr. Mine Dogucu</a>. All Rights Reserved.</div> 
+
+---
+
+
+
+## Meet and Greet Each Other
+
+In groups three or four meet and greet each other.
+
+Include 
+
+- Your name
+- Your year
+- I live ...
+- My favorite thing about UCI is ...
+- I am awesome because ...
+
+Find something in common between all of you by expanding the conversation. 
+
+Find a difference. 
+
+---
+
+## Recap
+
+.question[What did we do last class?]
+
+---
+
+Go over Reading Questions.
+
+
+Is this a summary table?
+
+Is this a data frame?
+
+
+Identify type of variables
+
+Experimental or Observational
+
+Population-SAmple
+
+Design an Experiment 
+
+- soda preference 
+- causation and correlation
+
+summary table random sampling, random allocation.
+
+---
+# Within One Week
+
+
+* Due Wednesday:   
+  + Reading and Reading Questions   
+* Due Friday:  
+ + HW1 (Syllabus Quiz and All About You Survey)  
+* Due Monday:  
+  + Reading and Reading Questions  
+  
+
+
