@@ -1,0 +1,25 @@
+---
+title: "Introduction to Probability"
+date: "2019-10-09"
+output: 
+  html_document:
+    css: slo-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- define and use vocabulary related to probability including sample space, outcome, random variable, disjoint/mutually exclusive events, independent and dependent events,  complement of an event.
+- apply probability addition and multiplication rule when appropriate.
+- check whether a function meets probability axioms.
+- calculate conditional, marginal, and joint probabilities.
+- use Bayes rule for events
+
+
+<br>
+<br>
+<br>
+
