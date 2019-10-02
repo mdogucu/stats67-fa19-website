@@ -1,0 +1,29 @@
+---
+title: "Reading 2: Data Basics"
+date: "due 2019-10-09 at 9:00 am"
+output: 
+  html_document:
+    css: reading-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+## Reading
+
+Read Chapter 3 (Probability) from <a href = "https://leanpub.com/openintro-statistics"> OpenIntro </a> but only the following sections. 
+3.1 Defining Probability
+3.2 Conditional Probability
+3.3 Sampling from a Small Population
+
+
+__Note:__ You may discuss the reading with others before attempting the reading questions. Make sure those you are discussing with have not completed their reading questions either. 
+
+## Reading Questions
+
+You can use your book while answering the reading questions. You will have a single attempt to answer the questions. Make sure you have done the reading before attempting to answer. There is a twenty minute time limit. 
+
+Respond to reading questions <a href="https://canvas.eee.uci.edu/courses/19775/quizzes/71041"> here </a>
+
+<br>
+<br>
+<br>
