@@ -41,28 +41,113 @@ Include
 - My favorite thing about UCI is ...
 - I am awesome because ...
 
-Find something in common between all of you by expanding the conversation. 
-
-Find a difference. 
-
 ---
 
+## Few Things
+
+- Piazza is active 👍
+- How did reading go?
+
+---
 ## Recap
 
 .question[What did we do last class?]
 
 
 ---
+## Types of Variables
+
+
+```r
+college_grad_students %&gt;% 
+  select(major, grad_unemployment_rate, 
+         grad_sample_size, grad_median) %&gt;% 
+  glimpse()
+```
+
+```
+## Observations: 173
+## Variables: 4
+## $ major                  &lt;chr&gt; "Construction Services", "Commercial Ar...
+## $ grad_unemployment_rate &lt;dbl&gt; 0.08754339, 0.05775585, 0.07386679, 0.0...
+## $ grad_sample_size       &lt;int&gt; 200, 882, 437, 72, 171, 22, 3738, 386, ...
+## $ grad_median            &lt;dbl&gt; 75000, 60000, 65000, 47000, 57000, 7500...
+```
+---
+
+## Sampling (True or False)
+
+
+An airline company wants an opinion on their service thus leaves a survey in the pockets of passenger students. Some passengers respond to this survey. This is a random sample.
+
+A cell phone factory wants to do quality control of their products to ensure that their customers do not get malfunctioning products. They randomly select 3% of the phones that they produce and manually check if there are any problems or not. All the cell phones in the world make up the population and the cell phones that this factory produces make up the sample. 
+
 
 ---
-# Within One Week
+## Correlation vs. Causation
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/8B271L3NtAw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+---
+
+## Simpson's Paradox - UC Berkeley Admissions, 1973
+
+&lt;img src="slide-1b-intro-data_files/figure-html/unnamed-chunk-3-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Simpson's Paradox - UC Berkeley Admissions, 1973
+
+&lt;img src="slide-1b-intro-data_files/figure-html/unnamed-chunk-4-1.png" style="display: block; margin: auto;" /&gt;
 
 
-* Due Wednesday:   
-  + Reading and Reading Questions   
+---
+## Simpson's Paradox - UC Berkeley Admissions, 1973
+
+&lt;img src="slide-1b-intro-data_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto;" /&gt;
+
+
+
+---
+
+## Design an Experiment
+
+On the course syllabus it says:
+
+&lt;blockquote&gt;
+You will not be graded solely on attendance. Research suggests that attendance is a better predictor of grades than many other measures such as SAT scores, study habits, and study skills (Credé, Roch &amp; Kieszczynka, 2010). Even though that is not a causal claim (we will learn more on this), If you would like to be successful in this class, you should attend ALL lectures and discussion sessions.
+&lt;/blockquote&gt;
+
+This conclusion was not based on an experiment thus we cannot say attendance will directly lead to higher grades. Design an experiment to measure whether class attendance increases grades. Think about what data you would collect from the participants. How would your data frame look like? Which of these variable(s) would be response, which would be explanatory? Which of them will be categorical, numerical discrete, or continuous?
+---
+## Design an Experiment 
+
+["Experiment" on the NY Times](https://www.nytimes.com/2019/09/24/science/cats-humans-bonding.html#targetText=Despite%20apparent%20aloofness%2C%20cats%20are,people%2C%20a%20new%20study%20suggests.&amp;targetText=In%20the%20perennial%20battle%20over,a%20clear%20public%20relations%20winner.&amp;targetText=Aloof%2C%20mysterious%20and%20independent%2C%20cats,only%20because%20we%20feed%20them.)
+
+
+---
+
+## Random sampling vs. random allocation
+
+&lt;br&gt;
+&lt;br&gt;
+.question["What is the difference between random sampling and random allocation? When do we need both?]
+
+---
+## XKCD Comic
+
+https://xkcd.com/552/
+
+---
+
+## Within One Week
+
 * Due Friday:  
- + HW1 (Syllabus Quiz and All About You Survey)  
-* Due Monday:  
+ + HW1 (Syllabus Quiz and All About You Survey) 
+ Note that your new homework will be posted on this      Friday. Make sure to check the course website.
+* Due Monday:   
+  + Reading and Reading Questions 
+* Due Wednesday:  
   + Reading and Reading Questions
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>

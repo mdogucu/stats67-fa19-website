@@ -17,7 +17,11 @@ layout: true
 
 ---
 
-
+```{r message = FALSE, echo = FALSE}
+library(tidyverse)
+library(fivethirtyeight)
+library(datasets)
+```
 
 ## Meet and Greet Each Other
 
@@ -31,48 +35,157 @@ Include
 - My favorite thing about UCI is ...
 - I am awesome because ...
 
-Find something in common between all of you by expanding the conversation. 
-
-Find a difference. 
-
 ---
 
+## Few Things
+
+- Piazza is active `r emo::ji("thumb")`
+- How did reading go?
+
+---
 ## Recap
 
 .question[What did we do last class?]
 
----
-
-Go over Reading Questions.
-
-
-Is this a summary table?
-
-Is this a data frame?
-
-
-Identify type of variables
-
-Experimental or Observational
-
-Population-SAmple
-
-Design an Experiment 
-
-- soda preference 
-- causation and correlation
-
-summary table random sampling, random allocation.
 
 ---
-# Within One Week
+## Types of Variables
+
+```{r}
+college_grad_students %>% 
+  select(major, grad_unemployment_rate, 
+         grad_sample_size, grad_median) %>% 
+  glimpse()
+```
+---
+
+## Sampling (True or False)
 
 
-* Due Wednesday:   
-  + Reading and Reading Questions   
+An airline company wants an opinion on their service thus leaves a survey in the pockets of passenger students. Some passengers respond to this survey. This is a random sample.
+
+A cell phone factory wants to do quality control of their products to ensure that their customers do not get malfunctioning products. They randomly select 3% of the phones that they produce and manually check if there are any problems or not. All the cell phones in the world make up the population and the cell phones that this factory produces make up the sample. 
+
+
+---
+## Correlation vs. Causation
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8B271L3NtAw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+
+## Simpson's Paradox - UC Berkeley Admissions, 1973
+
+```{r echo = FALSE, fig.height=5, fig.align='center', message = FALSE}
+ucb <- data.frame(UCBAdmissions)
+
+gender <-
+  group_by(ucb, Gender) %>%
+  summarize(Total = sum(Freq))
+
+
+gender_admit <-
+  group_by(ucb, Admit, Gender) %>%
+  summarize(Freq = sum(Freq)) %>%
+  inner_join(gender) %>%
+  mutate(Prop = Freq/Total)
+
+
+
+gender_admit %>% 
+  ggplot(aes(x = Gender, y = Prop, fill = Admit)) +
+  geom_bar(stat = "identity") +
+  theme(text = element_text(size=30))
+
+
+
+```
+
+---
+
+## Simpson's Paradox - UC Berkeley Admissions, 1973
+
+```{r echo = FALSE, fig.height=5, fig.align='center', message = FALSE}
+
+dept <-
+  group_by(ucb, Dept) %>%
+  summarize(Total = sum(Freq))
+
+
+dept_admit <-
+  group_by(ucb, Admit, Dept) %>%
+  summarize(Freq = sum(Freq)) %>%
+  inner_join(dept) %>%
+  mutate(Prop = Freq/Total)
+
+
+
+ggplot(dept_admit, aes(x = Dept, 
+                         y = Prop, fill = Admit)) +
+  geom_bar(stat = "identity")   +
+  theme(text = element_text(size=30))
+
+
+```
+
+
+---
+## Simpson's Paradox - UC Berkeley Admissions, 1973
+
+```{r echo = FALSE, fig.height=5, fig.align='center', message = FALSE}
+
+gender_dept <-
+  group_by(ucb, Gender, Dept) %>%
+  summarize(Freq = sum(Freq)) %>%
+  inner_join(dept) %>%
+  mutate(Prop=Freq/Total)
+
+ggplot(gender_dept, aes(x = Dept, y = Prop, 
+                        fill = Gender)) +
+  geom_bar(stat = "identity") +
+  theme(text = element_text(size=30))
+  
+```
+
+---
+
+## Design an Experiment
+
+On the course syllabus it says:
+
+<blockquote>
+You will not be graded solely on attendance. Research suggests that attendance is a better predictor of grades than many other measures such as SAT scores, study habits, and study skills (Credé, Roch & Kieszczynka, 2010). Even though that is not a causal claim (we will learn more on this), If you would like to be successful in this class, you should attend ALL lectures and discussion sessions.
+</blockquote>
+
+This conclusion was not based on an experiment thus we cannot say attendance will directly lead to higher grades. Design an experiment to measure whether class attendance increases grades. Think about what data you would collect from the participants. How would your data frame look like? Which of these variable(s) would be response, which would be explanatory? Which of them will be categorical, numerical discrete, or continuous?
+---
+## Design an Experiment 
+
+["Experiment" on the NY Times](https://www.nytimes.com/2019/09/24/science/cats-humans-bonding.html#targetText=Despite%20apparent%20aloofness%2C%20cats%20are,people%2C%20a%20new%20study%20suggests.&targetText=In%20the%20perennial%20battle%20over,a%20clear%20public%20relations%20winner.&targetText=Aloof%2C%20mysterious%20and%20independent%2C%20cats,only%20because%20we%20feed%20them.)
+
+---
+
+## Random sampling vs. random allocation
+
+<br>
+<br>
+.question["What is the difference between random sampling and random allocation? When do we need both?]
+
+---
+## XKCD Comic
+
+https://xkcd.com/552/
+
+---
+
+## Within One Week
+
 * Due Friday:  
- + HW1 (Syllabus Quiz and All About You Survey)  
-* Due Monday:  
+ + HW1 (Syllabus Quiz and All About You Survey) 
+ Note that your new homework will be posted on this      Friday. Make sure to check the course website.
+* Due Monday:   
+  + Reading and Reading Questions 
+* Due Wednesday:  
   + Reading and Reading Questions  
   
 
