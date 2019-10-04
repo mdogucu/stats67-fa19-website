@@ -1,0 +1,224 @@
+---
+title: "Visualizing Data"
+author: "Dr. Dogucu"
+date: "2019-10-09"
+output: 
+  xaringan::moon_reader:
+    css: slide-styles.css
+      
+---
+
+layout: true
+  
+<div class="my-header"></div>
+
+<div class="my-footer"> 
+ Copyright &copy; <a href="https://mdogucu.ics.uci.edu">Dr. Mine Dogucu</a>. All Rights Reserved.</div> 
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r message = FALSE}
+library(titanic)
+library(tidyverse)
+
+titanic_train <- 
+  titanic_train %>% 
+  mutate(Survived = case_when(Survived == 0 ~ "Not Survived",
+                              Survived == 1 ~ "Survived")) %>% 
+  mutate(Pclass = as.factor(Pclass))
+```
+
+## Recap 
+
+- Always make a copy of today's project, whenever you start the project for the first time. 
+
+<img src = "img/cloud-copy.png" class="center-image">  </img>
+
+---
+
+# Recap
+
+
+You can "run" or "process" .Rmd file by knitting. To knit your document  
+
+- Clicking the Knit button or
+
+- Using short cut Ctrl (Cmd on Mac) + Shift + K 
+
+Every time you knit your .Rmd file is automatically saved.
+
+
+---
+## One More Short Cut 
+
+For %>% (aka piper operator) you can use the shortcut Ctrl + Shift + M (Windows) or Cmd + Shift + M (Mac)
+
+When you read out your code, you can read %>% as "and then"
+
+
+---
+
+## Today
+
+Data Visualzation 
+Show fivethirty eight examples. 
+
+Other examples
+
+---
+
+
+
+## Three steps of basic visualization with ggplot2 package
+
+1. Make some space (this soon will make sense) using the `ggplot()` function.
+
+2. Draw your axes using `aes()` function.
+
+3. Add you plot, whether it is  histogram, bar plot or something else. We will call these geom objects.
+
+
+---
+
+## Flow for the Day
+
+For every plot, 
+
+1) Decide, what variables to use.  
+2) Decide which variable is on which axes.  
+3) Decide what kind of plot it is.  
+4) Watch the demo for plotting.  
+---
+<br>
+<br>
+<br>
+```{r fig.align = "center", fig.height=6}
+titanic_train %>% 
+    ggplot(aes(x = Survived, fill = Pclass)) + 
+  geom_bar()
+```
+
+
+???
+Make sure to do this step by step please
+
+Show that titanic %>% ggplot() makes space. 
+titanic %>% ggplot(aes(x = Survived)) puts the axes.
+and so on.
+
+Note that they will only see + in R code while using ggplot function because the visualization works in layers and we are adding layers by +.
+
+
+---
+```{r fig.align = "center", fig.height=6}
+titanic_train %>% 
+  ggplot(aes(x = Fare)) + 
+  geom_histogram()
+```
+
+Why are we getting this warning? 
+???
+They should know what bins are from reading. Remind them. ggplot will set up a default binwidth but it ill also warn you about it. 
+Make sure to set your own bindwidth. Remind them we had 3 steps of plots 1)
+making space 2) axes 3) geom object. Which of these steps is bindwidth related to?
+---
+
+<br>
+<br>
+<br>
+```{r fig.align = "center", fig.height=6}
+titanic_train %>% 
+  ggplot(aes(x = Fare)) + 
+  geom_histogram(binwidth = 15)
+```
+  
+  
+??? 
+
+since binwidth is related to the geom object we can put the binwidth argument inside the geom_histogram function. 
+---
+
+## Cheatsheet
+
+Look at the ggplot cheatsheet. Moving on you will attempt at making the plot by finding the geom object from your cheatsheet.
+---
+<br>
+<br>
+<br>
+```{r fig.align = "center", fig.height=6}
+titanic_train %>% 
+  ggplot(aes(x = Pclass, y = Fare)) +
+  geom_boxplot()
+```
+
+---
+## You Attempt This First
+
+Make a plot that shows the relationship between age of the passenger and the fare that they paid. Comment whether older passengers bought more expensive tickets.
+
+---
+
+```{r fig.height=6}
+titanic_train %>% 
+  ggplot(aes(x = Age, y = Fare )) +
+  geom_point()
+```
+
+
+---
+
+bit.ly/shapes
+
+
+
+
+bit.ly/shapes
+
+## Your Turn
+
+
+## Recap
+
+We have learned that we can insert R code chunk to an R Markdown file by 
+
+- Clicking Insert > R or
+- using shortcuts Ctrl+Alt+I (Windows) &	Command+Option+I (Mac)
+
+---
+
+
+## Your Turn
+
+<iframe width="560" height="315" align ="middle" src="https://www.youtube.com/embed/bLF6sAAMb4s?start=3" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+
+
+## Your Turn
+
+You have been provided with `bechdel` dataframe object in your project. Get to know the dataframe and answer the questions. 
+
+---
+
+
+## Getting Ready for Submission
+
+
+- At the top of the .Rmd document you will see a part where my name is written. Replace it with full names of your group members separated by commas. Be careful about the quotation.
+
+- Knit your document as a .pdf one last time. 
+
+- On the files panel, in the lower right, you should see your pdf file. Check the pdf file. Click on More > Export > Download. You now have downloaded your pdf file to your computer.
+
+
+---
+
+## Submission
+
+- Log onto Gradescope and upload it. 
+
+- Gradescope may ask you which page has which questions, provide this information.

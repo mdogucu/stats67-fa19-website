@@ -62,7 +62,7 @@ college_grad_students %>%
 ## Sampling (True or False)
 
 
-An airline company wants an opinion on their service thus leaves a survey in the pockets of passenger students. Some passengers respond to this survey. This is a random sample.
+An airline company wants an opinion on their service thus leaves a survey in the pockets of passenger seats. Some passengers respond to this survey. This is a random sample.
 
 A cell phone factory wants to do quality control of their products to ensure that their customers do not get malfunctioning products. They randomly select 3% of the phones that they produce and manually check if there are any problems or not. All the cell phones in the world make up the population and the cell phones that this factory produces make up the sample. 
 
@@ -95,8 +95,8 @@ gender_admit <-
 gender_admit %>% 
   ggplot(aes(x = Gender, y = Prop, fill = Admit)) +
   geom_bar(stat = "identity") +
-  theme(text = element_text(size=30))
-
+  theme(text = element_text(size=30)) +
+  labs(title = "Admit Rate by Gender")
 
 
 ```
@@ -123,7 +123,8 @@ dept_admit <-
 ggplot(dept_admit, aes(x = Dept, 
                          y = Prop, fill = Admit)) +
   geom_bar(stat = "identity")   +
-  theme(text = element_text(size=30))
+  theme(text = element_text(size=30)) +
+  labs(title = "Admit Rate by Dept")
 
 
 ```
@@ -143,12 +144,17 @@ gender_dept <-
 ggplot(gender_dept, aes(x = Dept, y = Prop, 
                         fill = Gender)) +
   geom_bar(stat = "identity") +
-  theme(text = element_text(size=30))
+  theme(text = element_text(size=15)) +
+  labs(title = "App Rate based on Gender for each Dept")
   
 ```
 
 ---
+## The Original Article
 
+[Sex Bias in Graduate Admissions: Data from Berkeley](https://pdfs.semanticscholar.org/b704/3d57d399bd28b2d3e84fb9d342a307472458.pdf)
+
+---
 ## Design an Experiment
 
 On the course syllabus it says:

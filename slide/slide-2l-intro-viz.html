@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Visualizing Data</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Dogucu" />
+    <meta name="date" content="2019-10-09" />
+    <link rel="stylesheet" href="slide-styles.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Visualizing Data
+### Dr. Dogucu
+### 2019-10-09
+
+---
+
+
+layout: true
+  
+&lt;div class="my-header"&gt;&lt;/div&gt;
+
+&lt;div class="my-footer"&gt; 
+ Copyright &amp;copy; &lt;a href="https://mdogucu.ics.uci.edu"&gt;Dr. Mine Dogucu&lt;/a&gt;. All Rights Reserved.&lt;/div&gt; 
+
+---
+
+
+
+
+
+## Recap 
+
+- Always make a copy of today's project, whenever you start the project for the first time. 
+
+&lt;img src = "img/cloud-copy.png" class="center-image"&gt;  &lt;/img&gt;
+
+---
+
+# Recap
+
+
+You can "run" or "process" .Rmd file by knitting. To knit your document  
+
+- Clicking the Knit button or
+
+- Using short cut Ctrl (Cmd on Mac) + Shift + K 
+
+Every time you knit your .Rmd file is automatically saved.
+
+
+---
+## One More Short Cut 
+
+For %&gt;% (aka piper operator) you can use the shortcut Ctrl + Shift + M (Windows) or Cmd + Shift + M (Mac)
+
+When you read out your code, you can read %&gt;% as "and then"
+
+
+---
+
+## Today
+
+Data Visualzation 
+Show fivethirty eight examples. 
+
+Other examples
+
+---
+
+
+
+## Three steps of basic visualization with ggplot2 package
+
+1. Make some space (this soon will make sense) using the `ggplot()` function.
+
+2. Draw your axes using `aes()` function.
+
+3. Add you plot, whether it is  histogram, bar plot or something else. We will call these geom objects.
+
+
+---
+
+## Flow for the Day
+
+For every plot, 
+
+1) Decide, what variables to use.  
+2) Decide which variable is on which axes.  
+3) Decide what kind of plot it is.  
+4) Watch the demo for plotting.  
+---
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;img src="slide-2l-intro-viz_files/figure-html/unnamed-chunk-2-1.png" style="display: block; margin: auto;" /&gt;
+
+
+???
+Make sure to do this step by step please
+
+Show that titanic %&gt;% ggplot() makes space. 
+titanic %&gt;% ggplot(aes(x = Survived)) puts the axes.
+and so on.
+
+Note that they will only see + in R code while using ggplot function because the visualization works in layers and we are adding layers by +.
+
+
+---
+
+```
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+```
+
+&lt;img src="slide-2l-intro-viz_files/figure-html/unnamed-chunk-3-1.png" style="display: block; margin: auto;" /&gt;
+
+Why are we getting this warning? 
+???
+They should know what bins are from reading. Remind them. ggplot will set up a default binwidth but it ill also warn you about it. 
+Make sure to set your own bindwidth. Remind them we had 3 steps of plots 1)
+making space 2) axes 3) geom object. Which of these steps is bindwidth related to?
+---
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;img src="slide-2l-intro-viz_files/figure-html/unnamed-chunk-4-1.png" style="display: block; margin: auto;" /&gt;
+  
+  
+??? 
+
+since binwidth is related to the geom object we can put the binwidth argument inside the geom_histogram function. 
+---
+
+## Cheatsheet
+
+Look at the ggplot cheatsheet. Moving on you will attempt at making the plot by finding the geom object from your cheatsheet.
+---
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;img src="slide-2l-intro-viz_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+## You Attempt This First
+
+Make a plot that shows the relationship between age of the passenger and the fare that they paid. Comment whether older passengers bought more expensive tickets.
+
+---
+
+
+```
+## Warning: Removed 177 rows containing missing values (geom_point).
+```
+
+![](slide-2l-intro-viz_files/figure-html/unnamed-chunk-6-1.png)&lt;!-- --&gt;
+
+
+---
+
+bit.ly/shapes
+
+
+
+
+bit.ly/shapes
+
+## Your Turn
+
+
+## Recap
+
+We have learned that we can insert R code chunk to an R Markdown file by 
+
+- Clicking Insert &gt; R or
+- using shortcuts Ctrl+Alt+I (Windows) &amp;	Command+Option+I (Mac)
+
+---
+
+
+## Your Turn
+
+&lt;iframe width="560" height="315" align ="middle" src="https://www.youtube.com/embed/bLF6sAAMb4s?start=3" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+---
+
+
+## Your Turn
+
+You have been provided with `bechdel` dataframe object in your project. Get to know the dataframe and answer the questions. 
+
+---
+
+
+## Getting Ready for Submission
+
+
+- At the top of the .Rmd document you will see a part where my name is written. Replace it with full names of your group members separated by commas. Be careful about the quotation.
+
+- Knit your document as a .pdf one last time. 
+
+- On the files panel, in the lower right, you should see your pdf file. Check the pdf file. Click on More &gt; Export &gt; Download. You now have downloaded your pdf file to your computer.
+
+
+---
+
+## Submission
+
+- Log onto Gradescope and upload it. 
+
+- Gradescope may ask you which page has which questions, provide this information.
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
