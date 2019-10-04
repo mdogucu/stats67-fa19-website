@@ -40,7 +40,7 @@ titanic_train <-
 
 ---
 
-# Recap
+## Recap
 
 
 You can "run" or "process" .Rmd file by knitting. To knit your document  
@@ -50,6 +50,16 @@ You can "run" or "process" .Rmd file by knitting. To knit your document
 - Using short cut Ctrl (Cmd on Mac) + Shift + K 
 
 Every time you knit your .Rmd file is automatically saved.
+
+---
+## Recap
+
+
+We have learned that we can insert R code chunk to an R Markdown file by 
+
+- Clicking Insert > R or
+- using shortcuts Ctrl+Alt+I (Windows) &	Command+Option+I (Mac)
+
 
 
 ---
@@ -98,7 +108,7 @@ For every plot,
 <br>
 ```{r fig.align = "center", fig.height=6}
 titanic_train %>% 
-    ggplot(aes(x = Survived, fill = Pclass)) + 
+    ggplot(aes(x = Survived)) + 
   geom_bar()
 ```
 
@@ -170,43 +180,53 @@ titanic_train %>%
 
 
 ---
+## Color 
 
-bit.ly/shapes
+```{r echo = TRUE}
+titanic_train %>% 
+  ggplot(aes(x = Fare )) + 
+  geom_histogram(color = "salmon")
+```
+
+
+---
+## Fill 
+
+```{r echo = TRUE}
+titanic_train %>% 
+  ggplot(aes(x = Fare)) + 
+  geom_histogram(fill = "salmon")
+```
+---
+## Stacked bar plot
+
+Can you guess where the fill argument will go for this stacked bar plot?
+
+```{r}
+titanic_train %>% 
+  ggplot(aes(x = Pclass, fill = Survived)) +
+  geom_bar()
+```
+
+???
+
+Note that since it is a barplot y axis is reserved for count
+Note that these are the default color scheme of ggplot
+They should focus on adding a second variable rather than changing colors.
+
+
+## Colors of R
 
 
 
-
-bit.ly/shapes
+bit.ly/colors-r
 
 ## Your Turn
 
 
-## Recap
-
-We have learned that we can insert R code chunk to an R Markdown file by 
-
-- Clicking Insert > R or
-- using shortcuts Ctrl+Alt+I (Windows) &	Command+Option+I (Mac)
-
 ---
-
-
-## Your Turn
-
-<iframe width="560" height="315" align ="middle" src="https://www.youtube.com/embed/bLF6sAAMb4s?start=3" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
----
-
-
-## Your Turn
-
-You have been provided with `bechdel` dataframe object in your project. Get to know the dataframe and answer the questions. 
-
----
-
 
 ## Getting Ready for Submission
-
 
 - At the top of the .Rmd document you will see a part where my name is written. Replace it with full names of your group members separated by commas. Be careful about the quotation.
 

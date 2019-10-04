@@ -39,7 +39,7 @@ layout: true
 
 ---
 
-# Recap
+## Recap
 
 
 You can "run" or "process" .Rmd file by knitting. To knit your document  
@@ -49,6 +49,16 @@ You can "run" or "process" .Rmd file by knitting. To knit your document
 - Using short cut Ctrl (Cmd on Mac) + Shift + K 
 
 Every time you knit your .Rmd file is automatically saved.
+
+---
+## Recap
+
+
+We have learned that we can insert R code chunk to an R Markdown file by 
+
+- Clicking Insert &gt; R or
+- using shortcuts Ctrl+Alt+I (Windows) &amp;	Command+Option+I (Mac)
+
 
 
 ---
@@ -159,43 +169,63 @@ Make a plot that shows the relationship between age of the passenger and the far
 
 
 ---
-
-bit.ly/shapes
-
+## Color 
 
 
+```r
+titanic_train %&gt;% 
+  ggplot(aes(x = Fare )) + 
+  geom_histogram(color = "salmon")
+```
 
-bit.ly/shapes
+```
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+```
+
+![](slide-2l-intro-viz_files/figure-html/unnamed-chunk-7-1.png)&lt;!-- --&gt;
+
+
+---
+## Fill 
+
+
+```r
+titanic_train %&gt;% 
+  ggplot(aes(x = Fare)) + 
+  geom_histogram(fill = "salmon")
+```
+
+```
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+```
+
+![](slide-2l-intro-viz_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
+---
+## Stacked bar plot
+
+Can you guess where the fill argument will go for this stacked bar plot?
+
+![](slide-2l-intro-viz_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
+
+???
+
+Note that since it is a barplot y axis is reserved for count
+Note that these are the default color scheme of ggplot
+They should focus on adding a second variable rather than changing colors.
+
+
+## Colors of R
+
+
+
+bit.ly/colors-r
 
 ## Your Turn
 
 
-## Recap
-
-We have learned that we can insert R code chunk to an R Markdown file by 
-
-- Clicking Insert &gt; R or
-- using shortcuts Ctrl+Alt+I (Windows) &amp;	Command+Option+I (Mac)
-
 ---
-
-
-## Your Turn
-
-&lt;iframe width="560" height="315" align ="middle" src="https://www.youtube.com/embed/bLF6sAAMb4s?start=3" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
-
----
-
-
-## Your Turn
-
-You have been provided with `bechdel` dataframe object in your project. Get to know the dataframe and answer the questions. 
-
----
-
 
 ## Getting Ready for Submission
-
 
 - At the top of the .Rmd document you will see a part where my name is written. Replace it with full names of your group members separated by commas. Be careful about the quotation.
 
