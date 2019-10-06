@@ -21,11 +21,11 @@ a{
 }
 
 p {
-font-size: 28px;
+font-size: 38px;
 }
 
 ul {
-  font-size: 28px;
+  font-size: 38px;
 
 }
 
@@ -60,8 +60,9 @@ div.my-footer {
   
 .question{
   background-color:#cfafaf;
-  font-size: 36px;
+  font-size: 43px;
   color:#000000;
+  text-align:center;
 
 }
 
