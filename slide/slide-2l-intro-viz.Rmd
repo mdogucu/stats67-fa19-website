@@ -24,6 +24,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r message = FALSE}
 library(titanic)
 library(tidyverse)
+library(fivethirtyeight)
 
 titanic_train <- 
   titanic_train %>% 
@@ -74,10 +75,13 @@ When you read out your code, you can read %>% as "and then"
 
 ## Today
 
-Data Visualzation 
-Show fivethirty eight examples. 
+Data Visualization using ggplot2 package.
 
-Other examples
+## Examples
+
+[BBC](https://bbc.github.io/rcookbook/)  
+[FiveThirtyEight](https://fivethirtyeight.com/features/the-rise-of-religiously-inspired-terrorism-in-france/)  
+[Master List](http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html#Histogram)  
 
 ---
 
@@ -108,8 +112,10 @@ For every plot,
 <br>
 ```{r fig.align = "center", fig.height=6}
 titanic_train %>% 
-    ggplot(aes(x = Survived)) + 
-  geom_bar()
+  ggplot(aes(x = Survived)) + 
+  geom_bar() +
+  theme(text = element_text(size=30)) 
+
 ```
 
 
@@ -127,29 +133,31 @@ Note that they will only see + in R code while using ggplot function because the
 ```{r fig.align = "center", fig.height=6}
 titanic_train %>% 
   ggplot(aes(x = Fare)) + 
-  geom_histogram()
+  geom_histogram() +
+  theme(text = element_text(size=30))
 ```
 
 Why are we getting this warning? 
+
 ???
+
 They should know what bins are from reading. Remind them. ggplot will set up a default binwidth but it ill also warn you about it. 
 Make sure to set your own bindwidth. Remind them we had 3 steps of plots 1)
 making space 2) axes 3) geom object. Which of these steps is bindwidth related to?
 ---
 
-<br>
-<br>
-<br>
 ```{r fig.align = "center", fig.height=6}
 titanic_train %>% 
   ggplot(aes(x = Fare)) + 
-  geom_histogram(binwidth = 15)
+  geom_histogram(binwidth = 15) +
+  theme(text = element_text(size=30))
 ```
   
+What step of the code is binwidth related to?
   
-??? 
+???    
 
-since binwidth is related to the geom object we can put the binwidth argument inside the geom_histogram function. 
+Since binwidth is related to the geom object we can put the binwidth argument inside the geom_histogram function. 
 ---
 
 ## Cheatsheet
@@ -162,7 +170,8 @@ Look at the ggplot cheatsheet. Moving on you will attempt at making the plot by 
 ```{r fig.align = "center", fig.height=6}
 titanic_train %>% 
   ggplot(aes(x = Pclass, y = Fare)) +
-  geom_boxplot()
+  geom_boxplot() +
+  theme(text = element_text(size=30))
 ```
 
 ---
@@ -172,40 +181,99 @@ Make a plot that shows the relationship between age of the passenger and the far
 
 ---
 
-```{r fig.height=6}
+```{r fig.height=6, fig.align='center'}
 titanic_train %>% 
   ggplot(aes(x = Age, y = Fare )) +
-  geom_point()
+  geom_point() +
+  theme(text = element_text(size=30))
 ```
 
 
 ---
 ## Color 
 
-```{r echo = TRUE}
+```{r echo = TRUE, eval = FALSE}
 titanic_train %>% 
   ggplot(aes(x = Fare )) + 
-  geom_histogram(color = "salmon")
+  geom_histogram(color = "salmon") 
+```
+
+```{r fig.height = 5}
+titanic_train %>% 
+  ggplot(aes(x = Fare )) + 
+  geom_histogram(color = "salmon") +
+  theme(text = element_text(size=30))
 ```
 
 
+
 ---
+
 ## Fill 
 
-```{r echo = TRUE}
+```{r echo = TRUE, eval = FALSE}
 titanic_train %>% 
   ggplot(aes(x = Fare)) + 
-  geom_histogram(fill = "salmon")
+  geom_histogram(fill = "salmon") 
+```
+
+```{r fig.height=5}
+titanic_train %>% 
+  ggplot(aes(x = Fare)) + 
+  geom_histogram(fill = "salmon") +
+  theme(text = element_text(size=30))
+```
+
+---
+
+## Shape
+
+```{r fig.height = 4, fig.align='center', warning = FALSE, eval = FALSE, echo = TRUE}
+titanic_train %>% 
+  ggplot(aes(x = Age, y = Fare )) +
+  geom_point(shape = 4) 
+```
+
+```{r fig.height = 4, fig.align='center', warning = FALSE}
+titanic_train %>% 
+  ggplot(aes(x = Age, y = Fare )) +
+  geom_point(shape = 4) +
+  theme(text = element_text(size=30))
 ```
 ---
+
+class: center, inverse
+## More colors
+
+<br>
+<br>
+<br>
+
+[bit.ly/colors-r](bit.ly/colors-r)
+
+---
+
+
+class: center, inverse
+## More shapes
+
+<br>
+<br>
+<br>
+
+[bit.ly/shapes-r](bit.ly/shapes-r)
+
+---
+
 ## Stacked bar plot
 
 Can you guess where the fill argument will go for this stacked bar plot?
 
-```{r}
+```{r fig.height=5, fig.align='center'}
 titanic_train %>% 
   ggplot(aes(x = Pclass, fill = Survived)) +
-  geom_bar()
+  geom_bar() +
+  theme(text = element_text(size=30))
 ```
 
 ???
@@ -215,28 +283,33 @@ Note that these are the default color scheme of ggplot
 They should focus on adding a second variable rather than changing colors.
 
 
-## Colors of R
-
-
-
-bit.ly/colors-r
+---
 
 ## Your Turn
+
+Make this plot with any color other than the default one and submit it. Make sure to set binwidth. `bechdel` is loaded already.
+
+```{r warning = FALSE, fig.height=4, fig.align='center'}
+bechdel %>% 
+  ggplot(aes(x = domgross, fill = binary)) +
+  geom_histogram(binwidth = 10000000) +
+  theme(text = element_text(size=30))
+```
 
 
 ---
 
 ## Getting Ready for Submission
 
-- At the top of the .Rmd document you will see a part where my name is written. Replace it with full names of your group members separated by commas. Be careful about the quotation.
+At the top of the .Rmd document you will see a part where my name is written. Replace it with full names of your group members separated by commas. Be careful about the quotation.
 
-- Knit your document as a .pdf one last time. 
+Knit your document as a .pdf one last time. 
 
-- On the files panel, in the lower right, you should see your pdf file. Check the pdf file. Click on More > Export > Download. You now have downloaded your pdf file to your computer.
+On the files panel, in the lower right, you should see your pdf file. Check the pdf file. Click on More > Export > Download. You now have downloaded your pdf file to your computer.
+
 
 
 ---
-
 ## Submission
 
 - Log onto Gradescope and upload it. 

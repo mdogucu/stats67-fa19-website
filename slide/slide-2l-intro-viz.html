@@ -73,10 +73,13 @@ When you read out your code, you can read %&gt;% as "and then"
 
 ## Today
 
-Data Visualzation 
-Show fivethirty eight examples. 
+Data Visualization using ggplot2 package.
 
-Other examples
+## Examples
+
+[BBC](https://bbc.github.io/rcookbook/)  
+[FiveThirtyEight](https://fivethirtyeight.com/features/the-rise-of-religiously-inspired-terrorism-in-france/)  
+[Master List](http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html#Histogram)  
 
 ---
 
@@ -127,21 +130,21 @@ Note that they will only see + in R code while using ggplot function because the
 &lt;img src="slide-2l-intro-viz_files/figure-html/unnamed-chunk-3-1.png" style="display: block; margin: auto;" /&gt;
 
 Why are we getting this warning? 
+
 ???
+
 They should know what bins are from reading. Remind them. ggplot will set up a default binwidth but it ill also warn you about it. 
 Make sure to set your own bindwidth. Remind them we had 3 steps of plots 1)
 making space 2) axes 3) geom object. Which of these steps is bindwidth related to?
 ---
 
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
 &lt;img src="slide-2l-intro-viz_files/figure-html/unnamed-chunk-4-1.png" style="display: block; margin: auto;" /&gt;
   
+What step of the code is binwidth related to?
   
-??? 
+???    
 
-since binwidth is related to the geom object we can put the binwidth argument inside the geom_histogram function. 
+Since binwidth is related to the geom object we can put the binwidth argument inside the geom_histogram function. 
 ---
 
 ## Cheatsheet
@@ -165,7 +168,7 @@ Make a plot that shows the relationship between age of the passenger and the far
 ## Warning: Removed 177 rows containing missing values (geom_point).
 ```
 
-![](slide-2l-intro-viz_files/figure-html/unnamed-chunk-6-1.png)&lt;!-- --&gt;
+&lt;img src="slide-2l-intro-viz_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -175,37 +178,78 @@ Make a plot that shows the relationship between age of the passenger and the far
 ```r
 titanic_train %&gt;% 
   ggplot(aes(x = Fare )) + 
-  geom_histogram(color = "salmon")
+  geom_histogram(color = "salmon") 
 ```
 
-```
-## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
-```
-
-![](slide-2l-intro-viz_files/figure-html/unnamed-chunk-7-1.png)&lt;!-- --&gt;
-
-
----
-## Fill 
-
-
-```r
-titanic_train %&gt;% 
-  ggplot(aes(x = Fare)) + 
-  geom_histogram(fill = "salmon")
-```
 
 ```
 ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 ```
 
 ![](slide-2l-intro-viz_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
+
+
+
 ---
+
+## Fill 
+
+
+```r
+titanic_train %&gt;% 
+  ggplot(aes(x = Fare)) + 
+  geom_histogram(fill = "salmon") 
+```
+
+
+```
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+```
+
+![](slide-2l-intro-viz_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
+
+---
+
+## Shape
+
+
+```r
+titanic_train %&gt;% 
+  ggplot(aes(x = Age, y = Fare )) +
+  geom_point(shape = 4) 
+```
+
+&lt;img src="slide-2l-intro-viz_files/figure-html/unnamed-chunk-12-1.png" style="display: block; margin: auto;" /&gt;
+---
+
+class: center, inverse
+## More colors
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+[bit.ly/colors-r](bit.ly/colors-r)
+
+---
+
+
+class: center, inverse
+## More shapes
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+[bit.ly/shapes-r](bit.ly/shapes-r)
+
+---
+
 ## Stacked bar plot
 
 Can you guess where the fill argument will go for this stacked bar plot?
 
-![](slide-2l-intro-viz_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
+&lt;img src="slide-2l-intro-viz_files/figure-html/unnamed-chunk-13-1.png" style="display: block; margin: auto;" /&gt;
 
 ???
 
@@ -214,28 +258,28 @@ Note that these are the default color scheme of ggplot
 They should focus on adding a second variable rather than changing colors.
 
 
-## Colors of R
-
-
-
-bit.ly/colors-r
+---
 
 ## Your Turn
+
+Make this plot with any color other than the default one and submit it. Make sure to set binwidth. `bechdel` is loaded already.
+
+&lt;img src="slide-2l-intro-viz_files/figure-html/unnamed-chunk-14-1.png" style="display: block; margin: auto;" /&gt;
 
 
 ---
 
 ## Getting Ready for Submission
 
-- At the top of the .Rmd document you will see a part where my name is written. Replace it with full names of your group members separated by commas. Be careful about the quotation.
+At the top of the .Rmd document you will see a part where my name is written. Replace it with full names of your group members separated by commas. Be careful about the quotation.
 
-- Knit your document as a .pdf one last time. 
+Knit your document as a .pdf one last time. 
 
-- On the files panel, in the lower right, you should see your pdf file. Check the pdf file. Click on More &gt; Export &gt; Download. You now have downloaded your pdf file to your computer.
+On the files panel, in the lower right, you should see your pdf file. Check the pdf file. Click on More &gt; Export &gt; Download. You now have downloaded your pdf file to your computer.
+
 
 
 ---
-
 ## Submission
 
 - Log onto Gradescope and upload it. 
