@@ -13,6 +13,7 @@ output:
 By the end of this lab, you will be able to:
 
 - select appropriate plots for given variables.
+- list three basic steps/layers of ggplot.
 - use `ggplot()` function to plot graphs.
 
 <br>
