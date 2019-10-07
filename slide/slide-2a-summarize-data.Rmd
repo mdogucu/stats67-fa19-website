@@ -60,7 +60,7 @@ This is NOT a class that you can only show up to midterm and final, and pass.
 ## All About You Survey
 
 - Thank you. I am happy to get to know you.
-- Concerns: Programming, Integrals, 
+- Worry: Programming, R, Probability, Integrals, Failing, Grades, No AP Stats, Group work, Staying awake during lecture, Learning things I may not ever use, Laptop issues, Time management, Course load, Catching Up after late registeration, Wednesday schedule,  Reading, New concepts/vocabulary, not CS major, no graphing calculator, Waking up/ driving, Nothing 
 ---
 ## RStudio Cloud
 
