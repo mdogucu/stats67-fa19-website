@@ -32,7 +32,7 @@ layout: true
 ## Check
 
 - Font size
-
+---
 ## Announcements
 
 - Additional office hours: Thursdays 3 - 4 pm.
@@ -67,7 +67,7 @@ This is NOT a class that you can only show up to midterm and final, and pass.
 ## All About You Survey
 
 - Thank you. I am happy to get to know you.
-- Concerns: Programming, Integrals, 
+- Worry: Programming, R, Probability, Integrals, Failing, Grades, No AP Stats, Group work, Staying awake during lecture, Learning things I may not ever use, Laptop issues, Time management, Course load, Catching Up after late registeration, Wednesday schedule,  Reading, New concepts/vocabulary, not CS major, no graphing calculator, Waking up/ driving, Nothing 
 ---
 ## RStudio Cloud
 
@@ -84,7 +84,7 @@ This is NOT a class that you can only show up to midterm and final, and pass.
 
 ## Review - Study Design
 
-Patients with a certain disease at a state hospital participate in a research study. They are randomly split into two and either receive a new found drug or a place based on their group. Researchers observe that the patients who have taken the drug have been cured from the disease. Which of the following is true? 
+Patients with a certain disease at a state hospital participate in a research study. They are randomly split into two and either receive a new found drug or a placebo based on their group. Researchers observe that the patients who have taken the drug have been cured from the disease. Which of the following is true? 
 
 a) Researchers can conclude that this drug cures the disease.  
 b) This is an observational study since it says "observe". Researchers cannot conclude that this drug cures the disease.   
@@ -132,7 +132,13 @@ a. a confounding design.
 b. a single-blind design.  
 c. a double-blind design.  
 ---
+## Review - Study Design
+Mohammed claims that he can tell the difference between tap water and bottled water. His friend, Phoebe does not believe him. They want to test his claim. They invite their friend Xuan to help out. Xuan pours bottled or tap water into a cup and gives it to Phoebe who then gives this to Mohammed. They repeat this twenty times. The study design is
 
+a. a confounding design.  
+b. a single-blind design.  
+c. __a double-blind design__.  
+---
 ## Review - Relationships of Variables
 
 If two variables are related/associated they are called __dependent__ variables (e.g. having a college degree and income)
@@ -297,7 +303,7 @@ count(titanic_train,
 
 
 
-Calculate 1)mean, 2) median, 3) mode, 4) variance, 5)standard deviation, 5) first quartile, 6) third quartile, 7) interquartile range and 
+Calculate 1)mean, 2) median, 3) mode, 4) first quartile, 5) third quartile, 6) interquartile range and 
 
 Draw a boxplot
 ---
@@ -309,7 +315,7 @@ Draw a boxplot
 titanic_train %&gt;% 
   summarize(mean(Fare), median(Fare),
             sd(Fare), var(Fare), 
-            min (Fare), max(Fare))
+            min(Fare), max(Fare))
 ```
 
 ```
@@ -367,22 +373,6 @@ titanic_train %&gt;%
 
 You can only group by a categorical variable.
 Imagine doing this by hand. You would first take the `Fare` amounts and then divide them into three groups based on `Pclass` and then calculate the mean for each group. 
----
-
-## Mean (1 or 3) and Std Dev (1 or 3)
-
-&lt;img src="slide-2a-summarize-data_files/figure-html/unnamed-chunk-19-1.png" style="display: block; margin: auto;" /&gt;
-
----
-
-## Descriptives Notation
-
-| Description        	| Population Parameter 	| Sample Statistic 	|
-|--------------------	|----------------------	|------------------	|
-| Mean               	|         `\(\mu\)`       	|     `\(\bar{x}\)`    	|
-| Variance           	|      `\(\sigma^2\)`      	|       `\(s^2\)`      	|
-| Standard Deviation 	|       `\(\sigma\)`       	|        `\(s\)`       	|
-
 
 ---
 
@@ -402,7 +392,7 @@ If Tyrion Lannister (4 feet 5 inches - 135.00 cm) were to walk into our classroo
 - for a pair of categorical variables
 - for a single continuous variable
 - for a pair of continuous variables
-- for a single categorical and continuous variables
+- for a single categorical and a single continuous variables
 
 
 ---
