@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Summarizing Data</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Dogucu" />
+    <meta name="date" content="2019-10-07" />
+    <link rel="stylesheet" href="slide-styles.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Summarizing Data
+### Dr. Dogucu
+### 2019-10-07
+
+---
+
+
+layout: true
+  
+&lt;div class="my-header"&gt;&lt;/div&gt;
+
+&lt;div class="my-footer"&gt; 
+ Copyright &amp;copy; &lt;a href="https://mdogucu.ics.uci.edu"&gt;Dr. Mine Dogucu&lt;/a&gt;. All Rights Reserved.&lt;/div&gt; 
+
+---
+
+
+
+## Announcements
+
+- Additional office hours: Thursdays 3 - 4 pm.
+
+- [OpenIntro has videos](https://www.youtube.com/user/OpenIntroOrg/playlists)
+- Do not trust Canvas for your grades. Grading policies are on the course website. 
+
+- Even though I respect your preferred name, Gradescope can only detect your official name that is on the Course roster. 
+
+---
+
+## Clarifications
+
+- Reading questions are due BEFORE class. You only get ONE attempt and it is timed. 
+- Week 1 was for getting used to the course. Make sure you read instructions.
+- Lab assignments are to be completed in class during discussion sessions.
+
+---
+## Clarifications
+
+- Reading Question  regarding music study skills
+
+---
+
+## Attendance
+
+If you do not attend lecture or discussion, you will be lost. 
+
+This is NOT a class that you can only show up to midterm and final, and pass.
+
+---
+## All About You Survey
+
+- Thank you. I am happy to get to know you.
+- Concerns: Programming, Integrals, 
+---
+## RStudio Cloud
+
+&lt;img src = "img/cloud-options.png" class="center-image"&gt;  &lt;/img&gt;
+---
+## Why R?
+
+- First and foremost you will add one more language to your skill set. You should know both Python and R.
+- Unlike Python, which is a general purpose language, R was built for data handling and analysis and is a powerful tool for data science. 
+- R is rich and provides functions for any typical statistical model that you can think of.
+- R provides a comprehensive data visualization tools that are easy to use such as `ggplot`.
+
+---
+
+## Review - Study Design
+
+Patients with a certain disease at a state hospital participate in a research study. They are randomly split into two and either receive a new found drug or a place based on their group. Researchers observe that the patients who have taken the drug have been cured from the disease. Which of the following is true? 
+
+a) Researchers can conclude that this drug cures the disease.  
+b) This is an observational study since it says "observe". Researchers cannot conclude that this drug cures the disease.   
+c) Researchers can conclude that this drug cures the disease only for this sample. 
+
+---
+## Review - Study Design
+
+Patients with a certain disease at a state hospital participate in a research study. They are randomly split into two and either receive a new found drug or a place based on their group. Researchers observe that the patients who have taken the drug have been cured from the disease. Which of the following is true? 
+
+a) Researchers can conclude that this drug cures the disease.  
+b) This is an observational study since it says "observe". Researchers cannot conclude that this drug cures the disease.   
+__c) Researchers can conclude that this drug cures the disease only for this sample.__ 
+
+---
+## A/B testing
+
+- A/B testing is basically an experiment that compares two versions (A and B) of a single variable.
+- It is commonly used on measuring online activies such as click-through rates (usually online ads) and revenue per user.
+- Example: Let's assume that on your company's web page you show the ads on the right side. You want to test whether moving the ad to the header will increase clicks on the ad (and money for your company). For randomly selected half of the users, you can display ads on the right (version A - control), and for the other half you can display the ads on the header (version B - treatment) and compare. 
+
+---
+## Review - Types of Variables
+
+
+```r
+titanic_train %&gt;% 
+  select(PassengerId, Name) %&gt;% 
+  glimpse()
+```
+
+```
+## Observations: 891
+## Variables: 2
+## $ PassengerId &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,...
+## $ Name        &lt;chr&gt; "Braund, Mr. Owen Harris", "Cumings, Mrs. John Bra...
+```
+
+Note that both `PassengerId` and `Name` are nomimal variables. There is really no meaningful ordering or grouping for these variables. 
+---
+## Review - Study Design
+Mohammed claims that he can tell the difference between tap water and bottled water. His friend, Phoebe does not believe him. They want to test his claim. They invite their friend Xuan to help out. Xuan pours bottled or tap water into a cup and gives it to Phoebe who then gives this to Mohammed. They repeat this twenty times. The study design is
+
+a. a confounding design.  
+b. a single-blind design.  
+c. a double-blind design.  
+---
+
+## Review - Relationships of Variables
+
+If two variables are related/associated they are called __dependent__ variables (e.g. having a college degree and income)
+
+If two variables are not related/associated they are called __independent__ variables (e.g. your hair color and whether it will rain in Gaborone.)
+---
+## Some R terminology 
+
+
+```r
+glimpse(titanic_train)
+```
+
+```
+## Observations: 891
+## Variables: 12
+## $ PassengerId &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,...
+## $ Survived    &lt;int&gt; 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0,...
+## $ Pclass      &lt;int&gt; 3, 1, 3, 1, 3, 3, 1, 3, 3, 2, 3, 1, 3, 3, 3, 2, 3,...
+## $ Name        &lt;chr&gt; "Braund, Mr. Owen Harris", "Cumings, Mrs. John Bra...
+## $ Sex         &lt;chr&gt; "male", "female", "female", "female", "male", "mal...
+## $ Age         &lt;dbl&gt; 22, 38, 26, 35, 35, NA, 54, 2, 27, 14, 4, 58, 20, ...
+## $ SibSp       &lt;int&gt; 1, 1, 0, 1, 0, 0, 0, 3, 0, 1, 1, 0, 0, 1, 0, 0, 4,...
+## $ Parch       &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 1, 0, 0, 5, 0, 0, 1,...
+## $ Ticket      &lt;chr&gt; "A/5 21171", "PC 17599", "STON/O2. 3101282", "1138...
+## $ Fare        &lt;dbl&gt; 7.2500, 71.2833, 7.9250, 53.1000, 8.0500, 8.4583, ...
+## $ Cabin       &lt;chr&gt; "", "C85", "", "C123", "", "", "E46", "", "", "", ...
+## $ Embarked    &lt;chr&gt; "S", "C", "S", "S", "S", "Q", "S", "S", "S", "C", ...
+```
+---
+## Some R terminology
+
+R is a functional language. In this case `glimpse()` is a function and `titanic_train` is the argument. 
+
+---
+## Review - __%&gt;%__ (aka pipe operator)
+
+Since R is functional let's remember functions from algebra. If you want to execute fog(x), you have three choices in R
+
+
+```r
+f(g(x))
+```
+
+
+
+```r
+g(x) %&gt;% 
+  f()
+```
+
+
+```r
+x %&gt;% 
+  g() %&gt;% 
+  f()
+```
+
+---
+## Review - __%&gt;%__ (aka pipe operator)
+
+
+
+```r
+glimpse(titanic_train)
+```
+
+
+```r
+titanic_train %&gt;% 
+  glimpse()
+```
+
+---
+
+## Review - __%&gt;%__ (aka pipe operator)
+
+
+```r
+count(titanic_train, Survived)
+```
+
+```
+## # A tibble: 2 x 2
+##   Survived     n
+##      &lt;int&gt; &lt;int&gt;
+## 1        0   549
+## 2        1   342
+```
+
+
+```r
+titanic_train %&gt;% 
+  count(Survived)
+```
+
+```
+## # A tibble: 2 x 2
+##   Survived     n
+##      &lt;int&gt; &lt;int&gt;
+## 1        0   549
+## 2        1   342
+```
+
+---
+
+## Review - `count()`
+
+Count can take more than two variables.
+
+
+```r
+count(titanic_train, Survived, Pclass)
+```
+
+```
+## # A tibble: 6 x 3
+##   Survived Pclass     n
+##      &lt;int&gt;  &lt;int&gt; &lt;int&gt;
+## 1        0      1    80
+## 2        0      2    97
+## 3        0      3   372
+## 4        1      1   136
+## 5        1      2    87
+## 6        1      3   119
+```
+
+---
+## Review - Multiple Lines
+
+You can break code over multiple lines
+
+
+```r
+count(titanic_train, 
+      Survived, 
+      Pclass)
+```
+
+```
+## # A tibble: 6 x 3
+##   Survived Pclass     n
+##      &lt;int&gt;  &lt;int&gt; &lt;int&gt;
+## 1        0      1    80
+## 2        0      2    97
+## 3        0      3   372
+## 4        1      1   136
+## 5        1      2    87
+## 6        1      3   119
+```
+---
+## Summarizing Sleep Data by Hand
+
+
+```
+##  [1] "7"                        "8"                       
+##  [3] "8"                        "8"                       
+##  [5] "8"                        "7"                       
+##  [7] "8"                        "4"                       
+##  [9] "7 (very rare occurrence)" "7.5"
+```
+
+
+
+Calculate 1)mean, 2) median, 3) mode, 4) variance, 5)standard deviation, 5) first quartile, 6) third quartile, 7) interquartile range and 
+
+Draw a boxplot
+---
+## Summarizing Data
+
+
+
+```r
+titanic_train %&gt;% 
+  summarize(mean(Fare), median(Fare),
+            sd(Fare), var(Fare), 
+            min (Fare), max(Fare))
+```
+
+```
+##   mean(Fare) median(Fare) sd(Fare) var(Fare) min(Fare) max(Fare)
+## 1   32.20421      14.4542 49.69343  2469.437         0  512.3292
+```
+---
+## Summarizing Data - Quantiles 
+
+
+```r
+titanic_train %&gt;% 
+  summarize(median(Fare),
+            quantile(Fare, 0.50))
+```
+
+```
+##   median(Fare) quantile(Fare, 0.5)
+## 1      14.4542             14.4542
+```
+---
+
+## Summarizing Data - Quantiles 
+
+
+```r
+titanic_train %&gt;% 
+  summarize(q1 = quantile(Fare, 0.25),
+            q3 = quantile(Fare, 0.75))
+```
+
+```
+##       q1 q3
+## 1 7.9104 31
+```
+---
+
+## Summarizing Data - `group_by()`
+
+
+```r
+titanic_train %&gt;% 
+  group_by(Pclass) %&gt;% 
+  summarize(mean_fare = mean(Fare))
+```
+
+```
+## # A tibble: 3 x 2
+##   Pclass mean_fare
+##    &lt;int&gt;     &lt;dbl&gt;
+## 1      1      84.2
+## 2      2      20.7
+## 3      3      13.7
+```
+
+You can only group by a categorical variable.
+Imagine doing this by hand. You would first take the `Fare` amounts and then divide them into three groups based on `Pclass` and then calculate the mean for each group. 
+---
+
+## Mean (1 or 3) and Std Dev (1 or 3)
+
+&lt;img src="slide-2a-summarize-data_files/figure-html/unnamed-chunk-19-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Descriptives Notation
+
+| Description        	| Population Parameter 	| Sample Statistic 	|
+|--------------------	|----------------------	|------------------	|
+| Mean               	|         `\(\mu\)`       	|     `\(\bar{x}\)`    	|
+| Variance           	|      `\(\sigma^2\)`      	|       `\(s^2\)`      	|
+| Standard Deviation 	|       `\(\sigma\)`       	|        `\(s\)`       	|
+
+
+---
+
+## Effect of Outliers
+
+Let's assume that the height in our classroom has bell-shaped symmetric distribution. In such distributions, mean = median = mode. 
+
+If Michael Jordan (6 feet 6 inches - 198.12 cm) were to walk into our classroom. How would the distibritution of our heights change? Describe the shape and spread. Order the mean, median, and mode in descending order.
+
+If Tyrion Lannister (4 feet 5 inches - 135.00 cm) were to walk into our classroom. How would the distibritution of our heights change? Describe the shape and spread. Order the mean, median, and mode in descending order.
+
+
+---
+## Plots, plots, and more plots
+
+- for a single categorical variable
+- for a pair of categorical variables
+- for a single continuous variable
+- for a pair of continuous variables
+- for a single categorical and continuous variables
+
+
+---
+
+## Within One Week
+
+* Due Wednesday:  
+  + Reading and Reading Questions 
+* Due Friday:  
+ + HW  (Introduction to Data) 
+ Note that your new homework will be posted on this      Friday. Make sure to check the course website.
+* Due Monday:   
+  + Reading and Reading Questions
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
