@@ -10,7 +10,7 @@ output:
 
 ## Learning Objectives
 
-By the end of this lab, you will be able to:
+By the end of this class, you will be able to:
 
 - choose appropriate visualization for discrete data. 
 - choose appropriate visualization for numerical data. 
