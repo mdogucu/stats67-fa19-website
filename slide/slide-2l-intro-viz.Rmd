@@ -296,7 +296,6 @@ bechdel %>%
   theme(text = element_text(size=30))
 ```
 
-
 ---
 
 ## Getting Ready for Submission
@@ -315,3 +314,6 @@ On the files panel, in the lower right, you should see your pdf file. Check the 
 - Log onto Gradescope and upload it. 
 
 - Gradescope may ask you which page has which questions, provide this information.
+
+- Make sure to add your group members' names 
+
