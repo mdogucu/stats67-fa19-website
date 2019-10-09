@@ -1,0 +1,23 @@
+---
+title: "Random Variables"
+date: "2019-10-14"
+output: 
+  html_document:
+    css: slo-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+## Learning Objectives
+
+By the end of this class, you will be able to:
+
+- calculate expected value and variance of discrete random variables and their linear combinations.
+- identify whether a function is probability mass function or not. 
+
+
+
+<br>
+<br>
+<br>
+
