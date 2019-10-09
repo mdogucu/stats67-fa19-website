@@ -1,0 +1,68 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.30)  8 OCT 2019 11:06
+entering extended mode
+**./template.tex
+(template.tex
+LaTeX2e <2018-12-01>
+
+("C:\Users\Mine Dogucu\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\report.
+cls"
+Document Class: report 2018/09/03 v1.4i Standard LaTeX document class
+
+("C:\Users\Mine Dogucu\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size12.
+clo"
+File: size12.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@chapter=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\c@figure=\count87
+\c@table=\count88
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (template.aux)
+\openout1 = `template.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 5.
+ [1
+
+{C:/Users/Mine Dogucu/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (temp
+late.aux) ) 
+Here is how much of TeX's memory you used:
+ 241 strings out of 492895
+ 2845 string characters out of 3120931
+ 60105 words of memory out of 3000000
+ 4235 multiletter control sequences out of 15000+200000
+ 6376 words of font info for 23 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 22i,4n,19p,133b,107s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Mine Dogucu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmmi12.pfb><C:/Users/Mine Dogucu/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb>
+Output written on template.pdf (1 page, 17836 bytes).
+PDF statistics:
+ 14 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
