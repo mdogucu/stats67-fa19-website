@@ -1,5 +1,5 @@
 ---
-title: "Random Variables"
+title: "Binomial and Geometric Distributions"
 date: "2019-10-16"
 output: 
   html_document:
@@ -12,10 +12,10 @@ output:
 
 By the end of this class, you will be able to:
 
-- identify cases that 
-- calculate expected value and variance of discrete random variables and their linear combinations.
-- identify whether a function is probability mass function or not. 
-
+- identify random variables with a binomial distribution.
+- identify random variables with a geometric distribution.
+- calculate expected value and variance of variables with a binomial distribution.
+- calculate expected value and variance of variables with a geometric distribution.
 
 
 <br>
