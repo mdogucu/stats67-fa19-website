@@ -1,0 +1,37 @@
+---
+title: "Reading: Binomial and Geometric Distributions"
+date: "due 2019-10-16 at 9:00 am"
+output: 
+  html_document:
+    css: reading-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+## Reading
+
+Read the following sections from [Introduction to Probability](https://math.dartmouth.edu/~prob/prob/prob.pdf) book.
+
+Pages 93 - 101 (note these pages are based on the book not the pdf document)
+
+- Binomial Coefficients  
+- Bernoulli Trials  
+- Binomial Probabilities  
+- Binomial Distributions  
+
+Pages 184- 186 
+
+- Geometric Distribution
+
+
+__Note:__ You may discuss the reading with others before attempting the reading questions. Make sure those you are discussing with have not completed their reading questions either. 
+
+## Reading Questions
+
+You can use your book while answering the reading questions. You will have MULTIPLE untimed attempts to answer this set of questions. Note that you answers to your last attempt will be considered your final set of answers. 
+
+Respond to reading questions <a href="https://canvas.eee.uci.edu/courses/19775/quizzes/71418"> here </a>
+
+<br>
+<br>
+<br>
