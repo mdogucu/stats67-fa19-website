@@ -23,12 +23,14 @@ Pages 184- 186
 
 - Geometric Distribution
 
+__$Note_1$:__ These topics are also covered in the OpenIntro book.  You can also read those sections as a supplement if needed.
 
-__Note:__ You may discuss the reading with others before attempting the reading questions. Make sure those you are discussing with have not completed their reading questions either. 
+
+__$Note_2$:__ You may discuss the reading with others before attempting the reading questions. Make sure those you are discussing with have not completed their reading questions either. 
 
 ## Reading Questions
 
-You can use your book while answering the reading questions. You will have MULTIPLE untimed attempts to answer this set of questions. Note that you answers to your last attempt will be considered your final set of answers. 
+You can use your book while answering the reading questions. You will have single attempt with one hour time limit to answer these questions.
 
 Respond to reading questions <a href="https://canvas.eee.uci.edu/courses/19775/quizzes/71418"> here </a>
 
