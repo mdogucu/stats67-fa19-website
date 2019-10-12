@@ -1,0 +1,50 @@
+---
+title: "Discrete Random Variables"
+author: "Dr. Dogucu"
+date: "2019-10-14"
+output: 
+  xaringan::moon_reader:
+    css: slide-styles.css
+      
+---
+
+layout: true
+  
+<div class="my-header"></div>
+
+<div class="my-footer"> 
+ Copyright &copy; <a href="https://mdogucu.ics.uci.edu">Dr. Mine Dogucu</a>. All Rights Reserved.</div> 
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Announcements
+
+- Reading questions have been graded
+
+Review mutually exclusive 
+venn diagram 
+Some true or false
+Some boxplot comparison question
+
+Random variables
+Notation on random variables
+
+Discrete distributions
+Ask if a distribution is discrete
+
+Calculate expected value
+
+Calculate variance
+
+Lottery example
+
+Notation on mean and variance
+
+
+
+
