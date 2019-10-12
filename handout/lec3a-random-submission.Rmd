@@ -1,0 +1,75 @@
+---
+output: 
+  pdf_document:
+    template: template.tex
+---
+
+```{r echo = FALSE, message = FALSE}
+library(tidyverse)
+library(fivethirtyeight)
+```
+
+\fbox{\begin{minipage}{35em}
+Names of Group Members: 
+\vspace{2cm}
+
+\end{minipage}}
+
+\section{In Class Activity - Submission}
+
+After you are done answering the questions in your groups. Write combined solutions to this sheet. Note that will __not__ receive points merely by writing down the answer. Show your work.
+
+Q1. What is the probability that a randomly selected Bob Ross painting will have a tree in it?
+
+\fbox{\begin{minipage}{35em}
+  \hfill
+\vspace{3cm}
+\end{minipage}}
+
+
+Q2. What is the probability that a randomly selected Bob Ross painting will have a tree and a mountain?
+
+\fbox{\begin{minipage}{35em}
+  \hfill
+\vspace{3cm}
+\end{minipage}}
+
+Q3. You sat down and are watching an episode of _The Joy of Painting_. Bob Ross has already painted a mountain, what is the probability that this painting will have a tree?
+
+\fbox{\begin{minipage}{35em}
+  \hfill
+\vspace{3cm}
+\end{minipage}}
+
+\pagebreak
+
+
+\vspace{3cm}
+
+Q4. Do the events of a painting having a tree and a painting having a mountain seem independent? Why or why not?
+
+\fbox{\begin{minipage}{35em}
+  \hfill
+\vspace{4cm}
+\end{minipage}}
+
+\vspace{2cm}
+
+
+Q5. Fill in the blanks in the code below for the plot on your handout.
+
+```{r eval = FALSE}
+bob_ross %>% 
+  ggplot(aes(x = ___________________, 
+             fill = _____________________________)) +
+  _____________________________
+```
+
+\vspace{2cm}
+
+Q6. Based on the data on your handout, calculate the expected household size as well as the variance.
+
+\fbox{\begin{minipage}{35em}
+  \hfill
+\vspace{6cm}
+\end{minipage}}

@@ -1,0 +1,78 @@
+---
+output: 
+  pdf_document:
+    template: template.tex
+---
+
+```{r echo = FALSE, message = FALSE}
+library(tidyverse)
+library(fivethirtyeight)
+```
+
+\fbox{\begin{minipage}{35em}
+Names of Group Members: 
+\vspace{2cm}
+
+\end{minipage}}
+
+\section{In Class Activity}
+\subsection{Conditional Proability}
+
+Bob Ross was an American painter and a television host who is known for his landscape paintings with "_happy trees_" and encouraging quotes such as "_We don't make mistakes, just happy little accidents_". He hosted a television program called _The Joy of Painting_ that aired from 1983 to 1994 on PBS. In each episode (except for two episodes) of this show he would complete one painting. The dataset we are going to use today has information on each of the paintings completed on this show. We are interested in two variables 1) whether a painting has a `tree` 2) whether the painting has a `mountain`. 1 indicates presence of the attribute and 0 indicates lack thereof. 
+
+```{r}
+bob_ross %>% 
+  count(tree, mountain)
+```
+
+
+Q1. What is the probability that a randomly selected Bob Ross painting will have a tree in it?
+
+\vspace{2.5cm}
+Q2. What is the probability that a randomly selected Bob Ross painting will have a tree and a mountain?
+
+\pagebreak
+Q3. You sat down and are watching an episode of _The Joy of Painting_. Bob Ross has already painted a mountain, what is the probability that this painting will have a tree?
+
+\vspace{3cm}
+
+Q4. Do the events of a painting having a tree and a painting having a mountain seem independent? Why or why not?
+\vspace{4cm}
+
+\subsection{Visualizing Data}
+
+```{r echo = FALSE, fig.height= 2, fig.align='center', fig.width=3}
+bob_ross %>% 
+  mutate(winter = as.factor(winter)) %>% 
+  mutate(fence = as.factor(fence)) %>% 
+  ggplot(aes(x = winter, fill = fence)) +
+  geom_bar()
+```
+
+Q5. The figure above shows  stacked bar plot for Bob Ross' paintings and whether these paintings have a winter scene and whether the painting has a fence. Fill in the blanks in the code below for the plot above.
+
+```{r eval = FALSE}
+bob_ross %>% 
+  ggplot(aes(x = ___________________, 
+             fill = _____________________________)) +
+  _____________________________
+```
+
+
+\pagebreak
+
+\subsection{Discrete Distributions}
+
+\begin{table}[H]
+\begin{tabular}{|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}| }
+\hline
+x & 1 & 2 & 3 & 4 & 5 & 6 & $\geq 7$ & \textbf{Total} \\
+\hline
+Number of respondents & 346 & 910 & 431 & 399 & 169 & 47 & 46 & 2348 \\
+\hline
+P(X=x) up to two decimal places& & & & & & & & \\
+\hline
+\end{tabular}
+\end{table}
+
+Q6. The table above is taken from the General Social Survey that we have seen in previous examples in the class. Based on this data, calculate the expected household size as well as the variance.
