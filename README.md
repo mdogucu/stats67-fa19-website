@@ -4,7 +4,7 @@
 
 All Right Reserved. Mine Dogucu. 
 
-If you would like to use any of these teaching materials, you can feel free to reach out to me via email on my website. 
+If you would like to use any of these teaching materials, you can feel free to reach out to me via email on my website. I mainly put all rights reserved to prevent some websites (e.g. Course Hero) collecting my materials but do check with me please.
 
 
 
