@@ -100,7 +100,7 @@ titanic_train %>%
 
 a. Fares of Queenstown passengers had the lowest median.
 
-b. Southampton passengers had the highest outliers in Fares when passengers are compared to other passengers from their embarkation point
+b. Southampton passengers had the highest number of outliers in Fares when passengers are compared to other passengers from their embarkation point
 
 c. The third quartile of Fares of Cherbourg passengers is higher than the maximum Fare of Southampton passengers. 
 
@@ -127,7 +127,7 @@ titanic_train %>%
 
 a. Fares of Queenstown passengers had the lowest median.
 
-b. Southampton passengers had the highest outliers in Fares when passengers are compared to other passengers from their embarkation point
+b. Southampton passengers had the highest number of outliers in Fares when passengers are compared to other passengers from their embarkation point
 
 c. __The third quartile of Fares of Cherbourg passengers is higher than the maximum Fare of Southampton passengers.__ 
 ---
@@ -140,13 +140,13 @@ Lower case letters $x, y, z$ are reserved to indicate __observed outcome__ of th
 e.g. $X$ is the number on a die after a roll.   
 The possible outcomes of $X$ are $x \in \{1,2,3,4,5,6\}$  
 To indicate a specific outcome we use subscript such as $x_1$, $x_2$... or we 
-use $x_i$ to refer to any outcome.
+use $x_i$ to refer to any outcome.  
 $P(X = 1) = \frac{1}{6}$
 
 ---
 ## Discrete Random Variables
 
-A discrete random variable has a sample space that is finite or countably infinite. When we refer to discrete random variables, the event itself can be numeric (the die shows 6) or not (the playing card is red), the random variable can still be discrete. 
+A discrete random variable has a sample space that is finite or countably infinite. 
 
 e.g. Let X be the random variable that represents the number of heads in a single coin flip.
 
@@ -167,7 +167,7 @@ Let $X$ be the number of times you roll a die until you get a 6. $\Omega_x = \{1
 
 ## Probability mass function (pmf)
 X is the number on a die after a roll
-```{r echo = FALSE, fig.align = 'center' }
+```{r echo = FALSE, fig.align = 'center', fig.height=6 }
 
 ggplot(data = data.frame(x = 1:6,
                          y = rep(1/6, 6),
@@ -205,6 +205,25 @@ ggplot(data = data.frame(x = 1:6,
   theme(text = element_text(size = 20)) 
 ```
 ---
+## Cumulative distribution function
+
+Using the cdf calculate these:
+
+$P(X<2) =$   
+$P(X\leq2) =$   
+$P(X\leq6) =$   
+$P(X>2) =$   
+---
+
+## Cumulative distribution function
+
+Using the cdf calculate these:
+
+$P(X<2) = \frac{1}{6}$   
+$P(X\leq2) = \frac{2}{6}$   
+$P(X\leq6) = 1$   
+$P(X>2) = 1 - \frac{2}{6} = \frac{4}{6}$   
+---
 ## Expected Value
 
 You are playing an amazing game where you always win. Host of the game makes you draw a banknote from a bag that has exactly four banknotes, `$1`, `$5`, `$10`, and `$50`. What is the expected value of earning in this game? 
@@ -235,12 +254,6 @@ $\frac{1+5+10+50+50}{5} = 23.2$
 
 After learning probability: 
 $1\cdot \frac{1}{5}+ 5\cdot \frac{1}{5} +10\cdot \frac{1}{5} + 50\cdot \frac{2}{5} = 23.2$
-
----
-
-## Expected Value
-
-You are playing an amazing game where you always win. Host of the game makes you draw a banknote from a bag that has exactly eight banknotes, two of each `$1`, `$5`, `$10`, and `$50`. What is the expected value of earning in this game?
 
 ---
 
