@@ -59,20 +59,3 @@ bob_ross %>%
 ```
 
 
-\pagebreak
-
-\subsection{Discrete Distributions}
-
-\begin{table}[H]
-\begin{tabular}{|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}| }
-\hline
-x & 1 & 2 & 3 & 4 & 5 & 6 & $\geq 7$ & \textbf{Total} \\
-\hline
-Number of respondents & 346 & 910 & 431 & 399 & 169 & 47 & 46 & 2348 \\
-\hline
-P(X=x) up to two decimal places& & & & & & & & \\
-\hline
-\end{tabular}
-\end{table}
-
-Q6. The table above is taken from the General Social Survey that we have seen in previous examples in the class. Based on this data, calculate the expected household size as well as the variance.
