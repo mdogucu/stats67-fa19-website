@@ -12,7 +12,7 @@ output:
 
 Read the following sections from [Introduction to Probability](https://math.dartmouth.edu/~prob/prob/prob.pdf) book.
 
-Pages 93 - 101 (note these pages are based on the book not the pdf document)
+Pages 93 - 101 (note that these pages are based on the book not the pdf document)
 
 - Binomial Coefficients  
 - Bernoulli Trials  
