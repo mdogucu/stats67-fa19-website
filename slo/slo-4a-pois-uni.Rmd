@@ -1,0 +1,24 @@
+---
+title: "Poisson and Discrete Uniform Distributions"
+date: "2019-10-21"
+output: 
+  html_document:
+    css: slo-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+## Learning Objectives
+
+By the end of this class, you will be able to:
+
+- identify random variables with a Poisson distribution.
+- identify random variables with a discrete uniform distribution.
+- calculate expected value and variance of variables with a Poisson distribution.
+- calculate expected value and variance of variables with a discrete uniform distribution.
+
+
+<br>
+<br>
+<br>
+

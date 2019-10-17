@@ -1,0 +1,23 @@
+---
+title: "Reading: Continuous Random Variables"
+date: "due 2019-10-23 at 9:00 am"
+output: 
+  html_document:
+    css: reading-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+## Reading
+
+Read the pages 59-68 (note that these pages are based on the book not the pdf document) from [Introduction to Probability](https://math.dartmouth.edu/~prob/prob/prob.pdf) book.
+
+
+
+## Reading Questions
+
+There will be no reading questions for this reading. 
+
+<br>
+<br>
+<br>
