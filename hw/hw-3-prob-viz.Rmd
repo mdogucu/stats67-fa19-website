@@ -13,9 +13,8 @@ output:
 
 This homework serves two goals 
 
-- for you to identify type and role of variables.
-- you to identify experiments and observational studies.
-- for you to start using R on your own.
+- for you to visualize graphs using `ggplot()`
+- calculate marginal, joint, and conditional probabilities
 
 
 ## Assignment
