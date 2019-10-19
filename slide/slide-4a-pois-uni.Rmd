@@ -1,0 +1,73 @@
+---
+title: "Poisson and Dicrete Uniform Distributions"
+author: "Dr. Dogucu"
+date: "2019-10-19"
+header-includes:
+   - \usepackage{mathtools}
+output: 
+  xaringan::moon_reader:
+    css: slide-styles.css
+      
+---
+
+layout: true
+  
+<div class="my-header"></div>
+
+<div class="my-footer"> 
+ Copyright &copy; <a href="https://mdogucu.ics.uci.edu">Dr. Mine Dogucu</a>. All Rights Reserved.</div> 
+
+---
+
+## Announcements
+
+- Note that you already have a homework due on 10/25. You will not be assigned a homework on 10/25 that would normally be due 11/01. Instead you will be provided midterm review questions. These questions will not be graded. You are encouraged to study in groups. 
+
+
+## Review - Sampling
+
+- A good sample is __representative__ of the population. 
+- In simple random sampling every element of the sample has an equal chance of being selected.
+- There are other sampling methods that help us get _representative_ samples. 
+
+## Review - Data Visualization
+
+## Review - 
+
+Give pmf and ask to calculate cdf 
+cdf as a bar plot
+
+Is this a probability function. 
+
+Would this variable have a pmf
+
+## Review - Indepdence
+
+We have only looked at the sample not population
+
+
+## Review varibles 
+
+in Statistics in R
+
+## Review
+
+Data does not always come in perfect. When should I do factor()
+
+mutate
+
+## Review - group_by()
+
+## Review - variables 
+
+Change categorical variables into discrete random variables
+
+## Review 
+
+give a random process 
+coin flip in binomial, geometric, poisson, uniform 
+
+## Review 
+
+Deriving  E(X) and Var(X)
+
