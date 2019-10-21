@@ -97,7 +97,8 @@ __But__ it is good practice to write the arguments.
 dbinom(x = 2, size = 10, prob = 0.70)
 dbinom(x = 3, size = 10, prob = 0.70)
 
-dbinom(x = 1, size = 10, prob = 0.70) +
+dbinom(x = 0, size = 10, prob = 0.70) +
+  dbinom(x = 1, size = 10, prob = 0.70) +
   dbinom(x = 2, size = 10, prob = 0.70) +
   dbinom(x = 3, size = 10, prob = 0.70) 
 
