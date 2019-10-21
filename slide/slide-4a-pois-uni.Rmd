@@ -1,5 +1,6 @@
 ---
 title: "Poisson and Dicrete Uniform Distributions"
+subtitle: "+ Lots of review"
 author: "Dr. Dogucu"
 date: "2019-10-21"
 header-includes:
@@ -68,6 +69,28 @@ glimpse(cats)
 The `cats` data frame has two variables of interest `Bwt` and `Hwt` which are Birth weight and Heart Weight of cats respectively. 
 
 If we wanted to examine the relationship between `Bwt` and `Hwt` what `geom_object()` could we utilize? In other words, what kind of plot could we make? 
+---
+
+## Review - Data Visualization
+
+```{r fig.align = 'center', fig.height = 5, eval = FALSE}
+cats %>% 
+  ggplot(aes(x = Bwt, y = Hwt)) +
+  geom_point() +
+  theme(text = element_text(size=30))
+
+  
+```
+
+```{r echo = FALSE, fig.align = 'center', fig.height = 5}
+cats %>% 
+  ggplot(aes(x = Bwt, y = Hwt)) +
+  geom_point() +
+  theme(text = element_text(size=30))
+
+  
+```
+
 ---
 ## Review - Data Visualization
 
@@ -433,21 +456,72 @@ $\Omega_X = \{a, a+1, ..., b-1, b\}$
 
 A broken phone alarm starts ringing once every day randomly. Let X be the random variable representing the hour on the 24 hour system when the alarm goes on. 
 
-Then $Omega_X = \{0, 1, 2, ...,23, 24\}$
+Then $Omega_X = \{0, 1, 2, ...,22,23\}$
 
-$X\sim unif(0,24)$
+$X\sim unif(0,23)$
 
 The probability that the alarm goes sometime between 15:00 - 16:00.
 
-$P(X = 15) = \frac{1}{24}$
+$P(X = 15) = \frac{1}{24} = 0.04167$
 
 ---
 ## Discrete Uniform Distribution
 
 
-Note that the R function `dunif()` is used to calculate probability density function of continuous uniform distributions and __not__ for probability mass function of discrete uniform distributions. We will have a work around that in the discussion.
+Note that the R function `dunif()` is used to calculate probability density function of continuous uniform distributions and __not__ for probability mass function of discrete uniform distributions. 
 
 
+---
+## Discrete Uniform Distribution
+
+R is an open-source language. That means any body can contribute to R. 
+
+Luckily someone wanted to contribute with a discrete uniform probability mass function.
+
+However, this function is not installed when R is installed.
+
+
+---
+## R packages
+
+When we download R or open RStdudio cloud, we have R functions that we can use such as `dbinom()`. These already installed set of functions are part of __base R__.
+
+The rest comes from the open source community who develop functions, datasets and provide it for the public use in R packages. 
+
+For instance the `ddunif()` function comes from the `fitur` package. 
+
+---
+## Using R packages
+
+In order to use a package, you first have to make sure it is downloaded. 
+
+```{r eval = FALSE}
+install.packages("fitur")
+```
+
+You only do installation process once. Once it is downloaded it will always be downloaded to your computer (RStudio Cloud is slightly different).
+
+---
+## Using R packages
+
+Once a package is downloaded you can use any function or object provided within the package. In order to use the `ddunif()` function from `fitur` package we have two options. 
+
+Option 1:
+```{r message = FALSE}
+library(fitur)
+ddunif(x = 15, min = 0, max = 23)
+```
+
+Use this option if you are going to keep using functions from the same package over and over again. `library(fitur)` and all packages you load should be at the top of your code.
+---
+## Using R packages
+
+Option 2:
+```{r}
+fitur::ddunif(x = 15, min = 0, max = 23)
+```
+
+Use this option if you are going to use functions from this package only few times. Also, this is a good option if you are unfamiliar with a package and you want to remind yourself which package the function belongs to. 
 ---
 ## Poisson Distribution
 
