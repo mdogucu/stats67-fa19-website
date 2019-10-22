@@ -1,0 +1,107 @@
+---
+output: 
+  pdf_document:
+    template: template.tex
+---
+
+```{r message = FALSE, echo = FALSE}
+library(tidyverse)
+```
+
+
+\section{Continuous Random Variables}
+
+__Definition__
+
+\vspace{5cm}
+
+__Examples__
+
+\vspace{5cm}
+
+
+__Probability Density Function__
+
+\vspace{10cm}
+
+\pagebreak
+__Example__
+
+\[
+  f(x) =
+  \begin{cases}
+                                   12x^2(1-x) & \text{if $0\leq x \leq 1$} \\
+                                   0 & \text{otherwise} 
+  \end{cases}
+\]
+
+Plot the graph of $f(x)$. Is $f(x)$ a probability density function? Why or why not?
+
+
+\vspace{8cm}
+
+If $f(x)$ is a pdf then calculate the following.
+
+a. $P(X = 0.4)$
+\vspace{3cm}
+
+
+b. $P(X < 0.4)$
+
+\vspace{4cm}
+
+
+c. $P(0.6 \leq X \leq 0.8)$
+
+\vspace{5cm}
+
+
+\pagebreak
+
+Calculate E[X]
+
+\vspace{7cm}
+
+Calculate Var[X]
+
+\pagebreak
+
+\section{Review}
+
+Q1.
+
+```{r fig.height=2, fig.width=3}
+data.frame (x = c(0, 0.5, 1),
+                y = c(0, 2, 0)) %>% 
+  ggplot(aes(x = x, y = y)) +
+  geom_line() +
+  labs(y = "f(x)")
+
+```
+
+Is the function depicted with the plot above a pdf? Why/not?
+
+\vspace{4cm}
+
+Q2. 
+a. A lottery game requires players to guess six numbers from 1 to 49. If a player guessed all the six numbers then they win the lottery of the week. What is the probability that a player will win the lottery?
+\vspace{3cm}
+
+b. What is the expected number of weeks until the first win for a player?
+\vspace{3cm}
+
+c. What is the variance?
+
+\pagebreak
+
+Q3. A customer service agent receives on average 2 calls every 5 minutes. 
+
+a. What is the probability that they will receive 0 calls in the next 5 minutes?
+\vspace{5cm}
+
+
+b. What is the probability that they will receive more than 2 calls in the next 5 minutes?
+\vspace{5cm}
+
+
+
