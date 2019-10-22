@@ -1,0 +1,7 @@
+---
+output: 
+  pdf_document:
+    template: template.tex
+---
+
+## Midterm Policies

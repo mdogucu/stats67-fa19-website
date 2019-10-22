@@ -1,4 +1,14 @@
-\documentclass{article}
+\documentclass[letterpaper,12pt]{report}
+
+\usepackage[
+  top=1cm,
+  bottom=1cm,
+  left=1cm,
+  right=1cm,
+  headheight=17pt, % as per the warning by fancyhdr
+  includehead,includefoot,
+  heightrounded, % to avoid spurious underfull messages
+]{geometry} 
 
 \usepackage{multirow}
 
@@ -16,7 +26,7 @@
 \pagestyle{fancy}
 
 
-\fancyhead[L]{UCI - Stats 67}
+\fancyhead[L]{UCI - Stats 67 - Midterm}
 \fancyhead[R]{Fall 2019}
 \fancyfoot[C]{Copyright \textsuperscript{\textcopyright}
 Dr. Mine Dogucu. All Rights Reserved.}
