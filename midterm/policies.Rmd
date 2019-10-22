@@ -4,4 +4,25 @@ output:
     template: template.tex
 ---
 
-## Midterm Policies
+\section*{Midterm Policies}
+
+You should have the following items on your desk (and nothing else) during the midterm:
+
+- Pen and/or pencil and/or eraser - make sure you have enough writing utensils and they are functional. You should not try to open your bag to get another pen. Have everything ready prior to the midterm. 
+
+- Scientific calculator. 
+
+- UCI Student ID - we will come around to check your ID during the midterm. 
+
+The following items are __not__ permitted during the midterm
+
+- Watches - remaining time will be displayed on the screen.
+- Cell phones - turn your cell phone off completely. 
+- Laptops
+- Ipads/Tablets
+- Graphing calculator
+- Notes of any kind, books etc. 
+- Any note taking device
+- Any device with internet connectivity
+
+You will not be allowed to use the bathroom during the midterm. Please plan accordingly. 
