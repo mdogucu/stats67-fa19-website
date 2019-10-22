@@ -4,4 +4,45 @@ output:
     template: template.tex
 ---
 
-## Midterm Policies
+\section*{Midterm Policies}
+
+You should have the following items on your desk (and nothing else) during the midterm:
+
+- Pen and/or pencil and/or eraser - make sure you have enough writing utensils and they are functional. You should not try to open your bag to get another pen. Have everything ready prior to the midterm. 
+
+- Scientific calculator. 
+
+- UCI Student ID card - we will come around to check your ID during the midterm. 
+
+The following items are __not__ permitted during the midterm
+
+- Scrap paper
+- Watches - remaining time will be displayed on the screen.
+- Cell phones - turn your cell phone off completely and put it in your bag not in your pocket. 
+- Laptops
+- Ipads/Tablets
+- Graphing calculator
+- Notes of any kind, books etc. 
+- Any note taking device
+- Any device with internet connectivity
+
+You will not be allowed to use the bathroom during the midterm. Please plan accordingly. 
+
+You may not leave the classroom if you finish early. Use the remaining time to review your answers. 
+
+You will have 75 minutes. 
+
+Make sure to write your name and Student ID below. You may not start the midterm until you are prompted to start. Just write your name and wait for the prompt to start. 
+
+
+\fbox{\begin{minipage}{45em}
+Name (as it appears on Canvas): 
+\vspace{2cm}
+
+\end{minipage}}
+
+\fbox{\begin{minipage}{45em}
+Student ID number: 
+\vspace{2cm}
+
+\end{minipage}}
