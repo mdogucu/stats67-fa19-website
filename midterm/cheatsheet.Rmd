@@ -4,17 +4,18 @@ output:
     template: template.tex
 ---
 
-\section*{Cheatsheet}
 
-Conditional Probability
-Bayes' Rule
+\large$\bar{x} = \frac{\Sigma_{i=1}^nx_i}{n}$ \hspace{4cm} $s^2 = \frac{\Sigma_{i=1}^n(x_i-\bar{x})}{n-1}$
 
+$P(A^c) = 1 - P(A)$ \hspace{3cm} $P(A \cup B) = P(A) + P(B) - P(A\cap B)$
+
+$P(A|B) = \frac{P(A \cap B)}{P(B)}$
 \section*{Discrete Random Variables}
 
 Let $X$ be a discrete random variable with a pmf of $p(x)$ then
 
-$E[X] = \displaystyle \sum_{x} x p(x) = \mu$  
-$Var(X) = E[(X-\mu)^2] = E[X^2] - E[X]^2$
+$E[X] = \displaystyle \sum_{x} x p(x)$  
+$Var(X) = E[X^2] - E[X]^2$
 
 Linear combination of random variables $X$ and $Y$ and fixed numbers $a$ and $b$:  
 
@@ -36,3 +37,7 @@ Poisson          & \large$\frac{\lambda^k}{k!}e^{-\lambda}$ & \large$\lambda$ & 
 
 
 \section*{Continuous Random Variables}
+
+$E[X] =  \int_{x \in \Omega_x} x f(x) \,dx$
+
+More will be added as we learn more.
