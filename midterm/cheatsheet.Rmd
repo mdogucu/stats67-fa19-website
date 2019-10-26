@@ -15,12 +15,15 @@ $P(A|B) = \frac{P(A \cap B)}{P(B)}$
 Let $X$ be a discrete random variable with a pmf of $p(x)$ then
 
 $E[X] = \displaystyle \sum_{x} x p(x)$  
+
+Let $X$ be a random variable, then
+
 $Var(X) = E[X^2] - E[X]^2$
 
 Linear combination of random variables $X$ and $Y$ and fixed numbers $a$ and $b$:  
 
 $E[aX+bY] = aE[X] + bE[Y]$  
-$Var(aX+bY) = a^2Var(x)+b^2Var(Y)$
+$Var(aX+bY) = a^2Var(X)+b^2Var(Y)$
 
 
 \begin{table}[H]
@@ -40,4 +43,3 @@ Poisson          & \large$\frac{\lambda^k}{k!}e^{-\lambda}$ & \large$\lambda$ & 
 
 $E[X] =  \int_{x \in \Omega_x} x f(x) \,dx$
 
-More will be added as we learn more.
