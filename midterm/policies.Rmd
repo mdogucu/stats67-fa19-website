@@ -4,6 +4,16 @@ output:
     template: template.tex
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, fig.height = 3, fig.align = 'center', message = FALSE, fig.width=5)
+```
+
+```{r }
+library(tidyverse)
+library(fivethirtyeight)
+```
+
+2019-11-04
 \section*{Midterm Policies}
 
 You should have the following items on your desk (and nothing else) during the midterm:
@@ -19,31 +29,32 @@ The following items are __not__ permitted during the midterm
 - Scrap paper
 - Watches - remaining time will be displayed on the screen.
 - Cell phones - turn your cell phone off completely and put it in your bag not in your pocket. 
-- Laptops
-- Ipads/Tablets
+- Laptops / Ipads/Tablets
 - Graphing calculator
 - Notes of any kind, books etc. 
-- Any note taking device
-- Any device with internet connectivity
+- Any note taking device or any device with internet connectivity
 
 Note that if you use an eraser (for pen or pencil) and do not erase well, you may not receive any points if previous answer and the latest answer are visible simultaneously.
 
+Multiple choice questions have one correct answer. Only choose one of the choices. Write your answers in the boxes provided. You should only write a single letter in each of these boxes.
 
-You may not leave the classroom if you finish early. Use the remaining time to review your answers. 
+For questions that are __not__ multiple choice, show your work. Write your final answers in the boxes provided. You should only write numbers in these boxes. For instance if your answer is $P(A) = 0.12$ only write $0.12$ inside the box.
 
-You will have 75 minutes. 
+You will have 75 minutes. You may not leave the classroom if you finish early. Use the remaining time to review your answers. 
 
-Make sure to write your name and Student ID below. You may not start the midterm until you are prompted to start. Just write your name and wait for the prompt to start. 
+ 
+
+You may not start the midterm until you are prompted to start. Just write your name and student ID number and wait for the prompt to start. 
 
 
 \fbox{\begin{minipage}{45em}
 Name (as it appears on Canvas): 
-\vspace{2cm}
+\vspace{1cm}
 
 \end{minipage}}
 
 \fbox{\begin{minipage}{45em}
 Student ID number: 
-\vspace{2cm}
+\vspace{1cm}
 
 \end{minipage}}

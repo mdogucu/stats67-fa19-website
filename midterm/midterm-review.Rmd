@@ -1,0 +1,589 @@
+---
+output: 
+  pdf_document:
+    template: template.tex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, fig.height = 3, fig.align = 'center', message = FALSE, fig.width=5)
+```
+
+```{r }
+library(tidyverse)
+library(fivethirtyeight)
+```
+
+2019-11-04
+\section*{Midterm Policies}
+
+You should have the following items on your desk (and nothing else) during the midterm:
+
+- Pen and/or pencil and/or eraser - make sure you have enough writing utensils and they are functional. You should not try to open your bag to get another pen. Have everything ready prior to the midterm. 
+
+- Scientific calculator. 
+
+- UCI Student ID card - we will come around to check your ID during the midterm. 
+
+The following items are __not__ permitted during the midterm
+
+- Scrap paper
+- Watches - remaining time will be displayed on the screen.
+- Cell phones - turn your cell phone off completely and put it in your bag not in your pocket. 
+- Laptops / Ipads/Tablets
+- Graphing calculator
+- Notes of any kind, books etc. 
+- Any note taking device or any device with internet connectivity
+
+Note that if you use an eraser (for pen or pencil) and do not erase well, you may not receive any points if previous answer and the latest answer are visible simultaneously.
+
+Multiple choice questions have one correct answer. Only choose one of the choices. Write your answers in the boxes provided. You should only write a single letter in each of these boxes.
+
+For questions that are __not__ multiple choice, show your work. Write your final answers in the boxes provided. You should only write numbers in these boxes. For instance if your answer is $P(A) = 0.12$ only write $0.12$ inside the box.
+
+You will have 75 minutes. You may not leave the classroom if you finish early. Use the remaining time to review your answers. 
+
+ 
+
+You may not start the midterm until you are prompted to start. Just write your name and student ID number and wait for the prompt to start. 
+
+
+\fbox{\begin{minipage}{45em}
+Name (as it appears on Canvas): 
+\vspace{1cm}
+
+\end{minipage}}
+
+\fbox{\begin{minipage}{45em}
+Student ID number: 
+\vspace{1cm}
+
+\end{minipage}}
+
+\pagebreak
+
+
+```{r}
+
+avocado <- read_csv("data/avocado.csv") %>% 
+  filter(year == 2017) %>% 
+  select(Date, AveragePrice, type) %>% 
+  rename(average_price = AveragePrice) %>% 
+  mutate(average_price = as.character(average_price))
+
+```
+
+The `avocado` data frame has information on avocado sales in 2017 as reported by the Hass Avocado Board. Answer the following three questions based on the output below. 
+
+```{r echo = TRUE}
+glimpse(avocado)
+count(avocado, type)
+```
+
+1. The variable `average-price` shows the average sale price of certain type of avocado on a given day. R has read `average-price` as a character variable. If you were to mutate `average_price` as a different type of variable that would reflect its statistical characteristics, in other words what type of variable would you mutate to? 
+
+\noindent
+\begin{minipage}[c]{0.9\linewidth}
+\begin{enumerate} [label=(\Alph*)]
+  \item character  
+  \item double  
+  \item integer 
+  \item factor 
+
+\end{enumerate}
+
+\end{minipage}
+\fbox{\begin{minipage}[c]{0.1\linewidth}
+\vspace{1cm}
+\hspace{1cm}
+\end{minipage}}
+
+2. If you were to mutate `type` as a different type of variable that would reflect its statistical characteristics, in other words what type of variable would you mutate to?
+
+
+\noindent
+\begin{minipage}[c]{0.9\linewidth}
+\begin{enumerate} [label=(\Alph*)]
+  \item character  
+  \item double  
+  \item integer 
+  \item factor 
+
+\end{enumerate}
+
+\end{minipage}
+\fbox{\begin{minipage}[c]{0.1\linewidth}
+\vspace{1cm}
+\hspace{1cm}
+\end{minipage}}
+
+
+
+
+\pagebreak
+
+```{r, echo=FALSE}
+avocado %>% 
+  mutate(average_price = as.numeric(average_price)) %>% 
+  mutate(type = as.factor(type)) %>% 
+  ggplot(aes(x = type, y = average_price)) +
+  geom_boxplot()
+```
+
+3. Which of the following statements is true based on the boxplot above?
+
+\noindent
+\begin{minipage}[c]{0.8\linewidth}
+\begin{enumerate} [label=(\Alph*)]
+  \item The minimum average price of conventional avocados is less than the first quartile of organic avocados.   
+  \item The median of organic avocados is less than the third quartile of conventional avocados. 
+  \item Interquartile range of organic avocados is greater than interquartile range of conventional avocados. 
+  \item The maximum of conventional avocados is less than the third quartile of organic avocados. 
+
+\end{enumerate}
+
+\end{minipage}
+\begin{minipage}[c]{0.1\linewidth}
+\vspace{2cm}
+\hspace{2cm}
+\end{minipage}
+\fbox{\begin{minipage}[c]{0.1\linewidth}
+\vspace{1cm}
+\hspace{1cm}
+\end{minipage}}
+
+\pagebreak
+
+
+```{r, echo=FALSE}
+
+options(scipen=10000)
+
+airline_safety %>% 
+  ggplot(aes(x=avail_seat_km_per_week, y=incidents_00_14)) + 
+  geom_point() + 
+  xlab("Available seat kilometers flown every week") +
+  ylab("Total number of fatalities (2000-2014)")
+```
+
+4. Below is a scatterplot showing the relationship between the available seat kilometers flown every week by an airline, and the total number of fatalities an airline experienced between 2000 and 2014. Each point is a different airline. Which of the following is false? Write your choice (a, b, c, or d) in the box. Only one correct answer.  
+
+\noindent
+\begin{minipage}[c]{0.8\linewidth}
+\begin{enumerate} [label=(\Alph*)]
+  \item Total number of fatalities is a discrete numerical variable.   
+  \item Total number of fatalities is the explanatory variable.  
+  \item There were airlines that did not have any fatality. 
+  \item There are three airlines that have more than 4000000000 available seat kilometers every flown every week. 
+
+\end{enumerate}
+
+\end{minipage}
+\begin{minipage}[c]{0.1\linewidth}
+\vspace{2cm}
+\hspace{2cm}
+\end{minipage}
+\fbox{\begin{minipage}[c]{0.1\linewidth}
+\vspace{1cm}
+\hspace{1cm}
+\end{minipage}}
+
+5. Police expects 15 cars to pass through a particular intersection every hour. Which of the following calculates the probability that exactly 17 cars pass through that intersection in an hour?
+
+
+\noindent
+\begin{minipage}[c]{0.8\linewidth}
+\begin{enumerate} [label=(\Alph*)]
+  \item \large${17\choose 15}\frac{15}{17}^2(1-\frac{15}{17})^{15}$  
+  \vspace{0.5cm}  
+  \item \large$\frac{15}{17}^2\frac{15}{17}^{15}$ 
+  \vspace{0.5cm}  
+  \item \large$\frac{15^{17}}{17!}{e^-15}$
+  \vspace{0.5cm}  
+  \item \large$\frac{15}{17}$
+
+\end{enumerate}
+
+\end{minipage}
+\begin{minipage}[c]{0.1\linewidth}
+\vspace{2cm}
+\hspace{2cm}
+\end{minipage}
+\fbox{\begin{minipage}[c]{0.1\linewidth}
+\vspace{1cm}
+\hspace{1cm}
+\end{minipage}}
+
+\pagebreak
+
+6. In 2009 there was a large outbreak in the U.S. of a flu strain clinically known as H1N1, but commonly known as the Swine Flu since the strain was similar to one found in pigs. That year, 20% of the population contracted Swine Flu. A test was developed at the time to diagnose whether a patient had the disease or not. If we knew a patient had Swine Flu, there was a 98% probability that they would get a positive test result. If we knew a patient did not have Swine Flu, there was a 96% probability that they would get a negative test result.
+
+
+
+
+a. What is the probability that a patient did not have Swine Flu and got a positive test result?
+
+\noindent
+\begin{minipage}[c]{0.90\linewidth}
+\vspace{5cm}
+\hspace{5cm}
+\end{minipage}
+\fbox{\begin{minipage}[c]{0.10\linewidth}
+\vspace{1cm}
+\hspace{1cm}
+\end{minipage}}
+
+b. What is the probability, in general, of getting a negative test result?
+
+\noindent
+\begin{minipage}[c]{0.90\linewidth}
+\vspace{5cm}
+\hspace{5cm}
+\end{minipage}
+\fbox{\begin{minipage}[c]{0.10\linewidth}
+\vspace{1cm}
+\hspace{1cm}
+\end{minipage}}
+
+c. What is the probability that a patient does not have Swine Flu, given they got a negative test result?
+
+\noindent
+\begin{minipage}[c]{0.90\linewidth}
+\vspace{5cm}
+\hspace{5cm}
+\end{minipage}
+\fbox{\begin{minipage}[c]{0.10\linewidth}
+\vspace{1cm}
+\hspace{1cm}
+\end{minipage}}
+
+
+\pagebreak 
+
+7. Everyone loves an orange kitty, but did you know that female orange tabby cats are rare? Studies have shown that only 2% of orange tabby cats are female. We’d like to see if this holds up in our area, so we find 14 orange tabby cats.
+
+  a. What is our random variable? What distribution does it follow?
+    
+\noindent
+\begin{minipage}[c]{0.90\linewidth}
+\vspace{3cm}
+\hspace{5cm}
+\end{minipage}
+\fbox{\begin{minipage}[c]{0.10\linewidth}
+\vspace{1cm}
+\hspace{1cm}
+\end{minipage}}
+
+  b. What is the probability that at least one but at most three of the cats we find are female?
+
+\noindent
+\begin{minipage}[c]{0.90\linewidth}
+\vspace{3cm}
+\hspace{5cm}
+\end{minipage}
+\fbox{\begin{minipage}[c]{0.10\linewidth}
+\vspace{1cm}
+\hspace{1cm}
+\end{minipage}}
+
+  c. What is the probability that at most two cats are female?
+    
+\noindent
+\begin{minipage}[c]{0.90\linewidth}
+\vspace{3cm}
+\hspace{5cm}
+\end{minipage}
+\fbox{\begin{minipage}[c]{0.10\linewidth}
+\vspace{1cm}
+\hspace{1cm}
+\end{minipage}}
+  d. Now assume that we are going to keep looking for orange tabby cats until we find one that’s female. How many cats do we expect we’ll have to find to get our first female?
+
+\noindent
+\begin{minipage}[c]{0.90\linewidth}
+\vspace{3cm}
+\hspace{5cm}
+\end{minipage}
+\fbox{\begin{minipage}[c]{0.10\linewidth}
+\vspace{1cm}
+\hspace{1cm}
+\end{minipage}}
+
+\pagebreak
+
+8. There is a game where you can pick a rubber duck out of a pool and win the prize at the bottom of the duck. There are 30 ducks in the pool. 16 of the ducks have no prize, 6 have a prize of \$1, 4 have a prize of \$2, 3 have \$5 dollar prize, and 1 has a \$10 prize.
+
+a. Assume the game is free, how much can you expect to win from the game?
+
+\noindent
+\begin{minipage}[c]{0.90\linewidth}
+\vspace{4cm}
+\hspace{5cm}
+\end{minipage}
+\fbox{\begin{minipage}[c]{0.10\linewidth}
+\vspace{1cm}
+\hspace{1cm}
+\end{minipage}}
+
+b. Now the game costs $1, what is the expected winnings and variance of this game?
+
+\noindent
+\begin{minipage}[c]{0.90\linewidth}
+\vspace{8cm}
+\hspace{5cm}
+\end{minipage}
+\fbox{\begin{minipage}[c]{0.10\linewidth}
+\vspace{1cm}
+\hspace{1cm}
+\end{minipage}}
+
+c. Now assume that the first game is free and each additional game is \$1 to play. How many games does it take until you expect to lose money?
+
+\noindent
+\begin{minipage}[c]{0.90\linewidth}
+\vspace{5cm}
+\hspace{5cm}
+\end{minipage}
+\fbox{\begin{minipage}[c]{0.10\linewidth}
+\vspace{1cm}
+\hspace{1cm}
+\end{minipage}}
+
+
+\pagebreak
+
+9. Imagine you are a student who is taking both intro chemistry and intro physics in the same quarter. Due to an unfortunate combination of schedules, you have an experiment for each class due on Monday. Because you have to split your time between the two experiments, and you don’t have time to re-do either, there is a 80% chance that you will perform your chemistry experiment correctly, a 52% chance you will perform you physics experiment correctly, and a 43% chance that you will perform both your physics experiment and your chemistry experiment correctly.
+
+  a. Draw a Venn diagram of this scenario.
+  
+\fbox{\begin{minipage}{45em}
+\hfill
+\vspace{7 cm}
+\end{minipage}}
+
+  b. What is the probability that you perform your physics experiment or your chemistry experiment correctly?
+
+\noindent
+\begin{minipage}[c]{0.90\linewidth}
+\vspace{3cm}
+\hspace{5cm}
+\end{minipage}
+\fbox{\begin{minipage}[c]{0.10\linewidth}
+\vspace{1cm}
+\hspace{1cm}
+\end{minipage}}
+
+  c. What is the probability that you will perform your physics experiment correctly, but not your chemistry experiment?
+  
+\noindent
+\begin{minipage}[c]{0.90\linewidth}
+\vspace{3cm}
+\hspace{5cm}
+\end{minipage}
+\fbox{\begin{minipage}[c]{0.10\linewidth}
+\vspace{1cm}
+\hspace{1cm}
+\end{minipage}}
+\pagebreak
+
+  d. Are performing your chemistry experiment correctly and performing your physics experiment correctly mutually exclusive? Why? Give mathematical reasoning.
+  
+\noindent
+\begin{minipage}[c]{0.90\linewidth}
+\vspace{3cm}
+\hspace{5cm}
+\end{minipage}
+\fbox{\begin{minipage}[c]{0.10\linewidth}
+\vspace{1cm}
+\hspace{1cm}
+\end{minipage}}
+
+  e. Is performing your chemistry experiment correctly independent of you performing your physics experiment correctly? Why? Give mathematical reasoning.
+  
+\noindent
+\begin{minipage}[c]{0.90\linewidth}
+\vspace{3cm}
+\hspace{5cm}
+\end{minipage}
+\fbox{\begin{minipage}[c]{0.10\linewidth}
+\vspace{1cm}
+\hspace{1cm}
+\end{minipage}}
+
+\pagebreak
+
+10. A research assistant has a job that requires them to count fireflies. Based on their experience, in a similar climate they had observed an average of 3 fireflies ever five minutes. What is the probability that they will observe more than 8 fruitflies in the next 5 minutes?
+
+
+\noindent
+\begin{minipage}[c]{0.8\linewidth}
+\begin{enumerate} [label=(\Alph*)]
+  \item  \begin{verbatim} ppois(q = 8, lambda = 3) \end{verbatim} 
+  \vspace{0.5cm}  
+  \item \begin{verbatim} dpois(x = 8, lambda = 3) \end{verbatim}
+  \vspace{0.5cm}  
+  \item \begin{verbatim} 1 - ppois(q = 7, lambda = 3) \end{verbatim}
+  \vspace{0.5cm}  
+  \item \begin{verbatim} 1 - dpois(x = 7, lambda = 3) \end{verbatim}
+
+\end{enumerate}
+
+\end{minipage}
+\begin{minipage}[c]{0.1\linewidth}
+\vspace{2cm}
+\hspace{2cm}
+\end{minipage}
+\fbox{\begin{minipage}[c]{0.1\linewidth}
+\vspace{1cm}
+\hspace{1cm}
+\end{minipage}}
+
+\pagebreak
+
+Defered Action for Childhood Arrival (DACA) is an immigration policy of the United States that provides a renewable two-year period of deferred action from deportation and work permit to individuals who were brought to the United States as children and who do not have a lawful presence. Note that DACA policy does not grant citizenship but grants two-year residency and work permit. On September 5, 2017 President Trump made a decision to end the DACA program. University of California was the first university in the nation to file suit in federal court against this decision. The oral arguments of this case will begin on November 12th in the US Supreme Court.
+
+For the following five questions we will be working with public opinion on DACA policy and the US-Mexico border wall. In June 2018 [Gallup](https://news.gallup.com/poll/235775/americans-oppose-border-walls-favor-dealing-daca.aspx), an internationally well-known American analytics company, indicated that 
+
+\begin{displayquote}
+
+
+41\% favor expanding construction of walls along U.S.-Mexico border
+
+83\% approve of allowing DACA immigrants to become citizens  
+
+Republicans, Democrats agree on DACA, disagree on walls 
+
+\end{displayquote}
+
+
+Gallup also published some information about their survey methods as stated below:
+
+\begin{displayquote}
+
+Results for this Gallup poll are based on telephone interviews conducted June 1-13, 2018, with a random sample of 1,520 adults, aged 18 and older, living in all 50 U.S. states and the District of Columbia. 
+
+Each sample of national adults includes a minimum quota of 70\% cellphone respondents and 30\% landline respondents, with additional minimum quotas by time zone within region. Landline and cellular telephone numbers are selected using random-digit-dial methods.
+
+\end{displayquote}
+
+\vspace{1cm}
+
+
+11. Which of the following indicates the sample of the study the best?
+
+\noindent
+\begin{minipage}[c]{0.8\linewidth}
+\begin{enumerate} [label=(\Alph*)]
+  \item  All residents of the United States aged 18 and older 
+  \vspace{0.5cm}  
+  \item All citizens of the United States aged 18 and older 
+  \vspace{0.5cm}  
+  \item All respondents of the survey 
+  \vspace{0.5cm}  
+  \item All DACA recipients 
+
+\end{enumerate}
+
+\end{minipage}
+\begin{minipage}[c]{0.1\linewidth}
+\vspace{2cm}
+\hspace{2cm}
+\end{minipage}
+\fbox{\begin{minipage}[c]{0.1\linewidth}
+\vspace{1cm}
+\hspace{1cm}
+\end{minipage}}
+
+
+\vspace{1cm}
+
+
+12. Which of the following indicates the population of the study the best?
+
+\noindent
+\begin{minipage}[c]{0.8\linewidth}
+\begin{enumerate} [label=(\Alph*)]
+  \item  All residents of the United States aged 18 and older 
+  \vspace{0.5cm}  
+  \item All citizens of the United States aged 18 and older 
+  \vspace{0.5cm}  
+  \item All respondents of the survey 
+  \vspace{0.5cm}  
+  \item All DACA recipients 
+
+\end{enumerate}
+
+\end{minipage}
+\begin{minipage}[c]{0.1\linewidth}
+\vspace{2cm}
+\hspace{2cm}
+\end{minipage}
+\fbox{\begin{minipage}[c]{0.1\linewidth}
+\vspace{1cm}
+\hspace{1cm}
+\end{minipage}}
+
+\pagebreak
+
+13. Assume that people either favor or oppose the expanding construction of walls along US - Mexico border. You randomly select five people from the population you defined above what is the probability that none of them will favor the expanding construction of walls along US - Mexico border.
+\noindent
+\begin{minipage}[c]{0.90\linewidth}
+\vspace{3cm}
+\hspace{5cm}
+\end{minipage}
+\fbox{\begin{minipage}[c]{0.10\linewidth}
+\vspace{1cm}
+\hspace{1cm}
+\end{minipage}}
+14. You randomly select five people from the population you defined above. Let $X$ be the random variiable that represents the number of people (out of 5) who approve of allowing DACA immigrants to become citizens. Plot the cdf of $X$.
+
+\fbox{\begin{minipage}{45em}
+\hfill
+\vspace{8 cm}
+\end{minipage}}
+
+15. Assume that there are only two political affiliations (Democractic and Republican). Is political affiliation and agreement on DACA independent or not or more information needed? Why or why not? 
+
+\fbox{\begin{minipage}{45em}
+\hfill
+\vspace{4 cm}
+\end{minipage}}
+
+\pagebreak
+
+\large$\bar{x} = \frac{\Sigma_{i=1}^nx_i}{n}$ \hspace{4cm} $s^2 = \frac{\Sigma_{i=1}^n(x_i-\bar{x})}{n-1}$
+
+$P(A^c) = 1 - P(A)$ \hspace{3cm} $P(A \cup B) = P(A) + P(B) - P(A\cap B)$
+
+$P(A|B) = \frac{P(A \cap B)}{P(B)}$
+\section*{Discrete Random Variables}
+
+Let $X$ be a discrete random variable with a pmf of $p(x)$ then
+
+$E[X] = \displaystyle \sum_{x} x p(x)$  
+
+Let $X$ be a random variable, then
+
+$Var(X) = E[X^2] - E[X]^2$
+
+Linear combination of random variables $X$ and $Y$ and fixed numbers $a$ and $b$:  
+
+$E[aX+bY] = aE[X] + bE[Y]$  
+$Var(aX+bY) = a^2Var(X)+b^2Var(Y)$
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Distribution} & \textbf{pmf} & \textbf{$E(X)$} & \textbf{$Var(X)$} \\ \hline
+Binomial        & \large${n \choose k} p^k (1-p)^{n-k}$            & \large$np$ & \large$np(1-p)$                 \\ \hline
+Geometric           & \large$(1-p)^{n-1}p$ & \large$\frac{1}{p}$ & \large$\frac{1-p}{p^2}$                 \\ \hline
+Discrete Uniform           & \large$\frac{1}{n}$ & \large$\frac{a+b}{2}$ & \large$\frac{(b-a+1)^2-1}{12}$                 \\ \hline
+Poisson          & \large$\frac{\lambda^k}{k!}e^{-\lambda}$ & \large$\lambda$ & \large$\lambda$                 \\ \hline
+\end{tabular}
+\end{table}
+
+
+\section*{Continuous Random Variables}
+
+$E[X] =  \int_{x \in \Omega_x} x f(x) \,dx$
