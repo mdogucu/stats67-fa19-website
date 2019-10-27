@@ -324,7 +324,7 @@ a. Assume the game is free, how much can you expect to win from the game?
 \hspace{1cm}
 \end{minipage}}
 
-b. Now the game costs $1, what is the expected winnings and variance of this game?
+b. Now the game costs $1.5, what is the expected winnings and variance of this game?
 
 \noindent
 \begin{minipage}[c]{0.90\linewidth}
@@ -336,7 +336,7 @@ b. Now the game costs $1, what is the expected winnings and variance of this gam
 \hspace{1cm}
 \end{minipage}}
 
-c. Now assume that the first game is free and each additional game is \$1 to play. How many games does it take until you expect to lose money?
+c. Now assume that the first game is free and each additional game is \$1.5 to play. How many games does it take until you expect to lose money?
 
 \noindent
 \begin{minipage}[c]{0.90\linewidth}
@@ -439,7 +439,7 @@ c. Now assume that the first game is free and each additional game is \$1 to pla
 
 \pagebreak
 
-Defered Action for Childhood Arrival (DACA) is an immigration policy of the United States that provides a renewable two-year period of deferred action from deportation and work permit to individuals who were brought to the United States as children and who do not have a lawful presence. Note that DACA policy does not grant citizenship but grants two-year residency and work permit. On September 5, 2017 President Trump made a decision to end the DACA program. University of California was the first university in the nation to file suit in federal court against this decision. The oral arguments of this case will begin on November 12th in the US Supreme Court.
+Deferred Action for Childhood Arrival (DACA) is an immigration policy of the United States that provides a renewable two-year period of deferred action from deportation and work permit to individuals who were brought to the United States as children and who do not have a lawful presence. Note that DACA policy does not grant citizenship but grants two-year residency and work permit. On September 5, 2017 President Trump made a decision to end the DACA program. University of California was the first university in the nation to file suit in federal court against this decision. The oral arguments of this case will begin on November 12th in the US Supreme Court.
 
 For the following five questions we will be working with public opinion on DACA policy and the US-Mexico border wall. In June 2018 [Gallup](https://news.gallup.com/poll/235775/americans-oppose-border-walls-favor-dealing-daca.aspx), an internationally well-known American analytics company, indicated that 
 
@@ -524,7 +524,7 @@ Each sample of national adults includes a minimum quota of 70\% cellphone respon
 
 \pagebreak
 
-13. Assume that people either favor or oppose the expanding construction of walls along US - Mexico border. You randomly select five people from the population you defined above what is the probability that none of them will favor the expanding construction of walls along US - Mexico border.
+13. Assume that people either favor or oppose the expanding construction of walls along US - Mexico border. You randomly select five people from the population you defined above. What is the probability that none of them will favor the expanding construction of walls along US - Mexico border.
 \noindent
 \begin{minipage}[c]{0.90\linewidth}
 \vspace{3cm}
@@ -534,14 +534,14 @@ Each sample of national adults includes a minimum quota of 70\% cellphone respon
 \vspace{1cm}
 \hspace{1cm}
 \end{minipage}}
-14. You randomly select five people from the population you defined above. Let $X$ be the random variiable that represents the number of people (out of 5) who approve of allowing DACA immigrants to become citizens. Plot the cdf of $X$.
+14. You randomly select five people from the population you defined above. Let $X$ be the random variable that represents the number of people (out of 5) who approve of allowing DACA immigrants to become citizens. Plot the cdf of $X$.
 
 \fbox{\begin{minipage}{45em}
 \hfill
 \vspace{8 cm}
 \end{minipage}}
 
-15. Assume that there are only two political affiliations (Democractic and Republican). Is political affiliation and agreement on DACA independent or not or more information needed? Why or why not? 
+15. Assume that there are only two political affiliations (Democractic and Republican). Is political affiliation and agreement on DACA independent or not? Why or why not? 
 
 \fbox{\begin{minipage}{45em}
 \hfill
