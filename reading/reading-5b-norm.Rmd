@@ -1,0 +1,27 @@
+---
+title: "Reading: Continuous Random Variables"
+date: "due 2019-10-30 at 9:00 am"
+output: 
+  html_document:
+    css: reading-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+## Reading
+
+Read Section 4.1 from <a href = "https://leanpub.com/openintro-statistics"> OpenIntro </a> book.
+
+Pages 133-143
+
+- Normal Distribution
+
+
+
+## Reading Questions
+
+There will be no reading questions for this reading. 
+
+<br>
+<br>
+<br>

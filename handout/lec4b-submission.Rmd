@@ -1,0 +1,63 @@
+---
+output: 
+  pdf_document:
+    template: template.tex
+---
+
+\fbox{\begin{minipage}{50em}
+Names of Group Members: 
+\vspace{2cm}
+
+\end{minipage}}
+
+\section*{In Class Activity - Review - Submission}
+
+After you are done answering the questions in your groups. Write combined solutions to this sheet. Note that will __not__ receive points merely by writing down the answer. Show your work. If you have used R to solve these questions then make sure to write down your R code and the output you received from R.
+
+Q1. Is the function on the handout a pdf? Why/not?
+
+
+\fbox{\begin{minipage}{50em}
+  \hfill
+\vspace{5cm}
+\end{minipage}}
+
+Q2. 
+a. A lottery game requires players to guess six numbers from 1 to 49. If a player guessed all the six numbers then they win the lottery of the week. What is the probability that a player will win the lottery?
+
+\fbox{\begin{minipage}{50em}
+  \hfill
+\vspace{3cm}
+\end{minipage}}
+
+b. What is the expected number of weeks until the first win for a player?
+
+\fbox{\begin{minipage}{50em}
+  \hfill
+\vspace{2.5cm}
+\end{minipage}}
+
+c. What is the variance?
+
+\fbox{\begin{minipage}{50em}
+  \hfill
+\vspace{2.5cm}
+\end{minipage}}
+
+\pagebreak
+
+Q3. A customer service agent receives on average 2 calls every 5 minutes. 
+
+a. What is the probability that they will receive 0 calls in the next 5 minutes?
+
+\fbox{\begin{minipage}{50em}
+  \hfill
+\vspace{4cm}
+\end{minipage}}
+
+b. What is the probability that they will receive more than 2 calls in the next 5 minutes?
+
+\fbox{\begin{minipage}{50em}
+  \hfill
+\vspace{4cm}
+\end{minipage}}
