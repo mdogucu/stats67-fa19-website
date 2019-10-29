@@ -1,0 +1,98 @@
+---
+title: "Plotting the Probability Density Function of Exponential Distribution"
+date: "2019-10-28"
+output: 
+  html_document:
+    css: demo-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+Note that you might have to install tidyverse package if it is not already installed. You can installed it by writing `install.package(tidyverse)` in your console.
+
+```{r message = FALSE}
+library(tidyverse)
+```
+
+
+In our handout we worked with random variable $X$ such that $X \sim Exp(0.1)$ which indicated that $\lambda = 0.1$
+
+Also remember that probability density function (pdf) for the Exponential Distribution is 
+
+$f(x) = \lambda e^{-\lambda x}$ for $x\geq0$
+
+We had manually tried to plot the pdf by calculating $f(x)$ for some values of $x$. For instance
+
+when $x = 0$, then  $f(x) = 0.1e^{-0.1\times0} = 0.1$  
+when $x = 1$, then  $f(x) = 0.1e^{-0.1\times1} \approx 0.09$  
+when $x = 2$, then  $f(x) = 0.1e^{-0.1\times2} \approx 0.08$
+
+Note that X is continous so we could calculate $f(1.5)$ or any other positive decimal number. For now we will use integers to make life easier. Also note the sample space of $X$ does not have an upper bound so plotting X by hand would be really difficult. 
+
+We now know that all probability functions (mass or density) start with the letter `d` in R. The function for exponential density is `dexp()`. 
+
+We can use this function to calculate densities as follows:
+
+```{r}
+dexp(x = 0, rate = 0.1)
+dexp(x = 1, rate = 0.1)
+dexp(x = 2, rate = 0.1)
+```
+
+
+Rather than doing these one by one, we can use 
+
+```{r}
+dexp(x = 0:10, rate = 0.1)
+```
+
+to calculaute $f(x)$ for $X \in \{0, 1, 2, .... 9, 10\}$.Note that this is a vector with 11 elements and the first three elements are exactly like the ones we have calculated above. We can also increase the possibilities for $x$ by changing the endpoint `dexp(x = 0:100, rate = 0.1)`. 
+`
+
+In order to make a ggplot we would have to have a data frame. So in the next code chunk, we will define a data frame that has all the $x$s and $f(x)$s. 
+
+```{r}
+our_data <- data.frame(our_x = 0:100,
+                       our_f_x = dexp(x = 0:100, rate = 0.1))
+
+glimpse(our_data)
+```
+
+
+Now that we have a data frame we can use it to plot the pdf. 
+
+```{r}
+our_data %>% 
+  ggplot(aes(x = our_x,
+             y = our_f_x)) +
+  geom_line()
+```
+
+
+
+And what if we wanted to include $x$s with decimal numbers? We can use the `seq()` to generate a sequence that increases at given increments.
+
+```{r}
+seq(from = 0, to = 2, by = 0.1)
+```
+
+
+```{r}
+our_data <- data.frame(our_x = seq(from = 0, to = 100, by = 0.1),
+                       our_f_x = dexp(seq(from = 0, to = 100, by = 0.1),
+                                      rate = 0.1))
+
+glimpse(our_data)
+
+our_data %>% 
+  ggplot(aes(x = our_x,
+             y = our_f_x)) +
+  geom_line()
+```
+
+Note that $x$ can go up to $\infty$  
+Also note that I have used variable names such as `our_x` to distinguish it from the `x` argument in the `aes()` function. If you feel comfortable with programming you may want to use better names for your objects.
+
+<br>
+<br>
+<br>
