@@ -1,0 +1,89 @@
+---
+output: 
+  pdf_document:
+    template: template.tex
+---
+
+Announcements:
+
+- On Nov 3, 2019 - Daylight Saving Time Ends
+On Sunday, November 3, 2019, 2:00:00 am clocks are turned backward 1 hour to
+Sunday, November 3, 2019, 1:00:00 am local standard time instead.
+
+- Midterm Review is online.
+
+- Midterm Part A is online.
+
+\section{Continuous Uniform Distribution}
+
+__Probability Density Function__
+
+\vspace{5cm}
+
+
+__Expected Value__
+\vspace{5cm}
+
+__Variance__
+
+\vspace{5cm}
+
+
+\pagebreak
+__Exercise__
+
+A broken phone alarm starts ringing once every day randomly. Let X be the random variable representing the time in the 24 hour system when the alarm goes on.
+
+1. Plot the pdf of $X$
+
+\vspace{5cm}
+
+2. What is $P(X = 12)$
+\vspace{2cm}
+
+3. What is $P(3<X<5)$
+\vspace{5cm}
+
+4. What is $E[X]$?
+\vspace{4cm}
+
+5. What is $Var[X]$?
+\vspace{2cm}
+
+\section{Exponential Distribution}
+
+__Probability Density Function__
+
+\vspace{5cm}
+
+
+__Expected Value__
+\vspace{3cm}
+
+__Variance__
+
+\vspace{3cm}
+
+__Note:__
+
+\pagebreak
+
+__Exercise__
+
+Suppose your waiting time (in minutes) for a bus is $X\sim Exp(0.1)$
+
+1. Plot the pdf of $X$
+
+\vspace{5cm}
+
+2. What is $P(X = 5)$?
+\vspace{2cm}
+
+3. What is $P(X < 5)$? In other words what is the probability that you would wait less than 5 minutes for the bus?
+\vspace{5cm}
+
+4. What is $E[X]$?
+\vspace{4cm}
+
+5. What is $Var[X]$?
+\vspace{2cm}
