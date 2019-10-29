@@ -134,7 +134,7 @@ avocado %>%
 \noindent
 \begin{minipage}[c]{0.8\linewidth}
 \begin{enumerate} [label=(\Alph*)]
-  \item The minimum average price of conventional avocados is less than the first quartile of organic avocados.   
+  \item The minimum average price of conventional avocados is greater than the first quartile of organic avocados.   
   \item The median of organic avocados is less than the third quartile of conventional avocados. 
   \item Interquartile range of organic avocados is greater than interquartile range of conventional avocados. 
   \item The maximum of conventional avocados is less than the third quartile of organic avocados. 
@@ -411,7 +411,7 @@ c. Now assume that the first game is free and each additional game is \$1.5 to p
 
 \pagebreak
 
-10. A research assistant has a job that requires them to count fireflies. Based on their experience, in a similar climate they had observed an average of 3 fireflies ever five minutes. What is the probability that they will observe more than 8 fruitflies in the next 5 minutes?
+10. A research assistant has a job that requires them to count fireflies. Based on their experience, in a similar climate they had observed an average of 3 fireflies every five minutes. What is the probability that they will observe more than 8 fruitflies in the next 5 minutes?
 
 
 \noindent
@@ -421,9 +421,9 @@ c. Now assume that the first game is free and each additional game is \$1.5 to p
   \vspace{0.5cm}  
   \item \begin{verbatim} dpois(x = 8, lambda = 3) \end{verbatim}
   \vspace{0.5cm}  
-  \item \begin{verbatim} 1 - ppois(q = 7, lambda = 3) \end{verbatim}
+  \item \begin{verbatim} 1 - ppois(q = 8, lambda = 3) \end{verbatim}
   \vspace{0.5cm}  
-  \item \begin{verbatim} 1 - dpois(x = 7, lambda = 3) \end{verbatim}
+  \item \begin{verbatim} 1 - dpois(x = 8, lambda = 3) \end{verbatim}
 
 \end{enumerate}
 
@@ -554,7 +554,7 @@ Each sample of national adults includes a minimum quota of 70\% cellphone respon
 
 $P(A^c) = 1 - P(A)$ \hspace{3cm} $P(A \cup B) = P(A) + P(B) - P(A\cap B)$
 
-$P(A|B) = \frac{P(A \cap B)}{P(B)}$
+\large$P(A|B) = \frac{P(A \cap B)}{P(B)} = \frac{P(B|A)P(A)}{P(B|A)P(A) + P(B|A^c)P(A^c)}$
 \section*{Discrete Random Variables}
 
 Let $X$ be a discrete random variable with a pmf of $p(x)$ then
