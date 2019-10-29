@@ -1,5 +1,5 @@
 ---
-title: "Continuous Uniform and Chi-square Distributions"
+title: "Continuous Uniform and Exponential Distributions"
 date: "2019-10-28"
 output: 
   html_document:
@@ -13,9 +13,9 @@ output:
 By the end of this class, you will be able to:
 
 - identify random variables with a continuous uniform distribution.
-- identify random variables with a Chi-square distribution.
+- identify random variables with an exponential distribution.
 - calculate expected value and variance of variables with a continuous uniform distribution.
-- calculate expected value and variance of variables with a Chi-square distribution.
+- calculate expected value and variance of variables with an exponential distribution.
 
 
 <br>
