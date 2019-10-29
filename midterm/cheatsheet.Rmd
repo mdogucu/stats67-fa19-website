@@ -9,7 +9,8 @@ output:
 
 $P(A^c) = 1 - P(A)$ \hspace{3cm} $P(A \cup B) = P(A) + P(B) - P(A\cap B)$
 
-$P(A|B) = \frac{P(A \cap B)}{P(B)}$
+\large$P(A|B) = \frac{P(A \cap B)}{P(B)} = \frac{P(B|A)P(A)}{P(B|A)P(A) + P(B|A^c)P(A^c)}$
+
 \section*{Discrete Random Variables}
 
 Let $X$ be a discrete random variable with a pmf of $p(x)$ then
