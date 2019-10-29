@@ -1,5 +1,5 @@
 ---
-title: "Reading: Continuous Random Variables"
+title: "Reading: Normal Distribution"
 date: "due 2019-10-30 at 9:00 am"
 output: 
   html_document:
