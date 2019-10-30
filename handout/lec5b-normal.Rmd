@@ -1,0 +1,64 @@
+---
+output: 
+  pdf_document:
+    template: template.tex
+---
+
+Announcements:
+
+- All grading disputes need to be resolved before the midterm. 
+- Make sure to read the policies section of the midterm carefully. 
+
+\section{Normal Distribution}
+
+__Probability Density Function__
+
+\vspace{6cm}
+
+
+__Expected Value__
+\vspace{2cm}
+
+__Variance__
+
+\vspace{2cm}
+
+
+__68-95-99.7 Rule__
+
+\pagebreak
+
+__Exercises__
+
+1. Assume that SAT scores are normally distributed with mean 1100 and standard deviation of 200. 
+
+a. What is the probability that a randomly selected student (we know nothing else about them) scores below 1100? 
+\vspace{5cm}
+
+b. What is the probability that a randomly selected student  scores at least 1300?
+
+\vspace{5cm}
+
+c. What is the probability that a randomly selected student scores less than 1500?
+
+\vspace{5cm}
+
+d. What is the probability that a randomly selected student scores less than 1400?
+
+\vspace{5cm}
+
+In all the questions a-d, we have found what we refer to as percentiles. 
+
+e. We know that a student scored at the 93rd percentile. What is their SAT score? If you cannot find it at first, attempt to estimate. 
+
+\vspace{5cm}
+
+\section{Standard Normal Distribution}
+
+
+\vspace{13cm}
+
+
+
+Note that you will see $Z$ scores in different contexts. Even though the standard normal distribution is always the same, the context we use it differs. During this class we have used it when we knew the mean, standard deviation, and distribution of all SAT scores. In other words, we knew about the population and used it as a distribution of population.
+
