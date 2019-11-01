@@ -263,14 +263,9 @@ c. What is the probability that a patient does not have Swine Flu, given they go
 
   a. What is our random variable? What distribution does it follow?
     
-\noindent
-\begin{minipage}[c]{0.90\linewidth}
-\vspace{3cm}
-\hspace{5cm}
-\end{minipage}
-\fbox{\begin{minipage}[c]{0.10\linewidth}
-\vspace{1cm}
-\hspace{1cm}
+\fbox{\begin{minipage}{45em}
+\hfill
+\vspace{3 cm}
 \end{minipage}}
 
   b. What is the probability that at least one but at most three of the cats we find are female?
@@ -387,26 +382,16 @@ c. Now assume that the first game is free and each additional game is \$1.5 to p
 
   d. Are performing your chemistry experiment correctly and performing your physics experiment correctly mutually exclusive? Why? Give mathematical reasoning.
   
-\noindent
-\begin{minipage}[c]{0.90\linewidth}
-\vspace{3cm}
-\hspace{5cm}
-\end{minipage}
-\fbox{\begin{minipage}[c]{0.10\linewidth}
-\vspace{1cm}
-\hspace{1cm}
+\fbox{\begin{minipage}{45em}
+\hfill
+\vspace{3 cm}
 \end{minipage}}
 
   e. Is performing your chemistry experiment correctly independent of you performing your physics experiment correctly? Why? Give mathematical reasoning.
   
-\noindent
-\begin{minipage}[c]{0.90\linewidth}
-\vspace{3cm}
-\hspace{5cm}
-\end{minipage}
-\fbox{\begin{minipage}[c]{0.10\linewidth}
-\vspace{1cm}
-\hspace{1cm}
+\fbox{\begin{minipage}{45em}
+\hfill
+\vspace{3 cm}
 \end{minipage}}
 
 \pagebreak
@@ -547,6 +532,80 @@ Each sample of national adults includes a minimum quota of 70\% cellphone respon
 \hfill
 \vspace{4 cm}
 \end{minipage}}
+
+\pagebreak
+
+16. Let $X$ be modeled by the function \large$f(x) = \frac{2}{x^3}$ for $x \geq 1$.
+
+a. Show that this is a valid probability density function (pdf).
+
+\fbox{\begin{minipage}{45em}
+\hfill
+\vspace{8 cm}
+\end{minipage}}
+
+b. What is the expected value of this distribution?
+
+\noindent
+\begin{minipage}[c]{0.90\linewidth}
+\vspace{5cm}
+\hspace{5cm}
+\end{minipage}
+\fbox{\begin{minipage}[c]{0.10\linewidth}
+\vspace{1cm}
+\hspace{1cm}
+\end{minipage}}
+    
+c. What is the variance of this distribution?
+
+\noindent
+\begin{minipage}[c]{0.90\linewidth}
+\vspace{5cm}
+\hspace{5cm}
+\end{minipage}
+\fbox{\begin{minipage}[c]{0.10\linewidth}
+\vspace{1cm}
+\hspace{1cm}
+\end{minipage}}
+
+\pagebreak 
+
+d. What is the probability that *X* is at least 4?
+
+\noindent
+\begin{minipage}[c]{0.90\linewidth}
+\vspace{5cm}
+\hspace{5cm}
+\end{minipage}
+\fbox{\begin{minipage}[c]{0.10\linewidth}
+\vspace{1cm}
+\hspace{1cm}
+\end{minipage}}
+    
+e. What is the probability that *X* is more than 3 but less than 10?
+
+\noindent
+\begin{minipage}[c]{0.90\linewidth}
+\vspace{5cm}
+\hspace{5cm}
+\end{minipage}
+\fbox{\begin{minipage}[c]{0.10\linewidth}
+\vspace{1cm}
+\hspace{1cm}
+\end{minipage}}
+    
+f. What is the probability that *X* is exactly 1?
+
+\noindent
+\begin{minipage}[c]{0.90\linewidth}
+\vspace{5cm}
+\hspace{5cm}
+\end{minipage}
+\fbox{\begin{minipage}[c]{0.10\linewidth}
+\vspace{1cm}
+\hspace{1cm}
+\end{minipage}}
+
 
 \pagebreak
 
