@@ -7,7 +7,7 @@ output:
       after_body: footer.html
 ---
 
-In order to get ready for the midterm, you should attempt at solving all the review questions. The review questions are posted [here](midterm-review.pdf). They have been collectively prepared by the teaching team. Note that these questions will not be graded. You are encouraged to study in groups for the midterm using these questions. The answer key for the review questions will not be provided until 11/1.
+In order to get ready for the midterm, you should attempt at solving all the review questions. The review questions are posted [here](midterm-review.pdf). They have been collectively prepared by the teaching team. Note that these questions will not be graded. You are encouraged to study in groups for the midterm using these questions. The answer key is posted [here](midterm-review-key.pdf).
 
 The midterm will have two parts: Part A and B. Both of these parts will be equally weighted. In other words each part is considered at 50% of your total midterm grade.
 
