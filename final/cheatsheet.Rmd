@@ -1,0 +1,46 @@
+---
+output: 
+  pdf_document:
+    template: template.tex
+---
+
+
+\large$\bar{x} = \frac{\Sigma_{i=1}^nx_i}{n}$ \hspace{4cm} $s^2 = \frac{\Sigma_{i=1}^n(x_i-\bar{x})}{n-1}$
+
+$P(A^c) = 1 - P(A)$ \hspace{3cm} $P(A \cup B) = P(A) + P(B) - P(A\cap B)$
+
+\large$P(A|B) = \frac{P(A \cap B)}{P(B)} = \frac{P(B|A)P(A)}{P(B|A)P(A) + P(B|A^c)P(A^c)}$
+
+\section*{Discrete Random Variables}
+
+Let $X$ be a discrete random variable with a pmf of $p(x)$ then
+
+$E[X] = \displaystyle \sum_{x} x p(x)$  
+
+Let $X$ be a random variable, then
+
+$Var(X) = E[X^2] - E[X]^2$
+
+Linear combination of random variables $X$ and $Y$ and fixed numbers $a$ and $b$:  
+
+$E[aX+bY] = aE[X] + bE[Y]$  
+$Var(aX+bY) = a^2Var(X)+b^2Var(Y)$
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Distribution} & \textbf{pmf} & \textbf{$E(X)$} & \textbf{$Var(X)$} \\ \hline
+Binomial        & \large${n \choose k} p^k (1-p)^{n-k}$            & \large$np$ & \large$np(1-p)$                 \\ \hline
+Geometric           & \large$(1-p)^{n-1}p$ & \large$\frac{1}{p}$ & \large$\frac{1-p}{p^2}$                 \\ \hline
+Discrete Uniform           & \large$\frac{1}{n}$ & \large$\frac{a+b}{2}$ & \large$\frac{(b-a+1)^2-1}{12}$                 \\ \hline
+Poisson          & \large$\frac{\lambda^k}{k!}e^{-\lambda}$ & \large$\lambda$ & \large$\lambda$                 \\ \hline
+\end{tabular}
+\end{table}
+
+
+\section*{Continuous Random Variables}
+
+$E[X] =  \int_{x \in \Omega_x} x f(x) \,dx$
+
