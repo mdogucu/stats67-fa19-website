@@ -65,7 +65,7 @@ SAT scores are normally distributed with mean 1100 and standard deviation of 200
 
 In the Bechdel data frame we were looking at a sample of movies and not ALL movies ever made. 
 
-In Bob Ross example we were looking at ALL the movies he has painted in the Joy of Painting. So it refers to a population.
+In Bob Ross example we were looking at ALL the paintings he has painted in the Joy of Painting. So it refers to a population.
 
 The SAT distribution is based on ALL the students who have taken the test.
 
@@ -113,7 +113,7 @@ We have data on everyone who worked for LAPD in the year 2018. So the distributi
 mean(lapd$`Base Pay`)
 ```
 
-Also, just in case we need it in the future let's also calculate the population standard deviation ( $\sigma$ )
+Also note that the population standard deviation is denoted with ( $\sigma$ ).
 
 ---
 
@@ -353,7 +353,7 @@ sample_means_data <- data.frame(sample_means = sample_means)
 
 ```
 
-I have taken 10,000 samples of size 50 and calculated their mean. The following slide shows the distribution of the sample means and saved it in a data frame called `sample_means_data`
+I have taken 10,000 samples of size 200 and calculated their mean. The following slide shows the distribution of the sample means and saved it in a data frame called `sample_means_data`
 
 ---
 
@@ -369,7 +369,7 @@ sample_means_data %>%
 
 ## Expected Value of the Sampling Distribution
 
-Even though the sampling distributions were based on samples with sample size ( $n$ ) of 200, if we were to take larger number of samples ( as $n \to infty$ ) then we would expect:
+Even though the sampling distributions were based on samples with sample size ( $n$ ) of 200, if we were to take larger samples ( as $n \to infty$ ) then we would expect:
 
 $E(\bar x) = \mu$
 
@@ -405,7 +405,7 @@ The standard error decreases and $\bar{x}$ becomes a more __precise__ estimator.
 
 ## Bias
 
-Even though each sample mean does not equal to the population mean. The expected value of all sample means does equal to the population mean.
+Even though each sample mean may not necessarily equal to the population mean. The expected value of all sample means does equal to the population mean.
 
 Sample mean is an __unbiased estimator__ of the population mean.
 
@@ -431,14 +431,15 @@ What similarities do you see between all the sampling distributions?
 
 ---
 
-## Central Limit Theorem
+## Central Limit Theorem (CLT)
 
-The sampling distribution will be normally distributed with a mean equal to the population parameter. The standard error will be inversely proportional to the square root of the sample size. 
+If certain conditions are met, the sampling distribution will be normally distributed with a mean equal to the population parameter. The standard error will be inversely proportional to the square root of the sample size. 
 
+We will learn the conditions in the upcoming lectures.
 
 ---
 
-Moving forward we will use CLT to make __inference__ about population parameters when we only have sample statistics. 
+Moving forward we will use CLT to make __inference__ about population parameters using sample statistics. 
 
 
 

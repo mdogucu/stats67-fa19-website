@@ -49,7 +49,7 @@ SAT scores are normally distributed with mean 1100 and standard deviation of 200
 
 In the Bechdel data frame we were looking at a sample of movies and not ALL movies ever made. 
 
-In Bob Ross example we were looking at ALL the movies he has painted in the Joy of Painting. So it refers to a population.
+In Bob Ross example we were looking at ALL the paintings he has painted in the Joy of Painting. So it refers to a population.
 
 The SAT distribution is based on ALL the students who have taken the test.
 
@@ -101,7 +101,7 @@ mean(lapd$`Base Pay`)
 ## [1] 85149.05
 ```
 
-Also, just in case we need it in the future let's also calculate the population standard deviation ( `\(\sigma\)` )
+Also note that the population standard deviation is denoted with ( `\(\sigma\)` ).
 
 ---
 
@@ -216,26 +216,26 @@ lapd %&gt;%
 ## # A tibble: 20 x 1
 ##    `Base Pay`
 ##         &lt;dbl&gt;
-##  1     69640 
-##  2     90594.
-##  3     98608.
-##  4    103893.
-##  5     95978.
-##  6     98615.
-##  7    106734.
-##  8     42626.
-##  9     90176.
-## 10     63603.
-## 11     98606.
-## 12     95976.
-## 13    104702.
-## 14    112987.
-## 15    119322.
-## 16     54508.
-## 17     46674.
-## 18     60051.
-## 19     72558.
-## 20      2428
+##  1         0 
+##  2     77067.
+##  3     79020.
+##  4    178885.
+##  5    105137.
+##  6     64278.
+##  7    123686.
+##  8     99088.
+##  9    100836 
+## 10    104101.
+## 11    104093.
+## 12         0 
+## 13    128936.
+## 14    132958.
+## 15     95971.
+## 16    108916.
+## 17     98619.
+## 18    103879.
+## 19     97363.
+## 20     89744.
 ```
 
 ---
@@ -251,26 +251,26 @@ lapd %&gt;%
 ## # A tibble: 20 x 1
 ##    `Base Pay`
 ##         &lt;dbl&gt;
-##  1     73517.
-##  2    101249.
-##  3     68824.
-##  4     66129.
-##  5    197591.
-##  6    110168.
-##  7    125207.
-##  8    106922.
-##  9    117549.
-## 10    104101.
-## 11     90584 
-## 12     96494.
-## 13     73862.
-## 14     66493.
-## 15    119248 
-## 16     63207.
-## 17         0 
-## 18    104286.
-## 19     49091.
-## 20     38143.
+##  1    105766 
+##  2         0 
+##  3    117150.
+##  4    124655.
+##  5     98615.
+##  6     41340.
+##  7    119323.
+##  8     95980.
+##  9      8888.
+## 10     96610.
+## 11    105562.
+## 12     21852 
+## 13    100960 
+## 14     80598.
+## 15    101249.
+## 16     16031.
+## 17     98606.
+## 18     76402.
+## 19    217126.
+## 20     70158.
 ```
 ---
 
@@ -554,7 +554,7 @@ I could do this over and over again. Don't you worry! I did.
 
 
 
-I have taken 10,000 samples of size 50 and calculated their mean. The following slide shows the distribution of the sample means and saved it in a data frame called `sample_means_data`
+I have taken 10,000 samples of size 200 and calculated their mean. The following slide shows the distribution of the sample means and saved it in a data frame called `sample_means_data`
 
 ---
 
@@ -563,7 +563,7 @@ I have taken 10,000 samples of size 50 and calculated their mean. The following 
 
 ## Expected Value of the Sampling Distribution
 
-Even though the sampling distributions were based on samples with sample size ( `\(n\)` ) of 200, if we were to take larger number of samples ( as `\(n \to infty\)` ) then we would expect:
+Even though the sampling distributions were based on samples with sample size ( `\(n\)` ) of 200, if we were to take larger samples ( as `\(n \to infty\)` ) then we would expect:
 
 `\(E(\bar x) = \mu\)`
 
@@ -599,7 +599,7 @@ The standard error decreases and `\(\bar{x}\)` becomes a more __precise__ estima
 
 ## Bias
 
-Even though each sample mean does not equal to the population mean. The expected value of all sample means does equal to the population mean.
+Even though each sample mean may not necessarily equal to the population mean. The expected value of all sample means does equal to the population mean.
 
 Sample mean is an __unbiased estimator__ of the population mean.
 
@@ -625,14 +625,15 @@ What similarities do you see between all the sampling distributions?
 
 ---
 
-## Central Limit Theorem
+## Central Limit Theorem (CLT)
 
-The sampling distribution will be normally distributed with a mean equal to the population parameter. The standard error will be inversely proportional to the square root of the sample size. 
+If certain conditions are met, the sampling distribution will be normally distributed with a mean equal to the population parameter. The standard error will be inversely proportional to the square root of the sample size. 
 
+We will learn the conditions in the upcoming lectures.
 
 ---
 
-Moving forward we will use CLT to make __inference__ about population parameters when we only have sample statistics.
+Moving forward we will use CLT to make __inference__ about population parameters using sample statistics.
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
