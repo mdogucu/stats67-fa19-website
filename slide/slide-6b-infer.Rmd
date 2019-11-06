@@ -1,0 +1,444 @@
+---
+title: "Introduction to Statisticial Inference"
+author: "Dr. Dogucu"
+date: "2019-11-06"
+header-includes:
+   - \usepackage{mathtools}
+output: 
+  xaringan::moon_reader:
+    css: slide-styles.css
+      
+---
+
+layout: true
+  
+<div class="my-header"></div>
+
+<div class="my-footer"> 
+ Copyright &copy; <a href="https://mdogucu.ics.uci.edu">Dr. Mine Dogucu</a>. All Rights Reserved.</div> 
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, fig.align = "center")
+options(scipen=0)
+
+```
+
+```{r message = FALSE, echo = FALSE}
+library(tidyverse)
+library(fivethirtyeight)
+```
+
+So far we have seen many distributions. Let's go back and think whether the distribution was of a sample or population? 
+---
+
+<br>
+```{r message = FALSE, warning = FALSE}
+require(scales)
+
+bechdel %>% 
+  ggplot(aes(x = domgross)) +
+  geom_histogram() +
+  scale_x_continuous(labels = comma, limits = c(-50000000, 850000000)) +
+  labs(x = "Domestic Gross",
+       title = "Movies in the Bechdel Dataset") +
+  theme(text = element_text(size = 20)) 
+```
+
+---
+
+<br>
+```{r}
+bob_ross %>% 
+  mutate(trees = case_when(trees == 1 ~ "TRUE",
+                           trees == 0 ~ "FALSE")) %>% 
+  ggplot(aes(x = trees)) +
+  geom_bar() +
+  labs(title = "Bob Ross' Paintings in the Joy Painting") +
+  theme(text = element_text(size = 20)) 
+```
+---
+
+SAT scores are normally distributed with mean 1100 and standard deviation of 200.
+---
+
+In the Bechdel data frame we were looking at a sample of movies and not ALL movies ever made. 
+
+In Bob Ross example we were looking at ALL the movies he has painted in the Joy of Painting. So it refers to a population.
+
+The SAT distribution is based on ALL the students who have taken the test.
+
+The distributions of populations and samples can be discrete or continuous. 
+
+---
+
+So far we have talked about population distribution and sample distribution. Today we are going to learn about sampling distribution. It is kind of like our imaginary friend. It does not really exist but we imagine about it. 
+---
+## Data
+
+
+```{r message = FALSE, warning = FALSE}
+lapd <- read_csv("data/lapd_2018.csv") 
+```
+
+We will be using payroll data from Los Angeles Police Department (LAPD) from 2018.
+
+```{r echo = TRUE}
+lapd %>% 
+  select(`Base Pay`, `Benefits Plan`) %>% 
+  glimpse()
+```
+
+Note that R does not allow object names to have a space in them. If a variable name has a space then you can use backticks to read such variables. 
+
+
+---
+
+
+```{r}
+lapd %>% 
+  ggplot(aes(x = `Base Pay`)) +
+  geom_histogram(binwidth = 5000) +
+  scale_x_continuous(labels = comma) +
+  theme(text = element_text(size = 20)) 
+  
+```
+
+---
+
+We have data on everyone who worked for LAPD in the year 2018. So the distribution we just looked at is a population distribution. We can go ahead and calculate the population mean ( $\mu$ ).
+
+```{r echo = TRUE}
+mean(lapd$`Base Pay`)
+```
+
+Also, just in case we need it in the future let's also calculate the population standard deviation ( $\sigma$ )
+
+---
+
+What if we did not have access to all this data? What would we do?
+
+---
+
+What if we did not have access to all this data? What would we do?
+
+Rely on a sample!
+---
+```{r}
+options(scipen = 0)
+pop_mean <-  mean(lapd$`Base Pay`)
+```
+
+Let's assume we went ahead and took a (random) sample of LAPD staff and asked their salary information (and they report to us truthfully) and calculated a mean, would we find a mean of 85149.05? Why, why not?
+
+---
+
+Let's pretend we have never seen the data and we do not know the population parameter $\mu$. In fact this is usually what happens in real life. We do not have the population information but we do want to know a population __parameter__ (does not necessarily have to be the mean).
+
+If we took a sample and calculated the sample mean, we would name this __point estimate__. It is very unlikely for the point estimate to be the same as the parameter. So whenever we use a sample to understand the population we make an __error__ which is the difference between the true parameter and the sample estimate. 
+
+---
+
+The __error__ we make when we use a __point estimate__ has two components:
+
+1) __Sampling error__ represents the variance of the point estimates from one sample to another. This is sometimes referred to as _sampling uncertainty_. We can make use of point estimates only when we take this uncertainty into account. 
+
+2) __Bias__ measures how much the point estimates over- or under-estimate the population parameter on average. 
+---
+
+Before we go on any further let's practice some notation. For the purposes of these questions assume that people are either left handed or right handed and not both. 
+
+---
+
+We were at Aldrich Park and asked some people their height with the hopes of finding the average height at UCI. We found an average of 160 cm. What is the point estimate? What is the parameter of interest?
+
+---
+
+We were at Aldrich Park and asked some people their height with the hopes of finding the average height at UCI. We found an average of 160 cm. What is the point estimate? What is the parameter of interest?
+
+Point estimate is the average sample heights. We can denote this with $\bar x_{height} = 160$ or simply $\bar x$
+
+Parameter of interest is the average height at UCI or simply $\mu$ and we do not know $\mu$ so $\mu = ?$
+
+---
+
+We think the left handed students of higher GPA than right handed students at UCI. We ask students around us and find that left handed students' GPA is 0.12 higher than right handed students'. What is the point estimate? What is the parameter of interest?
+
+---
+
+We think the left handed students of higher GPA than right handed students at UCI. We ask students around us and find that left handed students' GPA is 0.12 higher than right handed students'. What is the point estimate? What is the parameter of interest?
+
+$\bar x_{left} - \bar x_{right} = 0.12$
+
+We know that each time we sample we might get different result. Our parameter of interest is 
+
+$\mu_{left} - \mu_{right}$
+
+And the question we want to answer is
+
+$\mu_{left} - \mu_{right} \stackrel{?}{=} 0$
+
+---
+
+
+The proportion of left handed people are about `10%`. We want to know if this holds true at UCI. We sample a group of student and see that about `13%` of the students are left handed. What is the point estimate? What is the population parameter?
+
+---
+
+The proportion of left handed people are about `10%`. We want to know if this holds true at UCI. We sample a group of student and see that about `13%` of the students are left handed. What is the point estimate? What is the population parameter?
+
+Point estimate: sample proportion: $\hat p = 0.13$  
+Parameter of interest: population proportion: $p$  
+Question we want to answer: $p \stackrel{?}{=} 0.10$ or $p - 0.10 \stackrel{?}{=} 0$  
+---
+
+Do left handed people have higher rates of passing a class? You take a sample and see that in the sample `93%` of the left handed students passed and `88%` of the right handed students passed. What is the point estimate? What is the parameter of interest?
+
+---
+
+Do left handed people have higher rates of passing a class? You take a sample and see that in the sample `93%` of the left handed students passed and `88%` of the right handed students passed. What is the point estimate? What is the parameter of interest?
+
+Point estimate: difference of two sample proportions: $\hat p_1 - \hat p_2 = 0.93- 0.88$  
+Parameter of interest: difference of two population proportions: $p_1 - p_2$  
+Question we want to answer: $p_1 - p_2 \stackrel{?}{=} 0$ 
+
+---
+
+
+
+In the next few lectures we will learn about the following in more detail.
+
+|                               | Parameter of Interest | Point Estimate        |
+|-------------------------------|-----------------------|-----------------------|
+| Mean                          | $\mu$                 | $\bar x$              |
+| Difference of Two Means       | $\mu_1 - \mu_2$       | $\bar x_1 - \bar x_2$ |
+| Proportion                    | $p$                   | $\hat p$              |
+| Difference of Two Proportions | $p_1 - p_2$           | $\hat p_1 - \hat p_2$ |
+
+---
+
+We can go ahead and randomly sample 20 LAPD staff.
+
+```{r echo = TRUE}
+lapd %>% 
+  sample_n(20) %>% 
+  select(`Base Pay`)
+```
+
+---
+
+```{r echo = TRUE}
+lapd %>% 
+  sample_n(20) %>% 
+  select(`Base Pay`)
+```
+---
+
+Note that each time we use `sample_n()` function we seem to be getting a new random sample, which is great. However, that would also mean if each of you ran this code on a different computer you would be finding different sample means for each of the random samples. It would be very difficult for us to talk about all this. 
+
+More importantly, even if you were working by yourself, you would not be able to reproduce your results from one R session to the next. 
+
+To grant reproducibility of results, we will make use of `set.seed()` function to give us the same set of random samples each time we set seed. We only set seed once at the beginning. For demonstration purposes I will set seed twice. You can use any number to set seed I personally prefer 123. For consistency in the classroom let's all use 123.
+
+---
+
+## First Sample
+
+```{r echo = TRUE}
+set.seed(123)
+
+lapd %>% 
+  sample_n(20) %>% 
+  select(`Base Pay`)
+```
+
+
+---
+
+## Second Sample
+
+```{r echo = TRUE}
+
+lapd %>% 
+  sample_n(20) %>% 
+  select(`Base Pay`)
+```
+---
+
+## Third Sample
+
+```{r echo = TRUE}
+
+lapd %>% 
+  sample_n(20) %>% 
+  select(`Base Pay`)
+```
+
+---
+
+## First Sample
+
+```{r echo = TRUE}
+set.seed(123)
+
+lapd %>% 
+  sample_n(20) %>% 
+  select(`Base Pay`)
+```
+
+---
+## Second Sample
+
+```{r echo = TRUE}
+
+lapd %>% 
+  sample_n(20) %>% 
+  select(`Base Pay`)
+```
+---
+## Third Sample
+
+```{r echo = TRUE}
+
+lapd %>% 
+  sample_n(20) %>% 
+  select(`Base Pay`)
+```
+
+---
+
+Note that as soon as I set seed again, the random samples start from the first sample again.
+
+---
+
+Now that we know how to take random samples let's go ahead and take random samples and calculate their mean. 
+
+---
+```{r}
+set.seed(123)
+```
+
+
+```{r echo = TRUE}
+sample1_mean <- lapd %>% 
+  sample_n(20) %>% 
+  summarize(mean(`Base Pay`)) 
+
+sample1_mean
+```
+
+```{r echo = TRUE}
+sample2_mean <- lapd %>% 
+  sample_n(20) %>% 
+  summarize(mean(`Base Pay`))
+
+sample2_mean
+```
+
+---
+
+I could do this over and over again. Don't you worry! I did. 
+
+
+```{r}
+set.seed(123)
+sample_means <-vector()
+
+for (i in 1:10000){
+    sample_means <- c(sample_means, mean(sample_n(lapd, 200)$`Base Pay`))
+}
+
+sample_means_data <- data.frame(sample_means = sample_means)
+
+```
+
+I have taken 10,000 samples of size 50 and calculated their mean. The following slide shows the distribution of the sample means and saved it in a data frame called `sample_means_data`
+
+---
+
+```{r warning = FALSE, message = FALSE}
+sample_means_data %>% 
+  ggplot(aes(x = sample_means)) +
+  geom_histogram() +
+  labs(title = "Sampling Distribution of the Mean") +
+  scale_x_continuous(labels = comma) +
+  theme(text = element_text(size = 20)) 
+```
+---
+
+## Expected Value of the Sampling Distribution
+
+Even though the sampling distributions were based on samples with sample size ( $n$ ) of 200, if we were to take larger number of samples ( as $n \to infty$ ) then we would expect:
+
+$E(\bar x) = \mu$
+
+In other words expected value of sample means would equal to the population mean.
+
+---
+
+## Standard Error
+
+We said that sampling error describes how much points estimates vary from sample to another sample. From the sampling distribution, it was evident that there was variance and all point estimates were not the same. In fact there are few point estimates that are extremely underestimating the population parameter and there are few that are extremely overestimating the population parameter. However, majority of the sample estimates were close to the mean. 
+
+
+$Var(\bar x) = \frac{\sigma^2}{n}$ or $sd(\bar x) = \frac{\sigma}{\sqrt n}$ (This is the standard error of the estimate)
+---
+
+## Standard Error
+
+What happens to the standard error as $n$ increases?
+
+SE = $\frac{\sigma}{\sqrt n}$
+
+---
+
+## Standard Error
+
+What happens to the standard error as $n$ increases?
+
+SE = $\frac{\sigma}{\sqrt n}$
+
+The standard error decreases and $\bar{x}$ becomes a more __precise__ estimator. 
+
+---
+
+## Bias
+
+Even though each sample mean does not equal to the population mean. The expected value of all sample means does equal to the population mean.
+
+Sample mean is an __unbiased estimator__ of the population mean.
+
+In other words:
+
+$E[\bar{x}] - \mu = 0$
+
+---
+
+When using sample mean as an estimate of the population mean we have said that 
+
+$\bar x \sim N(\mu, \frac{\sigma^2}{n})$
+
+It turns out also if certain conditions are met: 
+
+$(\bar x_1 - \bar x_1) \sim N(\mu_1 - \mu_2, \frac{\sigma_1^2}{n_1}+ \frac{\sigma_2^2}{n_2})$  
+
+$\bar p \sim N(p, \frac{p(1-p)}{n})$
+
+$(\bar p_1 - \bar p_2) \sim N((p_1 - p_2), \frac{p_1(1-p_1)}{n_1} + \frac{p_2(1-p_2)}{n_2})$
+
+What similarities do you see between all the sampling distributions?
+
+---
+
+## Central Limit Theorem
+
+The sampling distribution will be normally distributed with a mean equal to the population parameter. The standard error will be inversely proportional to the square root of the sample size. 
+
+
+---
+
+Moving forward we will use CLT to make __inference__ about population parameters when we only have sample statistics. 
+
+
+

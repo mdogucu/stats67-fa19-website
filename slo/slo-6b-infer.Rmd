@@ -1,0 +1,24 @@
+---
+title: "Introduction to Inference"
+date: "2019-11-06"
+output: 
+  html_document:
+    css: slo-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+## Learning Objectives
+
+By the end of this class, you will be able to:
+
+- differentiate population distribution, sample distribution, and sampling distribution.
+- calculate point estimates.
+- identify parameters of interest.
+- build outline of a confidence interval.
+
+
+<br>
+<br>
+<br>
+
