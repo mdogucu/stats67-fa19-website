@@ -1,0 +1,24 @@
+---
+title: "Inference for Categorical Data"
+date: "2019-11-13"
+output: 
+  html_document:
+    css: slo-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- calculate confidence interval for a given sample proportion.
+- calculate confidence interval for a given difference of two sample proportions.
+- set and test hypotheses for population proportion.
+- set and test hypotheses for difference of two proportions.
+
+
+<br>
+<br>
+<br>
+
