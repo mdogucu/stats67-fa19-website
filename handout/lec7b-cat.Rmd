@@ -1,0 +1,108 @@
+---
+output: 
+  pdf_document:
+    template: template.tex
+---
+
+
+\section{Inference for a Single Proportion}
+\subsection{Conditions}
+
+The sampling distribution of a proportion $\hat p$, from a population with a proportion parameter $p$,  based on sample size $n$ is normally distributed if the following conditions are met. 
+
+1. The sample data are independent. 
+2. There needs to be at least 10 successes and 10 failures in the sample.
+3. The sample size is smaller than 10% of the population.
+
+If these conditions are met then
+
+$\hat p \sim N(p, \frac{p(1-p)}{n})$
+
+Note that if third condition is not met, then the standard error can be adjusted.
+
+\subsection{Confidence Interval}
+
+__Example__
+
+According to a Gallup Survey\footnote{https://news.gallup.com/poll/267698/support-legal-marijuana-steady-past-year.aspx} of 1017 adults living in US 66\% of Americans favor legalizing marijuana. Compute 95% confidence interval for the population proportion of those who favor legalizing marijuana.
+
+\vspace{10cm}
+
+
+\newpage
+For the same problem above, calculate 90% confidence interval.
+
+\vspace{4cm}
+Interpretation of confidence intervals
+\vspace{8cm}
+
+\subsection{Hypothesis Testing}
+
+__Key points:__
+
+- We can never know the truth.   
+
+- In hypothesis testing, we assume the null is true.  
+
+- We never accept the null hypothesis. We fail to reject it.
+
+- The data can provide evidence against the null and we may reject the null. 
+
+\newpage
+Example: In a survey of 1520 adults Gallup \footnote{https://news.gallup.com/poll/235775/americans-oppose-border-walls-favor-dealing-daca.aspx} asked opinions on immigration. Each immigration item was asked to only randomly selected half of the sample. The survey results state that 41\% favor expanding construction of walls along U.S.-Mexico border. Conduct a hypothesis test to evaluate whether the majority favors or opposes the wall.
+
+\newpage
+Example:
+_Do you favor or oppose the death penalty for persons convicted of murder?_ was a question asked on General Social Survey 2018. Of those who responded with a choice, 1385 favored and 808 opposed. Conduct a hypothesis test to evaluate whether majority of Americans favor capital punishment for persons convicted of murder. 
+
+
+\newpage
+__Decision Errors__
+
+\begin{table}[H]
+\begin{tabular}{ll|l|l|}
+\cline{3-4}
+ &  & \multicolumn{2}{c|}{\textbf{Decision}} \\ \cline{3-4} 
+ &  & fail to reject $H_0$ & reject $H_0$ \\ \hline
+\multicolumn{1}{|l|}{\multirow{2}{*}{\textbf{Truth}}} & $H_0$ true & Correct Decision & Type I Error ($\alpha$) \\ \cline{2-4} 
+\multicolumn{1}{|l|}{} & $H_A$ true & Type II error ($\beta$) & Correct Decision \\ \hline
+\end{tabular}
+\end{table}
+
+Example 
+\vspace{8cm}
+
+\section{Inference for a Difference of Two Proportions}
+
+\subsection{Conditions}
+
+1. The data are independent within two groups and between two groups.
+2. Each group needs to have 10 successes and 10 failures.
+\subsection{Confidence Interval}
+\subsection{Hypothesis Testing}
+
+If these conditions are met then
+
+$(\hat p_1 - \hat p_2) \sim N(p_1 - p_2, \frac{p_1(1-p_1)}{n_1})+\frac{p_2(1-p_2)}{n_2})$
+
+\newpage
+
+Example: Does taking a college level science class change views on after life? Below are the responses from General Social Survey in 2018.
+
+
+\begin{table}[H]
+\begin{tabular}{|l|l|l|l|}
+\hline
+ &  & \multicolumn{2}{c|}{\textbf{Belief in Life After Death}} \\ \hline
+ &  & Yes & No \\ \hline
+\multirow{2}{*}{\textbf{College Science Course}} & Yes & 375 & 75 \\ \cline{2-4} 
+ & No & 485 & 115 \\ \hline
+\end{tabular}
+\end{table}
+
+Example: Calculate the 95\% confidence interval for the difference in proportion of belief in after life between those who have taken a college science course and those who have not in the population 
+
+
+
+\newpage
+Example: Evaluate whether taking a college level science class change views on after life with a hypothesis test.
