@@ -1,0 +1,46 @@
+---
+title: "Homework: Inference for Single Proportion"
+date: "due 2019-11-22 at 5:00 pm"
+output: 
+  html_document:
+    css: hw-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+
+## Goals 
+
+This homework serves two goals 
+
+- for you to test hypotheses about single proportion.
+- for you to construct confidence interval for single proportion.
+
+## Assignment
+
+__Type:__ Individual
+
+__Tasks:__
+
+Sign onto your RStudio cloud using this [link](https://rstudio.cloud/spaces/29360/project/720980). This link should take you directly to the homework project. MAKE A COPY OF THIS PROJECT only the first time you log on. If you do not make a copy it will keep warning you with a blinking note that it is a temporary project.
+
+Once you make a copy of the project, open the `hw6-prop-inference.Rmd` file that is in the lower right panel labeled Files. Then at the top of `hw6-prop-inference.Rmd` make sure to replace Corey's name with yours and in the subtitle section write your UCI Student ID. Pay attention to the quotes.
+
+All the questions you need to solve are posted on the cloud. In order to make grading easier on Gradescope, it would be the best if each question is on a separate page when knitted to pdf. For this reason, you will see `\newpage` before each question. Do not erase this by mistake. Keep them as they are. Do not erase anything written by Corey. Just add your answers below each question. When you knit your pdf document, you will have multiple pages. You can keep scrolling down in the pdf document to see all your answers.
+
+Note that there are 4 questions and all questions have subquestions.
+
+__Scoring:__ 25 points
+
+## Submission
+
+In the Files pane in the lower right part of RStudio Cloud window check the `hw6-prop-inference.pdf` file. Click `More`, then `Export` and then `Download`.
+
+
+Upload the downloaded homework on Gradescope.
+
+Come to our [office hours](https://mdogucu.ics.uci.edu/teaching/stats67-fa19/office.html) if you need help with questions from the book, R, or how to submit your homework.  
+
+<br>
+<br>
+<br>

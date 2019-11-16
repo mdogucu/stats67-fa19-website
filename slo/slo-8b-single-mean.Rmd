@@ -1,6 +1,6 @@
 ---
-title: "Inference for a Single Proportion"
-date: "2019-11-13"
+title: "Inference for a Single Mean"
+date: "2019-11-20"
 output: 
   html_document:
     css: slo-styles.css 
@@ -12,8 +12,8 @@ output:
 
 By the end of this lecture, you will be able to:
 
-- calculate confidence interval for a single proportion.
-- set and test hypotheses for a single proportion.
+- calculate confidence interval for a single mean.
+- set and test hypotheses for a single mean.
 
 
 <br>

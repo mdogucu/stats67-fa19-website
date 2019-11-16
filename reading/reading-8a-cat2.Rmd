@@ -1,0 +1,29 @@
+---
+title: "Reading: Inference for Difference of Two Proportions"
+date: "due 2019-11-18 at 9:30 am"
+output: 
+  html_document:
+    css: reading-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+## Reading
+
+Review Section 6.1 _Inference for a single proportion_ from <a href = "https://leanpub.com/openintro-statistics"> OpenIntro </a> book.
+
+Read Section 6.2 _Difference of two proportions_ from <a href = "https://leanpub.com/openintro-statistics"> OpenIntro </a> book.
+
+
+
+__$Note$:__ You may discuss the reading with others before attempting the reading questions. Make sure those you are discussing with have not completed their reading questions either. 
+
+## Reading Questions
+
+You can use your book while answering the reading questions. You will have single attempt with half an hour time limit to answer these questions.
+
+Respond to reading questions <a href="https://canvas.eee.uci.edu/courses/19775/quizzes/72736"> here </a>
+
+<br>
+<br>
+<br>
