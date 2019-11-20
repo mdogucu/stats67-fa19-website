@@ -1,0 +1,284 @@
+---
+title: "Statistical Inference for Single Mean"
+author: "Dr. Dogucu"
+date: "2019-11-20"
+header-includes:
+   - \usepackage{mathtools}
+output: 
+  xaringan::moon_reader:
+    css: slide-styles.css
+      
+---
+
+layout: true
+  
+<div class="my-header"></div>
+
+<div class="my-footer"> 
+ Copyright &copy; <a href="https://mdogucu.ics.uci.edu">Dr. Mine Dogucu</a>. All Rights Reserved.</div> 
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, fig.align = "center")
+options(scipen=0)
+
+```
+
+```{r message = FALSE, echo = FALSE}
+library(tidyverse)
+library(nycflights13)
+```
+
+---
+## Review
+
+An eight-month pregnant person takes a pregnancy test and the test yields a negative result. Which of the following is true? The test result is a Type II error. True or False.
+
+---
+## Review
+
+Among Americans who own landlines, you want to know whether majority or minority of them will pick up their phones. You call 30 random numbers and see that 40% of those numbers pick up. Test your hypotheses at $\alpha = 0.05$
+
+---
+## Review
+
+<table class="tg">
+  <tr>
+    <th class="tg-lboi">z </th>
+    <th class="tg-lboi">p-value</th>
+    <th class="tg-lboi">Decision</th>
+  </tr>
+  <tr>
+    <td class="tg-lboi">|z|&gt; critical value</td>
+    <td class="tg-lboi">p-value &lt; $\alpha$ </td>
+    <td class="tg-lboi">Reject $H_0$</td>
+  </tr>
+  <tr>
+    <td class="tg-lboi">|z|&lt; critical value</td>
+    <td class="tg-lboi">p-value &gt; $\alpha$</td>
+    <td class="tg-lboi">Fail to reject $H_0$</td>
+  </tr>
+</table>
+
+---
+## Review
+
+Your friend also is interested in the same question. They call 100 random numbers and see that 40% of those numbers pick up. Test their hypotheses at $\alpha = 0.05$
+---
+## Review
+
+Note that pretty much all opinion surveys (Gallup etc.) we have seen before, had large sample sizes thus the standard errors were really small, the z-values were reallly large and p-values were really small.
+---
+## Note
+
+One sided tests are less common since we do not know whether the sample statistic will be less than or more than the population parameter we want to compare to.
+
+---
+
+## Conditions
+
+We can rely on Central Limit Theorem in order to make inference for a single mean if the following conditions have been met 
+
+__Independence__ The sample data must be independent
+
+__Normality__ If the sample size is small, then the sample data must come from a population with a normal distribution. 
+
+---
+## Checking Normality
+
+Normality can be a difficult condition to test since "small" is a relative term so we use a rule of thumb
+
+- If $n < 30$ and there are no outliers in the data then we assume the data came from a population with a normal distribution. 
+
+- If $n \geq 30$ and there are no outliers then we assume the sampling distribution of sample means is nearly normal even if the population does not follow a normal distribution.
+
+---
+## CLT
+
+If the conditions are met then
+
+$\bar x \sim N(\mu, \frac{\sigma^2}{n})$
+
+---
+
+## CLT
+
+If the conditions are met then
+
+$\bar x \sim N(\mu, \frac{\sigma^2}{n})$
+
+Houston, we have a problem! We do not know $\sigma$ so we may not calculate standard error easily. 
+
+---
+
+## How did we handle this problem before?
+
+When making inference for single proportion and difference of two proportions
+
+$\hat p \sim N(p, \frac{p(1-p)}{n})$
+
+$(\hat p_1 - \hat p_2) \sim N((p_1 - p_2), \frac{p_1(1-p_1)}{n_1} + \frac{p_2(1-p_2)}{n_2})$
+
+we did not know the population proportions. How did we deal with this problem when calculating standard error?
+---
+## How did we handle this problem before?
+
+We used the sample proportions. 
+---
+## How can we handle our current problem?
+
+
+Since we do not know $\sigma$, we will instead use $s$.
+
+Also, rather than using Normal distribution, we will now rely on $t$-distribution.
+
+For instance when we calculate a confidence interval would be
+
+$\bar x \pm t^*_{df} \times \frac{s}{\sqrt n}$
+
+---
+## t-distribution
+
+```{r}
+ggplot(data = data.frame(x = c(-3, 3)), aes(x)) +
+  stat_function(fun = dt, n = 101, args = list(df = 2)) + 
+  scale_y_continuous(breaks = NULL) +
+  ylab("f(x)") +
+  theme(text = element_text(size = 20))
+
+```
+
+---
+
+## t-distribution vs Normal Distribution
+
+```{r}
+
+ggplot(data = data.frame(x = c(-3, 3)), aes(x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = 0, sd = 1), aes(color = "z"))  +
+  stat_function(fun = dt, n = 101, args = list(df = 1), aes(color = "t")) + 
+  ylab("f(x)") +
+  scale_y_continuous(breaks = NULL) +
+  scale_colour_manual(name="Distribution",
+  values=c(z="red", t="blue")) +
+  theme(text = element_text(size = 20))
+
+
+```
+---
+
+## t-distribution
+
+When we learned normal distribution we looked into two parameters its mean which signified the center of the distribution and its variance which signified its spread. 
+
+In $t$-distribution, we will use one parameter only which is named degrees of freedom. 
+
+df = n - 1
+---
+## t-distribution with different df
+
+```{r}
+
+ggplot(data = data.frame(x = c(-3, 3)), aes(x)) +
+  stat_function(fun = dt, n = 101, args = list(df = 1), aes(color = "df1")) + 
+  stat_function(fun = dt, n = 101, args = list(df = 2), aes(color = "df2")) + 
+  stat_function(fun = dt, n = 101, args = list(df = 4), aes(color = "df4")) + 
+  stat_function(fun = dt, n = 101, args = list(df = 7), aes(color = "df7")) + 
+  stat_function(fun = dt, n = 101, args = list(df = 10), aes(color = "df9")) + 
+  ylab("f(x)") +
+  scale_y_continuous(breaks = NULL) +
+  scale_colour_manual(name="df",
+  values=c(df1 = "red", df2="blue", df4 = "green", df7 = "black", df9 = "orange")) +
+  theme(text = element_text(size = 20))
+
+
+```
+
+---
+## t-distribution vs Normal Distribution
+
+Note that as degrees of freedom increases t-distribution approaches a normal distribution. 
+---
+## t-distribution using R
+
+```{r fig.height=3}
+x <- seq(-4,4, 0.01)
+y <- dt(x, df = 1)
+data <- data.frame(x = x, y = y)
+qplot(x, y, data = data, 
+      geom = "line")+
+  geom_ribbon(data = subset(data, x >- 4 & x < -2),
+              aes(ymax = y), ymin = 0,
+              fill = "red", colour = NA, alpha = 0.5)+
+  scale_y_continuous(limits = c(0, .4)) +
+  ylab("f(x)")
+
+```
+
+
+
+```{r echo = TRUE}
+pt(q = -2, df = 1) # P(t < -2)
+
+qt(0.1475836, df = 1)
+```
+
+---
+
+## Finding critical values
+
+Assume that we want to calculate a 95% confidence interval for a sample mean from a sample with $n = 15$. What is the critical $t$ value?
+
+```{r fig.height=3}
+x <- seq(-4,4, 0.01)
+y <- dt(x, df = 14)
+data <- data.frame(x = x, y = y)
+qplot(x, y, data = data, 
+      geom = "line")+
+  geom_ribbon(data = subset(data, x >- 4 & x < -2.144787),
+              aes(ymax = y), ymin = 0,
+              fill = "red", colour = NA, alpha = 0.5)+
+  geom_ribbon(data = subset(data, x >2.144787 & x < 4),
+              aes(ymax = y), ymin = 0,
+              fill = "red", colour = NA, alpha = 0.5)+
+  scale_y_continuous(limits = c(0, .4)) +
+  ylab("f(x)") +
+  theme(text = element_text(size = 20))
+
+```
+
+```{r echo = TRUE}
+qt(0.025, df = 14)
+```
+
+---
+## Confidence Interval for Single Mean
+
+You might have seen $\pm$ written many times on snacks that you eat. Many companies weigh the items they produce but they do not necessarily weigh all the items. They take a sample of items. A chocolate company measured the weight of 20 chocolate bars that they produced and reported the 95% CI for the mean weight as $(3.1, 3.9)$ oz. How would this confidence interval get reported on the packaging of the chocolate bar? What is the sample mean and standard deviation of the weight of chocolate bars? 
+
+---
+## Exercise 2 
+
+```{r echo = TRUE}
+set.seed(123)
+
+flights %>%
+  filter(dest == "SNA") %>% 
+  sample_n(30) %>% 
+  summarize(mean_delay = mean(arr_delay, na.rm = TRUE), 
+            sd_delay = sd(arr_delay, na.rm = TRUE))
+```
+
+For a sample of flights leaving NYC airports and arriving in SNA, on average planes arrive 3.33 minutes early with sd = 27.2.
+---
+## Exercise 2 
+
+For flights arriving in SNA is the average arrival delay significantly different than 0? Assume the conditions have been met and set $\alpha$ to 0.05. 
+
+
+---
+
+## More exercises 
+
+From OpenIntro: 7.12, 6.24, 7.14, 6.8
