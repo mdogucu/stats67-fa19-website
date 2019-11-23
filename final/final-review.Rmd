@@ -1,0 +1,16 @@
+---
+title: "Final Review"
+output: pdf_document
+---
+
+
+Q1
+
+Q2
+
+Q3
+
+
+<br>
+<br>
+<br>

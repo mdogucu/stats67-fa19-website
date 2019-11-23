@@ -11,6 +11,12 @@ output:
 
 I will keep building our [cheat sheet](cheatsheet.pdf) for the final exam.
 
+We have list of R functions.
+
+WE have a list of reading topics. 
+
+
+
 <br>
 <br>
 <br>
