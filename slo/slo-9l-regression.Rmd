@@ -1,0 +1,22 @@
+---
+title: "Linear Regression Using R"
+date: "2019-11-27"
+output: 
+  html_document:
+    css: slo-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- fit simple and multiple linear regression models using R .
+- examine regression diagnostics using R.
+
+
+<br>
+<br>
+<br>
+

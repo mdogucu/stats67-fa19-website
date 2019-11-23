@@ -1,0 +1,34 @@
+---
+title: "Reading: Linear Regression"
+date: "due 2019-11-27 at 9:30 am"
+output: 
+  html_document:
+    css: reading-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+## Reading
+
+
+
+Read the following sections  from <a href = "https://leanpub.com/openintro-statistics"> OpenIntro </a> book.
+
+8.1 Fitting a ine, residuals, and correlation
+8.2 Least squares regression
+8.4 Inference for linear regression
+9.1 Introduction to Linear Regression
+9.2 Model selection
+9.3 Checking model conditions using graphs
+
+__$Note$:__ You may discuss the reading with others before attempting the reading questions. Make sure those you are discussing with have not completed their reading questions either. 
+
+## Reading Questions
+
+You can use your book while answering the reading questions. You will have single attempt with half an hour time limit to answer these questions.
+
+Respond to reading questions <a href="https://canvas.eee.uci.edu/courses/19775/quizzes/73414"> here </a>
+
+<br>
+<br>
+<br>

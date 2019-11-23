@@ -1,0 +1,23 @@
+---
+title: "Reading: Maximum Likelihood"
+date: "due 2019-12-02 at 9:30 am"
+output: 
+  html_document:
+    css: reading-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+## Reading
+
+
+Read _Chapter 2 Beyond Least Squares: Using Likelihoods to Fit and Compare Models_  from <a href = "https://bookdown.org/roback/bookdown-bysh/ch-beyondmost.html"> Broadening Your Statistical Horizons </a> book.
+
+
+## Reading Questions
+
+There will be no reading questions for this topic. 
+
+<br>
+<br>
+<br>

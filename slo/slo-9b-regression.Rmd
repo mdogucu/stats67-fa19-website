@@ -1,0 +1,24 @@
+---
+title: "Linear Regression"
+date: "2019-11-27"
+output: 
+  html_document:
+    css: slo-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+## Learning Objectives
+
+By the end of this lecture, you will be able to:
+
+- fit simple and multiple linear regression models.
+- interpret parameter estimates of linear regression models.
+- examine regression diagnostics.
+- compare nested models. 
+
+
+<br>
+<br>
+<br>
+
