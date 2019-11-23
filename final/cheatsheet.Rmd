@@ -44,3 +44,36 @@ Poisson          & \large$\frac{\lambda^k}{k!}e^{-\lambda}$ & \large$\lambda$ & 
 
 $E[X] =  \int_{x \in \Omega_x} x f(x) \,dx$
 
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Distribution} & \textbf{pmf} & \textbf{$E(X)$} & \textbf{$Var(X)$} \\ \hline
+Continous Uniform        & \large$\frac{1}{b-a}$            & \large$\frac{a+b}{2}$ & \large$\frac{(b-a)^2}{12}$                 \\ \hline
+Exponential           & \large$\lambda e^{-\lambda x}$ & \large$\frac{1}{\lambda}$ & \large$\frac{1}{\lambda^2}$                 \\ \hline
+Normal           & \large$\frac{1}{\sqrt{2\pi\sigma^2}} e ^{-\frac{(x-\mu)^2}{2\sigma^2}}$ & \large$\mu$ & \large$\sigma^2$                 \\ \hline
+
+\end{tabular}
+\end{table}
+
+
+\newpage
+
+\section*{Central Limit Theorem}
+
+Under certain conditions:
+
+$\bar x \sim N(\mu, \frac{\sigma^2}{n})$
+
+$(\bar x_1 - \bar x_2) \sim N(\mu_1 - \mu_2, \frac{\sigma_1^2}{n_1}+ \frac{\sigma_2^2}{n_2})$  
+
+$\hat p \sim N(p, \frac{p(1-p)}{n})$
+
+$(\hat p_1 - \hat p_2) \sim N((p_1 - p_2), \frac{p_1(1-p_1)}{n_1} + \frac{p_2(1-p_2)}{n_2})$
+
+\section*{Linear Regression}
+
+
+\section*{Maximum Likelihood}
+
+
