@@ -44,7 +44,7 @@ b. n = 9, T = -1.67,  $H_A: p < 0.3$
 
 c. n = 24, T = -5.64,  $H_A: p > 0.2$
 
-5. For this question we will be working with [Breast Cancer Coimbra Data Set](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Coimbra). Click on the Data Folder to download the data in `csv` format. 
+4. For this question we will be working with [Breast Cancer Coimbra Data Set](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Coimbra). Click on the Data Folder to download the data in `csv` format. 
 
 Make sure to familiarize yourself with the data by reading about the variables on the website. Note that the data comes this [study](https://bmccancer.biomedcentral.com/articles/10.1186/s12885-017-3877-1). It is reported in the study that the blood draws were taken when participants were fasting. According to [Mayo Clibic] a fasting blood sugar level less than 100 is mg/dL is normal. 
 
