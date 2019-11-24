@@ -38,11 +38,11 @@ __Homework Questions__
 2. OpenIntro 6.24 Sleep deprivation, CA vs. OR Part II
 3. Given the following information, calculate p-value and decide whether to the null hypothesis would be rejected at $\alpha = 0.05$. Assume conditions have been met. 
 
-a. n = 135, T = 4.32, $H_A: p \neq 0.5$
+a. n = 135, T = 4.32, $H_A: \mu \neq 0.5$
 
-b. n = 9, T = -1.67,  $H_A: p < 0.3$
+b. n = 9, T = -1.67,  $H_A: \mu < 0.3$
 
-c. n = 24, T = -5.64,  $H_A: p > 0.2$
+c. n = 24, T = -5.64,  $H_A: \mu > 0.2$
 
 4. For this question we will be working with [Breast Cancer Coimbra Data Set](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Coimbra). Click on the Data Folder to download the data in `csv` format. 
 
