@@ -25,58 +25,15 @@ output:
 \vspace{7cm}
 
 
-5. The following is an excerpt from a research study
+5. The following is an excerpt from a research study \footnote{https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0216241}
 
 \begin{displayquote}
 
-Evaluation of children with Autism Spectrum Disorders (ASD) is crucial to clinical diagnosis and educational intervention. The traditional evaluation methods based on questionnaires and scales rely on the experience and expertise of the evaluator, are time-consuming and clinically demanding. Computer games can provide an objective, motiving and safe way for evaluating and reflecting children's development. Therefore, the study aimed to investigate a technology-based method using computer games to evaluate children with ASD. The performance of 40 children with ASD and 51 aged-matched typically developing (TD) children was compared. We found: 1) The completion ratio for children with ASD was lower than TD children for the tasks in most of the games.
+Student evaluations of teaching are widely believed to contain gender bias. In this study, we conduct a randomized experiment with the student evaluations of teaching in four classes with large enrollments, two taught by male instructors and two taught by female instructors. In each of the courses, students were randomly assigned to either receive the standard evaluation instrument or the same instrument with language intended to reduce gender bias. Students in the anti-bias language condition had significantly higher rankings of female instructors than students in the standard treatment. There were no differences between treatment groups for male instructors. These results indicate that a relatively simple intervention in language can potentially mitigate gender bias in student evaluation of teaching.
 
 \end{displayquote}
 
-Write out hypotheses that would test this claim for a single game.
+Write out hypotheses that would test the claim about the evaluation of female instructors.
 \vspace{5cm}
-
-
-\newpage
-
-Under certain conditions:
-
-$\bar x \sim N(\mu, \frac{\sigma^2}{n})$
-
-$(\bar x_1 - \bar x_2) \sim N(\mu_1 - \mu_2, \frac{\sigma_1^2}{n_1}+ \frac{\sigma_2^2}{n_2})$  
-
-$\hat p \sim N(p, \frac{p(1-p)}{n})$
-
-$(\hat p_1 - \hat p_2) \sim N((p_1 - p_2), \frac{p_1(1-p_1)}{n_1} + \frac{p_2(1-p_2)}{n_2})$
-
-\section{Hypothesis Testing}
-
-6. At the beginning of the quarter I had asked you how many miles you are away from home. The following is based on a sample of the data. 
-
-```{r echo = FALSE, message = FALSE}
-library(tidyverse)
-library(fivethirtyeight)
-set.seed(1234)
-data <- read_csv("C:/Users/Mine Dogucu/Google Drive/teaching/stats67/data/class-data/miles.csv") %>% 
-  mutate(miles = as.numeric(miles))
-data %>% 
-  sample_n(40) %>% 
-  summarize(mean_miles = mean(miles, na.rm = TRUE), sd_miles = sd(miles, na.rm = TRUE), n = n())
-```
-
- 
-Set and test hypotheses whether the average distance to home is more than 1000 miles for everyone in our class. 
-
-
-\newpage
-
-\vspace{10cm}
-
-7. 
-```{r}
-bechdel %>% 
-  group_by(binary) %>% 
-  summarize(n(), mean(domgross, na.rm = TRUE), sd(domgross, na.rm = TRUE))
-```
 
 
