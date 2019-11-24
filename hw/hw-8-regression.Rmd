@@ -1,6 +1,6 @@
 ---
 title: "Homework: Linear Regression"
-date: "due 2019-12-XX at 5:00 pm"
+date: "due 2019-12-06 at 5:00 pm"
 output: 
   html_document:
     css: hw-styles.css 
@@ -8,14 +8,12 @@ output:
       after_body: footer.html
 ---
 
-## Hello!
-
 ## Goals 
 
-This homework serves two goals 
+This homework serves XX goals 
 
-- for you to test hypotheses about single proportion.
-- for you to construct confidence interval for single proportion.
+- for you to use R locally.
+- 
 
 ## Assignment
 
@@ -23,22 +21,39 @@ __Type:__ Individual
 
 __Tasks:__
 
-Sign onto your RStudio cloud using this [link](https://rstudio.cloud/spaces/29360/project/720980). This link should take you directly to the homework project. MAKE A COPY OF THIS PROJECT only the first time you log on. If you do not make a copy it will keep warning you with a blinking note that it is a temporary project.
+For this homework you will be using RStudio on a local machine, either your own personal computer or a school computer. Note that RStudio should be available on most computers across campus. 
 
-Once you make a copy of the project, open the `hw6-prop-inference.Rmd` file that is in the lower right panel labeled Files. Then at the top of `hw6-prop-inference.Rmd` make sure to replace Corey's name with yours and in the subtitle section write your UCI Student ID. Pay attention to the quotes.
+All this time, we have been working with R Markdown files and knitting them to pdf documents on the Cloud. Whenever you click File > New File > R Markdown it gives you three different file types as a choice, HTML, PDF, and Word. I normally use HTML and teach with HTML. However, the reason we have been using PDF all this time was because Gradescope only accepts pdf file uploads!
 
-All the questions you need to solve are posted on the cloud. In order to make grading easier on Gradescope, it would be the best if each question is on a separate page when knitted to pdf. For this reason, you will see `\newpage` before each question. Do not erase this by mistake. Keep them as they are. Do not erase anything written by Corey. Just add your answers below each question. When you knit your pdf document, you will have multiple pages. You can keep scrolling down in the pdf document to see all your answers.
+For this homework we will be using HTML and one the homework is completed we will make it a pdf. The reason is because pdf files requires extra installation on your computer. However, if you are interested in making these installations such as installing TinyTex you are free to work with pdf. You can find instructions [here](https://bookdown.org/yihui/rmarkdown/installation.html) on how to download TinyTex. 
 
-Note that there are 4 questions and all questions have subquestions.
+Make sure to watch the video on how to create R projects.
 
-__Scoring:__ 25 points
+
+__Homework Questions__
+
+
+1. 
+2. 
+3. 
+
+4. 
+
+
+__Scoring:__ XX points
 
 ## Submission
 
-In the Files pane in the lower right part of RStudio Cloud window check the `hw6-prop-inference.pdf` file. Click `More`, then `Export` and then `Download`.
+In your project folder, you should see at least 4 things 
 
+1. an R project
+2. the dataset as a csv file
+3. an R Markdown document
+4. an HTML file that you get when you knit the R Markdown. 
 
-Upload the downloaded homework on Gradescope.
+Before you submit, make sure you knit your R Markdown one last time and the HTML file has all your responses. If you were able to figure out pdf files then you are ready to submit on Gradescope. If not, open the HTML file in Google Chrome (or any web browser) and try to print the document (not really) by clicking Ctrl + P (Windows) or Cmd + P (Mac). For Destination, instead of choosing a printer, choose _Save as PDF_ save the file. 
+
+Upload the pdf file on Gradescope. NOTE THAT YOU WILL HAVE TO SPECIFY WHICH QUESTION IS ON WHICH PAGE OF YOUR SUBMISSION. If you fail to do this, you will lose 5 points. 
 
 Come to our [office hours](https://mdogucu.ics.uci.edu/teaching/stats67-fa19/office.html) if you need help with questions from the book, R, or how to submit your homework.  
 
