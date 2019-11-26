@@ -10,10 +10,11 @@ output:
 
 ## Goals 
 
-This homework serves XX goals 
+This homework serves three goals 
 
-- for you to use R locally.
-- 
+- for you to use R locally
+- build simple and multiple linear regression models
+- make inference on regression coefficients
 
 ## Assignment
 
@@ -35,14 +36,34 @@ __Homework Questions__
 
 
 1. OpenIntro 8.32 Beer and Blood Alcohol Content
-2. OpenIntro 8.40 Cats, Part I
+2. OpenIntro 8.40 Cats, Part II
 3. OpenIntro 9.14 Movie Returns, Part I
-4. 
+4. For this question you will be working with the [Pay for Play: Are Baseball Salaries Based on Performance? dataset](). Right-click the file name on GitHub and select "Save Link As..." to download the data in `csv` format. Once downloaded, you will need to load the data set and save it as `baseball`. More information on the data can be found [here](http://jse.amstat.org/datasets/baseball.txt).
 
-5. 
+We are primarily interested in the association between the number of [doubles](https://en.wikipedia.org/wiki/Double_(baseball)) a player hits (`Doubles`) and their salary in thousands of dollars (`Salary`).
+
+a. Make a scatter plot between the response and explanatory variable and describe the association you see.
+
+b. Create a linear regression model that regresses `Salary` on `Doubles`. Print out the summary.
+
+c. Interpret the two $\hat{\beta}$ values.
+
+d. Create a linear regression model that regresses `Salary` on `Doubles`, as well as `BattingAvg`, `Runs`,`Walks`, `Strikeouts`, `Errors`, and `FreeAgent9192`.
+
+e. Interpret the coefficient for `Doubles` again. How is this interpretation different than the one you gave in part (c)?
+
+f. Add the residuals and predicted values to the data frame.
+
+g. Create a residual plot and a qqplot. Comment on whether or not the conditions are met to use the model you found in part (d). 
+
+h. Obtain a 95\% confidence interval for the coefficient on `Double`, and interpret it in the context of the problem.
+
+i. Perform a hypothesis test on the coefficient for `Double` to test whether it is significantly different from 0. State your hypotheses, draw you conclusion, provide evidence for the conclusion, and interpret your conclusion in the context of the problem.
+
+ 
 
 
-__Scoring:__ XX points
+__Scoring:__ 25 points
 
 ## Submission
 

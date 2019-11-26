@@ -185,10 +185,11 @@ summary {
 
 <div id="goals" class="section level2">
 <h2>Goals</h2>
-<p>This homework serves XX goals</p>
+<p>This homework serves three goals</p>
 <ul>
-<li>for you to use R locally.</li>
-<li></li>
+<li>for you to use R locally</li>
+<li>build simple and multiple linear regression models</li>
+<li>make inference on regression coefficients</li>
 </ul>
 </div>
 <div id="assignment" class="section level2">
@@ -202,12 +203,23 @@ summary {
 <p><strong>Homework Questions</strong></p>
 <ol style="list-style-type: decimal">
 <li>OpenIntro 8.32 Beer and Blood Alcohol Content</li>
-<li>OpenIntro 8.40 Cats, Part I</li>
+<li>OpenIntro 8.40 Cats, Part II</li>
 <li>OpenIntro 9.14 Movie Returns, Part I</li>
-<li></li>
-<li></li>
+<li>For this question you will be working with the <a href>Pay for Play: Are Baseball Salaries Based on Performance? dataset</a>. Right-click the file name on GitHub and select “Save Link As…” to download the data in <code>csv</code> format. Once downloaded, you will need to load the data set and save it as <code>baseball</code>. More information on the data can be found <a href="http://jse.amstat.org/datasets/baseball.txt">here</a>.</li>
 </ol>
-<p><strong>Scoring:</strong> XX points</p>
+<p>We are primarily interested in the association between the number of <a href="https://en.wikipedia.org/wiki/Double_(baseball)">doubles</a> a player hits (<code>Doubles</code>) and their salary in thousands of dollars (<code>Salary</code>).</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Make a scatter plot between the response and explanatory variable and describe the association you see.</p></li>
+<li><p>Create a linear regression model that regresses <code>Salary</code> on <code>Doubles</code>. Print out the summary.</p></li>
+<li><p>Interpret the two <span class="math inline">\(\hat{\beta}\)</span> values.</p></li>
+<li><p>Create a linear regression model that regresses <code>Salary</code> on <code>Doubles</code>, as well as <code>BattingAvg</code>, <code>Runs</code>,<code>Walks</code>, <code>Strikeouts</code>, <code>Errors</code>, and <code>FreeAgent9192</code>.</p></li>
+<li><p>Interpret the coefficient for <code>Doubles</code> again. How is this interpretation different than the one you gave in part (c)?</p></li>
+<li><p>Add the residuals and predicted values to the data frame.</p></li>
+<li><p>Create a residual plot and a qqplot. Comment on whether or not the conditions are met to use the model you found in part (d).</p></li>
+<li><p>Obtain a 95% confidence interval for the coefficient on <code>Double</code>, and interpret it in the context of the problem.</p></li>
+<li><p>Perform a hypothesis test on the coefficient for <code>Double</code> to test whether it is significantly different from 0. State your hypotheses, draw you conclusion, provide evidence for the conclusion, and interpret your conclusion in the context of the problem.</p></li>
+</ol>
+<p><strong>Scoring:</strong> 25 points</p>
 </div>
 <div id="submission" class="section level2">
 <h2>Submission</h2>
