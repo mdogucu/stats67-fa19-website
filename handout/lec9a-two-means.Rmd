@@ -1,0 +1,39 @@
+---
+output: 
+  pdf_document:
+    template: template.tex
+---
+
+
+\section {Writing Hypotheses}
+
+1. The General Social Survey collects data on demographics, education, and work, among many other characteristics of US residents. A data anlyst examines the data from 2010 and finds those with a college degree worked 41.8 hours on average, those without a college degree worked 39.4 hours. Write hypotheses that test whether there is any significant difference between average hours of work of those who have a college degree and those who do not. 
+
+\vspace{6cm}
+
+
+2. According to a [New York Times](https://www.nytimes.com/2019/05/07/health/pregnancy-deaths-.html) article sixty-percent of pregnancy related deaths can be prevented. Based on the data provided by Center for Disease Control on pregnancy related deaths in the US, the writer reports that black women were more likely than white women to suffer a pregnancy-related death.Write hypotheses that can test this claim.
+
+\vspace{6cm}
+
+3. A statistics professor thinks that talking to students about self-confidence will help them improve their self confidence. She gives students a survey about self-confidence and then uses the scores to calculate a self-confidence score of each student. Then she talks to students about self-confidence and then gives them the survey again. Write hypotheses that tests the statistics professors question. 
+
+
+\newpage
+4. A data scientist is A/B testing. In one version of a web page (version A) users spend on average 3.18 minutes on the web page. In the other version of the web page (version B) they spend on average 2.97 minutes. Write hypotheses to test whether version A leads to users spending more time on the web page than version B. 
+
+\vspace{7cm}
+
+
+5. The following is an excerpt from a research study \footnote{https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0216241}
+
+\begin{displayquote}
+
+Student evaluations of teaching are widely believed to contain gender bias. In this study, we conduct a randomized experiment with the student evaluations of teaching in four classes with large enrollments, two taught by male instructors and two taught by female instructors. In each of the courses, students were randomly assigned to either receive the standard evaluation instrument or the same instrument with language intended to reduce gender bias. Students in the anti-bias language condition had significantly higher rankings of female instructors than students in the standard treatment. There were no differences between treatment groups for male instructors. These results indicate that a relatively simple intervention in language can potentially mitigate gender bias in student evaluation of teaching.
+
+\end{displayquote}
+
+Write out hypotheses that would test the claim about the evaluation of female instructors.
+\vspace{5cm}
+
+

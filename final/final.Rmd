@@ -7,14 +7,15 @@ output:
       after_body: footer.html
 ---
 
+This is the [cheat sheet](cheatsheet.pdf) for the final exam.
 
+Here are the [policies](policies.pdf). Read them carefully before coming to the final.
 
-I will keep building our [cheat sheet](cheatsheet.pdf) for the final exam.
+We have list of [R functions](https://docs.google.com/document/d/1fz1kIeCgRTXfJWT68u9RgX8-fSyC12mGx8OEcNitNm8/edit?usp=sharing) that we have learned.
 
-We have list of R functions.
+We have a list of [topics](https://docs.google.com/spreadsheets/d/11iE0fJAD_nG5_sa04kcpMZSZvUkKhvemgGvD_-q0w_s/edit?usp=sharing) along with readings. 
 
-WE have a list of reading topics. 
-
+The final review exam will be posted here as soon as we finish preparing it. You will be notified about it. 
 
 
 <br>

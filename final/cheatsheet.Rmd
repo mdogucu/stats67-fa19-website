@@ -71,9 +71,21 @@ $\hat p \sim N(p, \frac{p(1-p)}{n})$
 
 $(\hat p_1 - \hat p_2) \sim N((p_1 - p_2), \frac{p_1(1-p_1)}{n_1} + \frac{p_2(1-p_2)}{n_2})$
 
+
+Also note that
+
+$\hat p_{pooled} = \frac{\hat p_1 n_1 + \hat p_2 n_2}{n_1 + n_2}$
+
 \section*{Linear Regression}
 
+$y = \beta_0 + \beta_1x_1 + \beta_2x_2 +....+\beta_kx_k+ \epsilon$
 
 \section*{Maximum Likelihood}
 
+The likelihood function 
 
+$L(\bar \theta) = f_1(x_1, \bar \theta)\times....f_n(x_n, \bar \theta)$
+
+MLE estimator of $\bar \theta$ is
+
+$\hat {\bar \theta}=\arg\!\max_{\bar\theta} L(\bar\theta) = \arg\!\max_{\bar\theta}ln L(\bar\theta)$

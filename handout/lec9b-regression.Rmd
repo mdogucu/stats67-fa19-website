@@ -1,0 +1,158 @@
+---
+output: 
+  pdf_document:
+    template: template.tex
+---
+
+```{r echo = FALSE, message = FALSE}
+library(tidyverse)
+```
+
+\begin{landscape}
+
+\section {Review}
+
+\begin{tabular}{|p{3cm}|p{1cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3.5cm}|}
+\hline
+  Question & point estimate & parameter of interest & expected value of the sampling distribution & variance of the sampling distribution & standard error & confidence interval \\ \hline
+  single proportion & $\hat p$ & $p$ & $p$ & $\frac{p(1-p)}{n}$ & $\sqrt{\frac{\hat p (1-\hat p)}{n}}$ & $\hat p \pm z^*\sqrt{\frac{\hat p (1-\hat p)}{n}}$ \\ \hline
+  difference of two proportion & $\hat p_1 - \hat p_2$ & $p_1 - p_2$ & $p_1 - p_2$ & $\frac{p_1 (1-p_1)}{n_1} + \frac{p_2 (1-p_2)}{n_2}$ & $\sqrt{\frac{\hat p_1 (1-\hat p_1)}{n_1} + \frac{\hat p_2 (1-\hat p_2)}{n_2}}$ & $(\hat p_1 - \hat p_2)\pm z^*\sqrt{\frac{\hat p_1 (1-\hat p_1)}{n_1} + \frac{\hat p_2 (1-\hat p_2)}{n_2}}$ \\ \hline
+  single mean (dependent samples, paired data) & $\bar x$ & $\mu$ & $\mu$ & $\frac{\sigma^2}{n}$ &
+  $\frac{s}{\sqrt{n}}$ & $\bar x\pm t^*_{df}\frac{s}{\sqrt{n}}$ \\ \hline
+  difference of two means & $\bar x_1 - \bar x_2$ & $\mu_1 - \mu_2$ & $\mu_1 - \mu_2$ & $\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}$ &
+  $\sqrt{\frac{s_1^2}{n_1} +\frac{s_2^2}{n_2}}$ & $(\bar x_1 - \bar x_2)\pm t^*_{df}\sqrt{\frac{s_1^2}{n_1} +\frac{s_2^2}{n_2}}$\\ \hline
+  
+\end{tabular}
+
+Hypothesis Testing
+
+standard score (z or t) = $\frac{\text{point estimate} - \text{null value}}{Standard Error} $
+
+\end{landscape}
+
+
+
+\section{Simple Linear Regression}
+
+You may recall from your high school algebra class (and your calculus class) the equation of a line as 
+
+$y = mx + b$ where $m$ represents the slope of the line and $b$ represents the y-intercept. 
+
+In statistics we try to explain the relationship between two continuous variables using a linear regression model (if certain conditions are met).
+
+The equation for a simple linear regression model is as follows:
+
+$y = \beta_0 + \beta_1x + \epsilon$
+
+
+\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+\hline
+description & point estimate & parameter of interest & Hypotheses \\ \hline
+intercept   & OpenIntro: $b_0$ Other resources: $\hat \beta_0$   & $\beta_0$ & $H_0:\beta_0 = 0$ \\ \hline
+slope   & OpenIntro: $b_1$ Other resources: $\hat \beta_1$   & $\beta_1$ & $H_0:\beta_1 = 0$ \\ \hline
+\end{tabular}
+
+$y = \beta_0 + \beta_1x + \epsilon$
+
+$\hat y = \hat \beta_0 + \hat \beta_1x$
+
+Error/residual:
+$e = y - \hat y$
+
+```{r}
+mtcars %>% 
+  ggplot(aes(x = hp, y = mpg)) +
+  geom_point() +
+  geom_smooth(method = 'lm', se = FALSE)
+```
+
+
+\newpage
+
+```{r}
+lm(mpg ~ hp, data = mtcars) %>% 
+  summary()
+```
+
+Understanding the R output
+
+
+\newpage
+Residuals
+```{r, fig.align='center', fig.height=2.5, echo = FALSE, fig.width=4}
+mtcars %>% 
+  ggplot(aes(x = hp, y = mpg)) +
+  geom_point() +
+  geom_smooth(method = 'lm', se = FALSE)
+```
+
+```{r}
+mtcars %>% 
+  select(mpg, hp) %>% 
+  slice(1)
+
+mtcars %>% 
+  select(mpg, hp) %>% 
+  slice(18)
+```
+
+\newpage 
+
+\subsection{Estimation} 
+
+\newpage
+
+
+Conditions
+
+1. Linearity: The relationship between x and y has to be linear.
+
+2. Independent Observations
+
+3. Normality of Residuals
+
+```{r fig.height=2.5, echo = FALSE, fig.width=4}
+model1 <- lm(mpg ~ hp + wt + am, data = mtcars)
+
+mtcars <- 
+  mtcars %>% 
+  modelr::add_residuals(model1)
+
+mtcars %>% 
+  ggplot(aes(x = resid)) +
+  geom_histogram(binwidth = 0.5)
+```
+
+\vspace{3cm}
+
+4. Constant Varibility 
+
+```{r fig.height=2.5, echo = FALSE, fig.width=4}
+mtcars %>% 
+  ggplot(aes(x = hp, y = resid)) +
+  geom_point() +
+  geom_hline(yintercept = 0)
+```
+
+
+\newpage
+
+\section{Multiple Linear Regression}
+
+Equation for multiple linear regression is 
+
+$y = \beta_0 + \beta_1x_1+\beta_2x_2....+\beta_kx_k+\epsilon$
+
+where $k$ is the number of predictors.
+
+```{r}
+
+mtcars %>% 
+  select(mpg, hp, am, wt) %>% 
+  glimpse()
+
+lm(mpg ~ hp + am + wt, data = mtcars) %>% 
+  summary()
+```
+
+
