@@ -58,7 +58,7 @@ g. Create a residual plot and a qqplot. Comment on whether or not the conditions
 
 h. Obtain a 95\% confidence interval for the coefficient on `Double`, and interpret it in the context of the problem.
 
-i. Perform a hypothesis test on the coefficient for `Double` to test whether it is significantly different from 0. State your hypotheses, draw you conclusion, provide evidence for the conclusion, and interpret your conclusion in the context of the problem.
+i. Perform a hypothesis test on the coefficient for `Double` to test whether it is significantly different from 0. State your hypotheses, draw your conclusion, provide evidence for the conclusion, and interpret your conclusion in the context of the problem.
 
  
 
