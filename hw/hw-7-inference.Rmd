@@ -52,7 +52,7 @@ a. In the data provided to you, in other words in the sample, do breast cancer p
 
 b. Estimate 95% confidence interval for average glucose level of breast cancer patients.
 
-c. Set up and test hypotheses to determine whether breast cancer patients have normal glucose levels or not. 
+c. Set up and test hypotheses to determine whether breast cancer patients have higher than normal glucose levels or not. 
 
 
 __Scoring:__ 25 points
