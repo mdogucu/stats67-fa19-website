@@ -46,13 +46,13 @@ c. n = 24, T = -5.64,  $H_A: \mu > 0.2$
 
 4. For this question we will be working with [Breast Cancer Coimbra Data Set](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Coimbra). Click on the Data Folder to download the data in `csv` format. 
 
-Make sure to familiarize yourself with the data by reading about the variables on the website. Note that the data comes this [study](https://bmccancer.biomedcentral.com/articles/10.1186/s12885-017-3877-1). It is reported in the study that the blood draws were taken when participants were fasting. According to [Mayo Clibic] a fasting blood sugar level less than 100 is mg/dL is normal. 
+Make sure to familiarize yourself with the data by reading about the variables on the website. Note that the data comes this [study](https://bmccancer.biomedcentral.com/articles/10.1186/s12885-017-3877-1). It is reported in the study that the blood draws were taken when participants were fasting. According to [Mayo Clinic](https://www.mayoclinic.org/diseases-conditions/diabetes/diagnosis-treatment/drc-20371451) a fasting blood sugar level less than 100 is mg/dL is normal. 
 
 a. In the data provided to you, in other words in the sample, do breast cancer patients have normal glucose level on average? Calculate sample statistic. Make sure to share your code and comment on your finding. 
 
 b. Estimate 95% confidence interval for average glucose level of breast cancer patients.
 
-c. Set up and test hypotheses to determine whether breast cancer patients have normal glucose levels or not. 
+c. Set up and test hypotheses to determine whether breast cancer patients have higher than normal glucose levels or not. 
 
 
 __Scoring:__ 25 points
