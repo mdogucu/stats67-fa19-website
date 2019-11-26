@@ -9,11 +9,15 @@ output:
 
 
 
-I will keep building our [cheat sheet](cheatsheet.pdf) for the final exam.
+This is the [cheat sheet](cheatsheet.pdf) for the final exam.
 
-We have list of R functions.
+We have list of [R functions](https://docs.google.com/document/d/1fz1kIeCgRTXfJWT68u9RgX8-fSyC12mGx8OEcNitNm8/edit?usp=sharing) that we have learned.
 
-WE have a list of reading topics. 
+We have a list of topics along with readings. We will share the list soon. 
+
+The final review exam will be posted here as soon as we finish preparing it. You will be notified about it. 
+
+
 
 
 
