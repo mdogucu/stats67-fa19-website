@@ -4,17 +4,7 @@ output:
     template: template.tex
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, fig.height = 3, fig.align = 'center', message = FALSE, fig.width=5)
-```
-
-```{r }
-library(tidyverse)
-library(fivethirtyeight)
-```
-
-2019-11-04
-\section*{Midterm Policies}
+\section*{Final Policies}
 
 You should have the following items on your desk (and nothing else) during the midterm:
 
@@ -38,23 +28,20 @@ Note that if you use an eraser (for pen or pencil) and do not erase well, you ma
 
 Multiple choice questions have one correct answer. Only choose one of the choices. Write your answers in the boxes provided. You should only write a single letter in each of these boxes.
 
-For questions that are __not__ multiple choice, show your work. Write your final answers in the boxes provided. You should only write numbers in these boxes. For instance if your answer is $P(A) = 0.12$ only write $0.12$ inside the box.
+For questions that are __not__ multiple choice, show your work. Write your final answers in the boxes provided. You should only write numbers in these boxes. For instance if your answer is $P(A) = 0.12$ only write $0.12$ inside the box. 
 
-You will have 75 minutes. You may not leave the classroom if you finish early. Use the remaining time to review your answers. 
+You will have 115 minutes. You may leave the classroom if you finish early. Make sure to review your answers before leaving.
 
- 
+You may not start the final until you are prompted to start. Just write your name and student ID number and wait for the prompt to start. Once you begin make sure to write your name and Student ID on top of every page.
 
-You may not start the midterm until you are prompted to start. Just write your name and student ID number and wait for the prompt to start. 
-
-
-\fbox{\begin{minipage}{45em}
-Name (as it appears on Canvas): 
+\fbox{\begin{minipage}{5em}
+Row: 
+\vspace{1cm}
+\end{minipage}}
+\fbox{\begin{minipage}{5em}
+Seat: 
 \vspace{1cm}
 
 \end{minipage}}
 
-\fbox{\begin{minipage}{45em}
-Student ID number: 
-\vspace{1cm}
 
-\end{minipage}}
