@@ -52,15 +52,24 @@ Seat:
 \benum
 
 
+\item For a normally distributed random variable, 80\% of the observations are contained within _____ standard deviations of the mean. Make sure to write the final numeric answer in the box. Round to two decimal places.
+ 
+ \noindent
+  \begin{minipage}[c]{0.90\linewidth}
+  \vspace{5cm}
+  \hspace{5cm}
+  \end{minipage}
+  \fbox{\begin{minipage}[c]{0.10\linewidth}
+  \vspace{1cm}
+  \hspace{1cm}
+  \end{minipage}}
+  
+  \vspace{3cm}
 
 
-
-
-
-\item
-
-
-
+\item Determine distribution Continuous Uniform
+\item Determine distribution Exponential
+\item Determine distribution Binom/Geom/Poisson
 
 
 
