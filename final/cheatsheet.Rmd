@@ -80,6 +80,9 @@ $\hat p_{pooled} = \frac{\hat p_1 n_1 + \hat p_2 n_2}{n_1 + n_2}$
 
 $y = \beta_0 + \beta_1x_1 + \beta_2x_2 +....+\beta_kx_k+ \epsilon$
 
+$b_1 = \frac{s_y}{s_x}R$
+$b_0 = \bar{y} - b_1\bar x$
+
 \section*{Maximum Likelihood}
 
 The likelihood function 
