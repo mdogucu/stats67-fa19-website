@@ -1,16 +1,67 @@
 ---
-title: "Final Review"
-output: pdf_document
+output: 
+  pdf_document:
+    template: template.tex
+  header-includes:
+  - \newcommand{\benum}{\begin{enumerate}}
+  - \newcommand{\eenum}{\end{enumerate}}
 ---
 
+\section*{Final Policies}
 
-Q1
+You should have the following items on your desk (and nothing else) during the final:
 
-Q2
+- Pen and/or pencil and/or eraser - make sure you have enough writing utensils and they are functional. You should not try to open your bag to get another pen. Have everything ready prior to the midterm. 
 
-Q3
+- Scientific calculator. 
+
+- UCI Student ID card - we will come around to check your ID during the midterm. 
+
+The following items are __not__ permitted during the midterm
+
+- Scrap paper
+- Watches - remaining time will be displayed on the screen.
+- Cell phones - turn your cell phone off completely and put it in your bag not in your pocket. 
+- Laptops / Ipads/Tablets
+- Graphing calculator
+- Notes of any kind, books etc. 
+- Any note taking device or any device with internet connectivity
+
+Note that if you use an eraser (for pen or pencil) and do not erase well, you may not receive any points if previous answer and the latest answer are visible simultaneously.
+
+Multiple choice questions have one correct answer. Only choose one of the choices. Write your answers in the boxes provided. You should only write a single letter in each of these boxes.
+
+For questions that are __not__ multiple choice, show your work. Write your final answers in the boxes provided. You should only write numbers in these boxes. For instance if your answer is $P(A) = 0.12$ only write $0.12$ inside the box. 
+
+You will have 115 minutes. You may leave the classroom if you finish early. Make sure to review your answers before leaving.
+
+You may not start the final until you are prompted to start. Just write your name and student ID number and wait for the prompt to start. Once you begin make sure to write your name and Student ID on top of every page.
+
+\fbox{\begin{minipage}{5em}
+Row: 
+\vspace{1cm}
+\end{minipage}}
+\fbox{\begin{minipage}{5em}
+Seat: 
+\vspace{1cm}
+
+\end{minipage}}
+
+\newpage
+
+\benum
 
 
-<br>
-<br>
-<br>
+
+
+
+
+
+\item
+
+
+
+
+
+
+\eenum
