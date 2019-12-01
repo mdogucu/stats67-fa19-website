@@ -38,7 +38,7 @@ __Homework Questions__
 1. OpenIntro 8.32 Beer and Blood Alcohol Content
 2. OpenIntro 8.40 Cats, Part II
 3. OpenIntro 9.14 Movie Returns, Part I
-4. For this question you will be working with the [Pay for Play: Are Baseball Salaries Based on Performance? dataset](https://github.com/mdogucu/stats67-fa19-website/tree/master/hw/data). Right-click the file name on GitHub and select "Save Link As..." to download the data in `csv` format. Once downloaded, you will need to load the data set and save it as `baseball`. More information on the data can be found [here](http://jse.amstat.org/datasets/baseball.txt).
+4. For this question you will be working with the [Pay for Play: Are Baseball Salaries Based on Performance? dataset](https://github.com/mdogucu/stats67-fa19-website/blob/master/hw/data/baseball-9192.csv). Right-click the button that says "Raw" on GitHub and select "Save Link As..." to download the data in `csv` format. Once downloaded, you will need to load the data set and save it as `baseball`. More information on the data can be found [here](http://jse.amstat.org/datasets/baseball.txt).
 
 We are primarily interested in the association between the number of [doubles](https://en.wikipedia.org/wiki/Double_(baseball)) a player hits (`Doubles`) and their salary in thousands of dollars (`Salary`).
 
