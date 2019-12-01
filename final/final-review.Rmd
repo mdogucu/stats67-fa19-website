@@ -70,6 +70,7 @@ Seat:
 \item Determine distribution Continuous Uniform
 \item Determine distribution Exponential
 \item Determine distribution Binom/Geom/Poisson
+\item Give a ggplot with best line of fit. Ask them to fill in the blank for geom_smooth()
 
 
 
