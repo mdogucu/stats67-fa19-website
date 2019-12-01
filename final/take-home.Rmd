@@ -1,0 +1,121 @@
+---
+title: "Final: Take-Home Part"
+date: "due 2019-12-09 at 5:00 pm"
+output: 
+  html_document:
+    css: final-styles.css 
+    includes:
+      after_body: footer.html
+---
+
+This is take-home part of the final exam. Note that you should be working individually for this final. Do not ask questions regarding this on Piazza. Please make use of [office hours](https://mdogucu.ics.uci.edu/teaching/stats67-fa19/office.html) for any difficulties you may be having. 
+
+
+## Review
+
+In this section I will review and introduce some R functions that might be helpful for you to complete the final.
+
+```{r message = FALSE}
+library(tidyverse)
+library(nycflights13)
+glimpse(flights)
+```
+
+The `flights` dataset from the nycflights13 package contains information on flights leaving from NYC airport (JFK, LGA, and EWR). If we were interested in any flights arriving at SNA (John Wayne airport) then we could use the `filter()` function.
+
+```{r}
+flights %>% 
+  filter(dest == "SNA") %>% 
+  glimpse()
+```
+
+We can see that there are fewer observations and all the observations have `dest` as SNA. The `==` in the R code signifies if it equals to. These are called logical operators. The following is a list of logical operators in R (there are more)
+
+| Operator 	| Description              	|
+|----------	|--------------------------	|
+| ==       	| equals to                	|
+| !=       	| not equal to             	|
+| >        	| greater than             	|
+| >=       	| greater than or equal to 	|
+| <        	| less than                	|
+| <=       	| less than or equal to    	|
+| &        	| and                      	|
+| |        	| or                       	|
+
+For instance the code below would show flights that arrive in SNA or in LAX. Note the output for dest variable.
+
+```{r}
+flights %>% 
+  filter(dest == "SNA" | dest == "LAX") %>% 
+  glimpse()
+```
+
+The code would not return any flights because there are no flights that arrives in SNA and LAX
+
+```{r}
+flights %>% 
+  filter(dest == "SNA" & dest == "LAX")
+```
+
+Lasyly we are going to use `mutate()` and `case_when()` to track morning flights. If a flight is between 5 am - noon we will call it a morning flight.
+
+```{r}
+flights %>% 
+  mutate(morning = case_when(hour >= 5 & hour < 12 ~ "yes",
+                              hour <5 | hour >= 12 ~ "no" )) %>% 
+  glimpse()
+```
+
+Notice that `mutate()` is used to create a new variable called `morning`. Inside `case_when()` function we have used some logical statements to define that if the hour variable is less than or equal to 5 and less than 12 then the morning variable would be yes. Similarly we have also defined when morning variable would be no. If we had not defined the second condition morning variable would have NA values. 
+
+
+```{r}
+flights %>% 
+  mutate(morning = if_else(hour >= 5 & hour < 12, "yes", "no")) %>% 
+  glimpse()
+```
+
+`case_when()` is a useful function when you have more than two categories. Since we had only two morning or not, we can also use `if_else()` function. We first defined a condition, and then a result if the condition is true and a result if the condition is false. 
+
+
+## Data
+
+[Metro Bike Share](https://bikeshare.metro.net/) is a bike sharing system that operates in Los Angeles. Metro has been administering this bike share system since July 7, 2016. The way it works is riders can pick up a bike from one of the bike stations, ride it, and return it to a bike station. Make sure to read their homepage for more information about how the pricing works. 
+
+Metro provides data on rides [here](https://bikeshare.metro.net/about/data/). For this part of the final exam, we will be using the data from the third quarter of 2019. Download the dataset and answer the following questions based on this dataset. 
+
+## Exploratory Data Analysis
+
+1.  Read the data file into R. Call your data frame object bike. Glimpse at the data frame. How many observations are there? How many variables are there? What does each row represent? Note that the duration variable is measured in seconds.
+
+
+2. Can you calculate how much money riders have paid to Metro in third quarter of 2019? If yes, calculate the value, if not explain why it cannot be calculated. 
+
+
+3. If you look into `passholder_type` closely, you will realize that some of the rides were test rides. Eliminate any ride that was a test ride from the dataset. 
+
+4. There are three types of bike used in the Metro bike system as standard, electric, and smart. We want to make a comparison of standard bikes and the other two types. Make a new variable called standard. This variable should have "yes" values for bikes that are standard and "no" values for bikes that are electric or smart. 
+
+
+5. We want to know whether nonstandard bike rides are longer than significant bike rides. Write out hypotheses to test this question.
+
+6. What is the point estimate for the difference in biking duration between nonstandard bike rides and standard bike rides?
+
+## Inference
+
+7. What is the standard error?
+
+8. Calculate test statistic and p-value and state your conclusion whether those nonstandard bike rides are significantly longer than standard bike rides at the 0.05 significance level. 
+
+9. Can we make inference based on the rides in this dataset? Why / why not?
+
+
+
+## Submission
+
+Submit your final on Gradescope in pdf format. Make sure to assign which question is on which page. 
+
+
+<br>
+<br>
+<br>
