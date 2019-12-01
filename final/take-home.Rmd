@@ -110,6 +110,11 @@ Metro provides data on rides [here](https://bikeshare.metro.net/about/data/). Fo
 9. Can we make inference based on the rides in this dataset? Why / why not?
 
 
+## Scoring 
+
+| Question         	| 1 	| 2 	| 3 	| 4 	| 5 	| 6 	| 7 	| 8 	| 9 	|
+|------------------	|---	|---	|---	|---	|---	|---	|---	|---	|---	|
+| Number of Points 	| 9 	| 4 	| 6 	| 6 	| 6 	| 5 	| 5 	| 6 	| 3 	|
 
 ## Submission
 
