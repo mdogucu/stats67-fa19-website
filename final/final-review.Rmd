@@ -72,6 +72,32 @@ Seat:
   
   \vspace{3cm}
   
+  
+\vspace{2cm}
+
+\item Jared brings his Macbook into the Apple store because he feels it has not been working properly. The diagnostics test found that there is a problem with graphics chip and it gets sent to get repaired. Once it starts being repaired, it turns out that it was never actually broken. What type of error did the diagnostics test produce and why?
+
+  \noindent
+  \begin{minipage}[c]{0.8\linewidth}
+  \begin{enumerate} [label=(\Alph*)]
+    \item A Type I error because we rejected the null hypothesis and it turned out the null was true.
+    \item A Type I error because we failed to reject the null hypothesis and it turned out the null was true. 
+    \item A Type II error because we failed to reject the null hypothesis and it turned out the null was false. 
+    \item A Type II error because we rejected the null hypothesis and it turned out the null was true.
+    \item No error was committed. 
+  \end{enumerate}
+
+  \end{minipage}
+  \begin{minipage}[c]{0.1\linewidth}
+  \vspace{2cm}
+  \hspace{2cm}
+  \end{minipage}
+  \fbox{\begin{minipage}[c]{0.1\linewidth}
+  \vspace{1cm}
+  \hspace{1cm}
+  \end{minipage}}
+
+  
 \newpage  
 
 You test the following hypotheses:
@@ -148,18 +174,50 @@ text(-5.5, 0.35, "d)", cex=1.1, font=2)
   \hspace{1cm}
   \end{minipage}}
   
-  \vspace{3cm}
 
-\item How many degrees of freedom does the test-statistic T=1.27 have?
+\item How many degrees of freedom does the test-statistic T = 1.27 have?
+
+\noindent
+  \begin{minipage}[c]{0.90\linewidth}
+  \vspace{2cm}
+  \hspace{5cm}
+  \end{minipage}
+  \fbox{\begin{minipage}[c]{0.10\linewidth}
+  \vspace{1cm}
+  \hspace{1cm}
+  \end{minipage}}
+  
+
+\newpage
 
 \item Assuming you had already assigned your degrees of freedom to a variable named `degFree`, which line of code would find the appropriate T-critical value for this test?
 
 
-\item Determine distribution Continuous Uniform
-\item Determine distribution Exponential
-\item Determine distribution Binom/Geom/Poisson
-\item Give a ggplot with best line of fit. Ask them to fill in the blank for geom_smooth()
-\item Type I Type II error
+\noindent
+\begin{minipage}[c]{0.8\linewidth}
+\begin{enumerate} [label=(\Alph*)]
+  \item  \begin{verbatim} qt(0.05, df = degFree) \end{verbatim} 
+  \vspace{0.5cm}  
+  \item \begin{verbatim} qt(0.025, df = degFree) \end{verbatim}
+  \vspace{0.5cm}  
+  \item \begin{verbatim} qt(0.975, df = degFree) \end{verbatim}
+  \vspace{0.5cm}  
+  \item \begin{verbatim} qt(0.95, df = degFree) \end{verbatim}
+
+\end{enumerate}
+
+\end{minipage}
+\begin{minipage}[c]{0.1\linewidth}
+\vspace{2cm}
+\hspace{2cm}
+\end{minipage}
+\fbox{\begin{minipage}[c]{0.1\linewidth}
+\vspace{1cm}
+\hspace{1cm}
+\end{minipage}}
+  
+  \vspace{5cm}
+
 
 \item Which of the following is false?
 
@@ -190,33 +248,80 @@ print(sum_model1)
 
 \item The model summary has a blank. Fill in the blank with appropriate code.
 
+\fbox{\begin{minipage}{40em}
+  \hfill
+  \vspace{2 cm}
+  \end{minipage}}
+
 \item Interpret the coefficients (slope and intercept) in the context of air quality. 
 
+\fbox{\begin{minipage}{40em}
+  \hfill
+  \vspace{6 cm}
+  \end{minipage}}
+
+\newpage
 \item \label{itm:first} Below are a residual plot, a QQ-plot, and a histogram of residuals for the model. Check whether the conditions for a linear regression are met.
 
-```{r}
+```{r echo = FALSE}
 airquality <- airquality %>%
    add_predictions(model1) %>%
    add_residuals(model1)
 ```
 
-```{r}
-airquality %>%
-   ggplot(aes(x=Ozone,y=resid))+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+resid_plot <- airquality %>%
+   ggplot(aes(x = Ozone, y = resid))+
    geom_point()+
-   geom_hline(yintercept=0)
+   geom_hline(yintercept = 0)
 
-airquality %>%
+qq_plot <- airquality %>%
    ggplot(aes(sample=resid)) +
    geom_qq()
 
-airquality %>%
+resid_hist <- airquality %>%
    ggplot(aes(resid))+
    geom_histogram()
+
+ggpubr::ggarrange(resid_plot, qq_plot, resid_hist,
+                    ncol = 2, nrow = 2)
 ```
 
+\fbox{\begin{minipage}{40em}
+  \hfill
+  \vspace{7 cm}
+  \end{minipage}}
 
+\newpage
 \item  Regardless of what you determine in Question \ref{itm:first}, construct a 95% confidence interval for the slope. Interpret it in the context of the problem.
 
+\fbox{\begin{minipage}{40em}
+  \hfill
+  \vspace{7 cm}
+  \end{minipage}}
+  
+\item Assume that there is a student that has a 37% chance of getting an A on any assignment for any class. Which of the following would be used to calculate the probability that this student gets an A on 3 of 10 assignments?
 
+\noindent
+  \begin{minipage}[c]{0.8\linewidth}
+  \begin{enumerate} [label=(\Alph*)]
+    \item \large${10 \choose 3} (0.37)^3 (1-0.37)^7$
+    \item \large$(0.37) (1-0.37)^9$ 
+    \item \large$10 e{-10(3)}$
+    \item \large$\frac{1}{10-3}$
+    \item \large$\frac{10^3 e{-10}}{3!}$ 
+  \end{enumerate}
+
+  \end{minipage}
+  \begin{minipage}[c]{0.1\linewidth}
+  \vspace{2cm}
+  \hspace{2cm}
+  \end{minipage}
+  \fbox{\begin{minipage}[c]{0.1\linewidth}
+  \vspace{1cm}
+  \hspace{1cm}
+  \end{minipage}}
+  
+
+  
 \eenum
