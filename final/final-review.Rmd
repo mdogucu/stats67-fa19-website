@@ -71,7 +71,7 @@ Seat:
 \item Determine distribution Exponential
 \item Determine distribution Binom/Geom/Poisson
 \item Give a ggplot with best line of fit. Ask them to fill in the blank for geom_smooth()
-
-
+\item Type I Type II error
+\item unbiased estimator
 
 \eenum
