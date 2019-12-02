@@ -1,0 +1,105 @@
+---
+output: 
+  pdf_document:
+    template: template.tex
+---
+
+```{r echo = FALSE, message = FALSE}
+library(tidyverse)
+```
+
+\section{Review}
+
+```{r}
+model_mpg <- lm(mpg ~ hp + am + wt, data = mtcars) 
+
+summary(model_mpg)
+
+
+anova(model_mpg) #anova stands for analysis of variance
+
+```
+
+\vspace{10cm}
+
+```{r}
+678.37 + 202.24 + 65.15 + 180.29
+
+mtcars %>% 
+  mutate(error = mpg - mean(mpg)) %>% 
+  mutate(error_sq = error^2) %>% 
+  glimpse()
+
+mtcars %>% 
+  mutate(error = mpg - mean(mpg)) %>% 
+  mutate(error_sq = error^2) %>%  
+  summarize(sum(error_sq))
+```
+
+\vspace{5cm}
+```{r}
+summary(model_mpg)$r.squared
+
+(678.37 + 202.24 + 65.15)/(678.37 + 202.24 + 65.15 + 180.29)
+```
+
+\newpage
+
+\section{Binomial Likelihood Example}
+
+You have a friend who claims that they can identify caffeinated and non-caffeniated coffee. Let their success rate be an unknown parameter $p$. You do a double blind test with 10 cups of coffee. Your friend identifies 8 cups of coffee correctly. Which of the following is the most likely estimation for $p$?
+
+a) 0.3
+b) 0.5 
+c) 0.8
+
+The answer may seem intuitive but let's see the reasoning behind it
+
+
+\newpage
+```{r fig.align='center', fig.height=2, fig.width=3}
+p <- seq(from = 0, to = 1, by = 0.001)
+likelihood <- dbinom(x = 8, size = 10, prob = p)
+
+data<- as.data.frame(cbind(p, likelihood))
+
+data %>% 
+  ggplot(aes(x = p, y = likelihood)) +
+  geom_line()
+
+data %>% 
+filter(likelihood == max(likelihood))
+
+```
+
+```{r fig.align='center', fig.height=2, fig.width=3}
+data %>% 
+  ggplot(aes(x = p, y = log(likelihood))) +
+  geom_line()
+
+data %>% 
+filter(log(likelihood) == max(log(likelihood)))
+  
+```
+
+
+\newpage
+
+Estimating $p$ is quite easy when we are only testing one friend. We are now going to consider two scenarios.
+
+The experiment is repeated with a friend who tests 50 cups of coffee and correctly identifies 40 cups. What is the estimate for $p$?
+
+
+
+\vspace{5cm}
+
+In second scenario:
+
+You repeat the experiment with five friends where each friend tests 10 cups of coffee. Two friends are correct about 7 cups, 1 friend is correct about 8 cups, 2 friends are correct about 9 cups. What is the estimate for $p$?
+
+\newpage
+
+\section{Binomial Likelihood Using Calculus}
+
+
+
