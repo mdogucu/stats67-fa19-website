@@ -86,7 +86,7 @@ Metro provides data on rides [here](https://bikeshare.metro.net/about/data/). Fo
 
 ## Exploratory Data Analysis
 
-1.  Read the data file into R. Call your data frame object bike. Glimpse at the data frame. How many observations are there? How many variables are there? What does each row represent? Note that the duration variable is measured in seconds.
+1.  Read the data file into R. Call your data frame object bike. Glimpse at the data frame. How many observations are there? How many variables are there? What does each row represent? Note that the duration variable is measured in minutes.
 
 
 2. Can you calculate how much money riders have paid to Metro in third quarter of 2019? If yes, calculate the value, if not explain why it cannot be calculated. 
@@ -97,7 +97,7 @@ Metro provides data on rides [here](https://bikeshare.metro.net/about/data/). Fo
 4. There are three types of bike used in the Metro bike system as standard, electric, and smart. We want to make a comparison of standard bikes and the other two types. Make a new variable called standard. This variable should have "yes" values for bikes that are standard and "no" values for bikes that are electric or smart. 
 
 
-5. We want to know whether nonstandard bike rides are longer than significant bike rides. Write out hypotheses to test this question.
+5. We want to know whether nonstandard bike rides are longer than standard bike rides. Write out hypotheses to test this question.
 
 6. What is the point estimate for the difference in biking duration between nonstandard bike rides and standard bike rides?
 
@@ -107,7 +107,7 @@ Metro provides data on rides [here](https://bikeshare.metro.net/about/data/). Fo
 
 8. Calculate test statistic and p-value and state your conclusion whether those nonstandard bike rides are significantly longer than standard bike rides at the 0.05 significance level. 
 
-9. Can we make inference based on the rides in this dataset? Why / why not?
+9. Can we make inference based on the rides in this dataset? Why / why not? Check conditions.
 
 
 ## Scoring 
