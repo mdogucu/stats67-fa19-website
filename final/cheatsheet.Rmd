@@ -93,28 +93,5 @@ MLE estimator of $\bar \theta$ is
 
 $\hat {\bar \theta}=\arg\!\max_{\bar\theta} L(\bar\theta) = \arg\!\max_{\bar\theta}ln L(\bar\theta)$
 
-\newpage
-
-
-```{r}
-dnorm(0.025)
-dnorm(0.05)
-dnorm(0.10)
-dnorm(0.80)
-dnorm(0.90)
-
-pnorm(0.025)
-pnorm(0.05)
-pnorm(0.10)
-pnorm(0.80)
-pnorm(0.90)
-
-qnorm(0.025)
-qnorm(0.05)
-qnorm(0.10)
-qnorm(0.80)
-qnorm(0.90)
-
-```
 
 
