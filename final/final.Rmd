@@ -15,7 +15,7 @@ We have list of [R functions](https://docs.google.com/document/d/1fz1kIeCgRTXfJW
 
 We have a list of [topics](https://docs.google.com/spreadsheets/d/11iE0fJAD_nG5_sa04kcpMZSZvUkKhvemgGvD_-q0w_s/edit?usp=sharing) along with readings. 
 
-The final review exam is [here](final_review.pdf)
+The final review exam is [here](final-review.pdf)
 
 The take-home portion of the final is available [here](take-home.html)
 
