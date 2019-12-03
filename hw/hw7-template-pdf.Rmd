@@ -1,0 +1,43 @@
+---
+title: "Untitled"
+author: "Xuan Liu"
+date: "12/2/2019"
+output: pdf_document
+---
+
+Q1. 
+
+\pagebreak
+
+Q2. a
+
+\pagebreak
+
+Q2. b
+
+\pagebreak
+
+Q3. a
+
+\pagebreak
+
+Q3. b
+
+\pagebreak
+
+Q3. c
+
+\pagebreak
+
+Q4. a
+
+\pagebreak
+
+Q4. b
+
+\pagebreak
+
+Q4. c
+
+\pagebreak
+

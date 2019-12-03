@@ -1,0 +1,82 @@
+---
+title: "Untitled"
+author: "Mine Dogucu"
+date: "12/2/2019"
+output: html_document
+---
+
+
+
+Q1. a
+
+<p style="page-break-before: always">
+
+Q1. b
+
+<p style="page-break-before: always">
+
+Q1. c
+
+<p style="page-break-before: always">
+
+Q1. d
+
+<p style="page-break-before: always">
+
+Q1. e
+
+<p style="page-break-before: always">
+
+Q2. a
+
+
+<p style="page-break-before: always">
+
+Q2. b
+
+<p style="page-break-before: always">
+
+Q2. c 
+
+<p style="page-break-before: always">
+
+Q2. d
+
+<p style="page-break-before: always">
+
+Q3. 
+
+<p style="page-break-before: always">
+
+Q4. a
+
+<p style="page-break-before: always">
+
+Q4. b
+
+<p style="page-break-before: always">
+
+Q4. c
+
+<p style="page-break-before: always">
+
+Q4. d
+
+<p style="page-break-before: always">
+
+Q4. e
+
+<p style="page-break-before: always">
+
+Q4. f
+
+<p style="page-break-before: always">
+
+Q4. g
+
+<p style="page-break-before: always">
+
+Q4. h
+
+<p style="page-break-before: always">
+

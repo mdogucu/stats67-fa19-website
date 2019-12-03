@@ -1,0 +1,43 @@
+---
+title: "Untitled"
+author: "Xuan Liu"
+date: "12/2/2019"
+output: html_document
+---
+
+Q1. 
+
+<p style="page-break-before: always">
+
+Q2. a
+
+<p style="page-break-before: always">
+
+Q2. b
+
+<p style="page-break-before: always">
+
+Q3. a
+
+<p style="page-break-before: always">
+
+Q3. b
+
+<p style="page-break-before: always">
+
+Q3. c
+
+<p style="page-break-before: always">
+
+Q4. a
+
+<p style="page-break-before: always">
+
+Q4. b
+
+<p style="page-break-before: always">
+
+Q4. c
+
+<p style="page-break-before: always">
+
