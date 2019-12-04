@@ -416,8 +416,9 @@ summary {
 <li>an R Markdown document</li>
 <li>an HTML file that you get when you knit the R Markdown.</li>
 </ol>
-<p>Before you submit, make sure you knit your R Markdown one last time and the HTML file has all your responses. If you were able to figure out pdf files then you are ready to submit on Gradescope. If not, open the HTML file in Google Chrome (or any web browser) and try to print the document (not really) by clicking Ctrl + P (Windows) or Cmd + P (Mac). For Destination, instead of choosing a printer, choose <em>Save as PDF</em> save the file.</p>
-<p>Upload the pdf file on Gradescope. NOTE THAT YOU WILL HAVE TO SPECIFY WHICH QUESTION IS ON WHICH PAGE OF YOUR SUBMISSION. If you fail to do this, you will lose 5 points.</p>
+<p>Gradescope expects each answer to be on a separate page. So you will have to add page breaks to your document. Between each of your responses, add the following code <code>&lt;p style=&quot;page-break-before: always&quot;&gt;</code> to add page breaks. Add this between each response. That means this code should come after your response to Question 1 and before your response to Question 2a. See this <a href="hw7-template-html.Rmd">Rmd example</a> file for further assistance. Note that HTML will not show page breaks. However, it will show the page breaks when you can save your file as a pdf. To do that open the HTML file in Google Chrome (or any web browser) and try to print the document (not really) by clicking Ctrl + P (Windows) or Cmd + P (Mac). For Destination, instead of choosing a printer, choose <em>Save as PDF</em> save the file.</p>
+<p>If you have been using pdf files all along, then you will have to use <code>\pagebreak</code> instead of the aforementioned code to add page breaks. See this <a href="hw7-template-pdf.Rmd">Rmd example</a></p>
+<p>Upload the pdf file on Gradescope.</p>
 <p>Come to our <a href="https://mdogucu.ics.uci.edu/teaching/stats67-fa19/office.html">office hours</a> if you need help with questions from the book, R, or how to submit your homework.</p>
 <p><br> <br> <br></p>
 </div>
