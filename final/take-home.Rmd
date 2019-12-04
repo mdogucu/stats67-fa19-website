@@ -118,7 +118,7 @@ Metro provides data on rides [here](https://bikeshare.metro.net/about/data/). Fo
 
 ## Submission
 
-Submit your final on Gradescope in pdf format. Make sure to that each question is on a separate page.
+Submit your final on Gradescope in pdf format. Make sure to that each question is on a separate page. If it is not then you will lose 5 points from the total score.
 
 
 <br>
