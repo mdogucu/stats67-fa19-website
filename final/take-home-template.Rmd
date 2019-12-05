@@ -1,0 +1,41 @@
+---
+title: "Untitled"
+author: "Mine Dogucu"
+date: "12/5/2019"
+output: pdf_document
+---
+
+Q1
+
+\pagebreak
+
+Q2
+
+\pagebreak
+
+Q3
+
+\pagebreak
+
+Q4
+
+\pagebreak
+
+Q5
+
+\pagebreak
+
+Q6
+
+\pagebreak
+
+Q7
+
+\pagebreak
+
+Q8
+
+\pagebreak
+
+Q9
+
