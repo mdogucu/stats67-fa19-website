@@ -378,9 +378,9 @@ The UCI Transportation website is now selling parking permits for the Winter qua
   \begin{minipage}[c]{0.8\linewidth}
   \begin{enumerate} [label=(\Alph*)]
     \item \large$\frac{1}{5-3}$
-    \item \large$(\frac{1}{3}) e^{-\frac{1}{3}5}$
+    \item \large$\int_{5}^{\infty}(\frac{1}{3}) e^{-\frac{1}{3}x}$
     \item \large$\frac{3^5}{5!} e^{-3}$
-    \item \large$(\frac{1}{5}) e^{-(\frac{1}{5}) 3}$
+    \item \large$\int_{5}^{\infty}(\frac{1}{5}) e^{-(\frac{1}{5}) x}$
     \item \large$5 e^{-(5) 3}$
   \end{enumerate}
 
