@@ -546,7 +546,7 @@ The UCI Transportation website is now selling parking permits for the Winter qua
 \hline
 $X$ & 0 & 1 & 2 & 3 \\ \hline
 $P(X)$& \large$\frac{\theta}{5}$ & \large$\frac{3\theta}{5}$ & \large$\frac{3(1 -\theta)}{5}$ &
-\large$\frac{\theta}{5}$ \\ \hline
+\large$\frac{2 - \theta}{5}$ \\ \hline
 \end{tabular}
 \end{table}
 
@@ -557,7 +557,6 @@ where $0<\theta<1$ and $\{3, 2, 2, 1, 0, 0\}$ represents a set of six observatio
   \hfill
   \vspace{10 cm}
   \end{minipage}}
-
 
 
 
