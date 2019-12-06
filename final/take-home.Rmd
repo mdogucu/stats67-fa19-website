@@ -86,7 +86,7 @@ Metro provides data on rides [here](https://bikeshare.metro.net/about/data/). Fo
 
 ## Exploratory Data Analysis
 
-1.  Read the data file into R. Call your data frame object bike. Glimpse at the data frame. How many observations are there? How many variables are there? What does each row represent? Note that the duration variable is measured in minutes.
+1.  Read the data file into R. Call your data frame object bike. Glimpse at the data frame. How many observations are there? How many variables are there? What does each row of the data frame represent? Note that the duration variable is measured in minutes.
 
 
 2. Can you calculate how much money riders have paid to Metro in third quarter of 2019? If yes, calculate the value, if not explain why it cannot be calculated. 
